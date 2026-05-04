@@ -553,4 +553,127 @@ function People() {
   );
 }
 
-Object.assign(window, { TopMoments, Financials, LookingAhead, People });
+function ClosingSection() {
+  return (
+    <section style={{
+      background: 'var(--prairie-deep)',
+      color: 'var(--cream)',
+      maxWidth: 'none',
+      padding: '80px 0 0',
+    }}>
+      <div style={{maxWidth: 1320, margin: '0 auto', padding: '0 48px'}}>
+
+        {/* Thank you banner */}
+        <div style={{
+          textAlign: 'center',
+          paddingBottom: 72,
+          borderBottom: '1px solid rgba(244,237,221,0.18)',
+        }}>
+          <p className="mono" style={{fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(244,237,221,0.5)', marginBottom: 24}}>
+            Edmonton Heritage Council · 2025 Annual Report
+          </p>
+          <h2 style={{
+            fontFamily: 'var(--display)',
+            fontSize: 'clamp(32px, 5vw, 64px)',
+            fontWeight: 600,
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+            color: 'var(--cream)',
+            marginBottom: 24,
+            maxWidth: '18ch',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}>
+            Thank you for being part of Edmonton's heritage story.
+          </h2>
+          <p style={{fontSize: 18, lineHeight: 1.65, color: 'rgba(244,237,221,0.75)', maxWidth: '54ch', margin: '0 auto 48px'}}>
+            None of this work happens without the donors, members, volunteers, jurors, knowledge holders, and community partners who make it possible — year after year.
+          </p>
+
+          {/* CTAs */}
+          <div style={{display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap'}}>
+            <a
+              href="https://edmontonheritage.ca/donate"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'var(--ember)',
+                color: 'white',
+                padding: '14px 32px',
+                borderRadius: 3,
+                fontWeight: 600,
+                fontSize: 15,
+                letterSpacing: '0.02em',
+                textDecoration: 'none',
+                transition: 'opacity 0.15s',
+              }}>
+              Donate to EHC →
+            </a>
+            <a
+              href="https://edmontonheritage.ca/membership"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-block',
+                background: 'transparent',
+                color: 'var(--cream)',
+                border: '1px solid rgba(244,237,221,0.4)',
+                padding: '14px 32px',
+                borderRadius: 3,
+                fontWeight: 500,
+                fontSize: 15,
+                letterSpacing: '0.02em',
+                textDecoration: 'none',
+                transition: 'border-color 0.15s',
+              }}>
+              Become a member
+            </a>
+          </div>
+        </div>
+
+        {/* Support message */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: 48,
+          padding: '56px 0 72px',
+          borderBottom: '1px solid rgba(244,237,221,0.18)',
+        }} className="closing-grid">
+          <div>
+            <h3 style={{fontSize: 22, fontWeight: 600, color: 'var(--cream)', marginBottom: 16, lineHeight: 1.25}}>
+              Help us bring heritage to every Edmonton neighbourhood.
+            </h3>
+            <p style={{fontSize: 16, lineHeight: 1.7, color: 'rgba(244,237,221,0.72)', margin: 0}}>
+              Donations support the Edmonton Heritage Places Endowment Fund and community programming citywide — ensuring that heritage remains a living, shared resource for all Edmontonians.
+            </p>
+          </div>
+          <div>
+            <h3 style={{fontSize: 22, fontWeight: 600, color: 'var(--cream)', marginBottom: 16, lineHeight: 1.25}}>
+              Join a community of heritage champions.
+            </h3>
+            <p style={{fontSize: 16, lineHeight: 1.7, color: 'rgba(244,237,221,0.72)', margin: 0}}>
+              EHC membership connects you to practitioners, organizations, and communities working to preserve, celebrate, and activate Edmonton's heritage — with invitations to exclusive events, publications, and programming throughout the year.
+            </p>
+          </div>
+        </div>
+
+        {/* Acknowledgement */}
+        <div style={{padding: '40px 0 64px', textAlign: 'center'}}>
+          <p style={{fontSize: 14, lineHeight: 1.8, color: 'rgba(244,237,221,0.5)', maxWidth: '68ch', margin: '0 auto 20px'}}>
+            Edmonton Heritage Council is located on Treaty 6 Territory and the Homeland of the Métis Nation. We acknowledge the traditional territories of the Cree, Blackfoot, Métis, Nakota Sioux, Iroquois, Dene, Ojibway/Saulteaux/Anishinaabe, Inuit, and many others whose histories, languages, and cultures continue to shape the land we share.
+          </p>
+          <p style={{fontSize: 13, color: 'rgba(244,237,221,0.35)', margin: 0}}>
+            © 2026 Edmonton Heritage Council Society · <a href="https://edmontonheritage.ca" target="_blank" rel="noopener noreferrer" style={{color: 'rgba(244,237,221,0.35)', textDecoration: 'none'}}>edmontonheritage.ca</a>
+          </p>
+        </div>
+      </div>
+
+      <style>{`
+        @media (max-width: 720px) { .closing-grid { grid-template-columns: 1fr !important; } }
+      `}</style>
+    </section>
+  );
+}
+
+Object.assign(window, { TopMoments, Financials, LookingAhead, People, ClosingSection });
