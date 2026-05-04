@@ -1,8 +1,6 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
-const ASSET_BASE = "https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/";
-const ASSET_TOKEN = "?t=fb77e219737809acd4f5f983ac0d69e0794668a2fbfa8d096c229f48e593fb0b.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777940247";
-const a = (file) => ASSET_BASE + encodeURIComponent(file) + ASSET_TOKEN;
+const a = (file) => "assets/" + file;
 
 const THEME_COLORS = {
   "Indigenous Domesticity": { bg: "#4a7a5c", text: "#fff" },
@@ -222,7 +220,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/August%207%20Labour%20Tour%20strike%202.jpg?t=fb77e219737809acd4f5f983ac0d69e0794668a2fbfa8d096c229f48e593fb0b.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777940247"
+                src="assets/August 7 Labour Tour strike 2.jpg"
                 alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -269,7 +267,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Trivia%20Night%20September%202025%2011.JPG?t=fb77e219737809acd4f5f983ac0d69e0794668a2fbfa8d096c229f48e593fb0b.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777940247"
+                src="assets/Trivia Night September 2025 11.JPG"
                 alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -297,7 +295,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Momentary%20Museum-Senses-223%202.jpg?t=fb77e219737809acd4f5f983ac0d69e0794668a2fbfa8d096c229f48e593fb0b.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777940247"
+                src="assets/Momentary Museum-Senses-223 2.jpg"
                 alt="Momentary Museum — Senses exhibit"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
