@@ -1,5 +1,5 @@
 [build]
-  publish = "project"
+  publish = "."
 
 [[headers]]
   for = "/components/*.jsx"
