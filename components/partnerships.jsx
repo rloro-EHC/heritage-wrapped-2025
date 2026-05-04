@@ -67,29 +67,46 @@ const COLLABORATORS = [
   { name: "Jury community members", role: "Three HCIP panels and FIRE peer assessment" },
 ];
 
-function ImgPlaceholder({ caption, ratio }) {
+function ImgPlaceholder({ caption, ratio, src, alt }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-      <div style={{
-        aspectRatio: ratio || '4 / 3',
-        background: 'var(--paper-warm)',
-        border: '1px solid var(--rule)',
-        borderRadius: 4,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}>
-        <span className="mono" style={{
+    <figure style={{ display: 'flex', flexDirection: 'column', gap: 8, margin: 0 }}>
+      {src ? (
+        <img
+          src={src}
+          alt={alt || caption}
+          style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4 }}
+        />
+      ) : (
+        <div style={{
+          aspectRatio: ratio || '4 / 3',
+          background: 'var(--paper-warm)',
+          border: '1px solid var(--rule)',
+          borderRadius: 4,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+          <span className="mono" style={{
+            fontSize: 11,
+            color: 'var(--ink-mute)',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+            textAlign: 'center',
+            padding: 24,
+            lineHeight: 1.6,
+          }}>{caption}</span>
+        </div>
+      )}
+      {caption && (
+        <figcaption className="mono" style={{
           fontSize: 11,
-          color: 'var(--ink-mute)',
-          letterSpacing: '0.08em',
+          letterSpacing: '0.07em',
           textTransform: 'uppercase',
-          textAlign: 'center',
-          padding: 24,
-          lineHeight: 1.6,
-        }}>{caption}</span>
-      </div>
-    </div>
+          color: 'var(--ink-mute)',
+          lineHeight: 1.5,
+        }}>{caption}</figcaption>
+      )}
+    </figure>
   );
 }
 
@@ -151,7 +168,10 @@ function Partnerships() {
               Delivered in collaboration with partners and community knowledge holders, the series reflected EHC's approach to partnerships as infrastructure — where relationships enable the conditions for meaningful heritage work to take place.
             </p>
           </div>
-          <ImgPlaceholder caption="Image placeholder · FIRE Spotlight Speaker Series 2025" />
+          <ImgPlaceholder
+            src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Fire%20Spotlight%20Series%20-%20King%20Charles%20III%20Coronation%20Medal%20Ceremony.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+            caption="Executive Director David Ridley brings remarks on behalf of EHC, recognizing honorees Dr. Jerry Saddleback, Celina Loyer, and Matthew Hiltermann"
+          />
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24, marginBottom: 32 }} className="spotlight-events">
@@ -179,7 +199,10 @@ function Partnerships() {
         <span className="eyebrow eyebrow-ink">06.3 — Black Heritage Caucus</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Connecting stories across the country</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhc-grid">
-          <ImgPlaceholder caption="Image placeholder · Black Heritage Caucus, Nova Scotia 2025" />
+          <ImgPlaceholder
+              src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Black%20Heritage%20Caucus.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+              caption="Black Heritage Caucus at 2025 National Trust Conference in Nova Scotia"
+            />
           <div>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
               In 2025, EHC Research & Policy Lead, Daliso Mwanza was part of a national organizing team of the National Trust's Black Heritage Caucus, a national gathering of Black heritage practitioners from across Canada focused on sharing knowledge, building relationships, and strengthening approaches to preserving Black histories.
@@ -232,7 +255,10 @@ function Partnerships() {
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-            <ImgPlaceholder caption="Image placeholder · Roots & Routes member event 2025" />
+            <ImgPlaceholder
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Roots%20%26%20Routes%20(Journey%20of%20the%20Horse).JPG?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+                caption="Roots & Routes visits Journey of the Horse at the Mah Society (April 2025)"
+              />
             <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
               <div className="cell" style={{ minHeight: 0, padding: 24 }}>
                 <span className="stat-lbl">Peak attendance</span>
