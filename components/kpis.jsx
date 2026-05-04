@@ -1,10 +1,80 @@
 // kpis.jsx — Part 4: Connections & Exchanges KPIs
 
+const AIMS = {
+  1: {
+    title: "Edmonton's neighbourhoods offer meaningful opportunities for heritage participation and engagement.",
+    actions: [
+      "1.1 Nurture cultural curiosity through planned and spontaneous heritage encounters.",
+      "1.2 Inventory and develop heritage interpretive experiences to increase visibility, access, and engagement.",
+    ],
+  },
+  2: {
+    title: "Edmontonians have a sense of belonging and connectedness to peoples, places, and stories of their city.",
+    actions: [
+      "2.1 Create and support opportunities for cultural connection and understanding between people, communities, and places.",
+      "2.2 Advance Edmonton City as Museum Project as a place of dialogue, exchange and collaborative city building.",
+      "2.3 Work with heritage community to adopt inclusive practices in museums, archives, and historical research and programming.",
+      "2.4 Contribute to placemaking through connections to cultural landscapes, natural history, built history, object, language, and story.",
+      "2.5 Support Indigenous peoples in revitalizing and participating locally in traditions that reflect their connections to ancestors, and the land.",
+    ],
+  },
+  3: {
+    title: "Heritage leaders are actively engaged in civic planning implementation.",
+    actions: [
+      "3.1 With City Administration, develop policy guiding interpretation, naming, commemoration, participation, built heritage, boards and committees, facilities, collections and incorporate heritage into city strategies and planning.",
+      "3.3 Encourage active civic engagement and participation in cultural activities.",
+      "3.4 Adopt a holistic definition of civic vitality including heritage as a valued component.",
+      "3.5 Apply a Fourth Pillar approach to City of Edmonton planning and policy development.",
+    ],
+  },
+  4: {
+    title: "Conditions are in place to remove barriers for all Edmontonians to participate in cultural experiences.",
+    actions: [
+      "4.2 Review Historian Laureate program and mandate for cultural inclusion.",
+      "4.3 Stand with Indigenous leaders in cultural work.",
+      "4.4 Resource Indigenous-led activities that support reclamation of Indigeneity.",
+    ],
+  },
+  5: {
+    title: "Dynamic exchanges of ideas and expertise occur between Edmonton's heritage sector and the world.",
+    actions: [
+      "5.1 Work with City Administration to champion public heritage experiences and raise awareness of Edmonton's lead practices.",
+      "5.2 Create opportunities for heritage practitioners to develop and promote innovative practices.",
+      "5.3 Work with public and private partners to celebrate and promote Edmonton's historic urban landscapes, including sites of conscience.",
+    ],
+  },
+  6: {
+    title: "Diverse platforms for collaboration within Edmonton that allow heritage communities to connect and create.",
+    actions: [
+      "6.1 Broaden the Edmonton City as Museum Project (ECAMP) to include public art, as well as neighbourhood and cultural heritage in a significant platform for cultural discovery and knowledge building.",
+      "6.2 Connect individuals and groups with the resources they need to do creative, innovative heritage work.",
+    ],
+  },
+  7: {
+    title: "Heritage practitioners are economically resilient.",
+    actions: [
+      "7.1 Increase investment in Edmonton's heritage through the EHC's Community Investment Program (+FIRE).",
+      "7.2 Research, develop and implement an equitable heritage practitioner pay scale (e.g., model on arts community CARFAC).",
+      "7.3 Build funding mechanisms with an emphasis on: multi-year research and documentation projects, mentorship, residencies, and professional development.",
+    ],
+  },
+  8: {
+    title: "New and existing heritage organizational capacity enables innovation and builds resilience in the sector.",
+    actions: [
+      "8.1 Increase heritage sector capacity through training and mentorship.",
+      "8.2 Multi-year funding opportunities for heritage organizations and heritage practitioners.",
+      "8.3 Research the prospect of grants for organizations to enhance program development, access, and consistency.",
+      "8.4 Provide change capital to cultural organizations to meet the needs of a rapidly changing city.",
+    ],
+  },
+};
+
 const KPIS = [
   {
     id: 1,
     title: "Reducing Barriers & Increasing Access",
     aims: "Aims 2 & 4",
+    aimNums: [2, 4],
     headline: "72% of grants reached equity-deserving communities.",
     bullets: [
       "FIRE funded 19 Indigenous-led cultural resurgence projects",
@@ -18,6 +88,7 @@ const KPIS = [
     id: 2,
     title: "Neighbourhood Engagement & Participation",
     aims: "Aims 1 & 2",
+    aimNums: [1, 2],
     headline: "5,000+ Edmontonians engaged in person.",
     bullets: [
       "365 guests on heritage walking tours, summer 2025",
@@ -30,6 +101,7 @@ const KPIS = [
     id: 3,
     title: "Sector Capacity & Economic Resilience",
     aims: "Aims 6, 7 & 8",
+    aimNums: [6, 7, 8],
     headline: "$417,564 to 12 operational grant recipients.",
     bullets: [
       "11 Career Development grants ($32,409.68) — practitioners across six countries",
@@ -42,6 +114,7 @@ const KPIS = [
     id: 4,
     title: "Raising Alberta's Heritage Profile",
     aims: "Aims 5 & 6",
+    aimNums: [5, 6],
     headline: "Heritage work going international and provincial.",
     bullets: [
       "Career Development grantees travelled to Barbados, Taiwan, Halifax, Perth, Ottawa, Inuvik, Toronto, Trinidad",
@@ -54,6 +127,7 @@ const KPIS = [
     id: 5,
     title: "Heritage in Civic Planning & Leadership",
     aims: "Aim 3",
+    aimNums: [3],
     headline: "From facilitator to active advocate.",
     bullets: [
       "Heritage Places Strategy — input on citywide preservation framework",
@@ -152,7 +226,7 @@ function Kpis() {
             </div>
           )}
 
-          <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
+          <ul style={{listStyle: 'none', padding: 0, margin: 0, marginBottom: 48}}>
             {k.bullets.map((b, i) => (
               <li key={i} style={{
                 display: 'grid',
@@ -168,6 +242,50 @@ function Kpis() {
               </li>
             ))}
           </ul>
+
+          {/* Aim descriptions */}
+          <div style={{borderTop: '2px solid var(--rule)', paddingTop: 32}}>
+            <div className="mono" style={{fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-mute)', marginBottom: 24}}>
+              Connections & Exchanges · Strategic Aims
+            </div>
+            <div style={{display: 'flex', flexDirection: 'column', gap: 28}}>
+              {k.aimNums.map(n => {
+                const aim = AIMS[n];
+                return (
+                  <div key={n} style={{
+                    background: 'var(--paper)',
+                    border: '1px solid var(--rule)',
+                    borderRadius: 4,
+                    padding: 24,
+                  }}>
+                    <div style={{display: 'flex', gap: 16, alignItems: 'baseline', marginBottom: 10}}>
+                      <span className="mono" style={{
+                        fontSize: 11,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: 'var(--prairie)',
+                        whiteSpace: 'nowrap',
+                      }}>Aim #{n}</span>
+                      <p style={{fontSize: 16, fontWeight: 600, lineHeight: 1.35, margin: 0, color: 'var(--ink)'}}>
+                        {aim.title}
+                      </p>
+                    </div>
+                    <ul style={{listStyle: 'none', padding: 0, margin: 0, borderTop: '1px solid var(--rule-soft)', paddingTop: 12}}>
+                      {aim.actions.map((a, i) => (
+                        <li key={i} style={{
+                          fontSize: 13,
+                          color: 'var(--ink-soft)',
+                          lineHeight: 1.6,
+                          padding: '5px 0',
+                          borderBottom: i < aim.actions.length - 1 ? '1px solid var(--rule-soft)' : 'none',
+                        }}>{a}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
 
