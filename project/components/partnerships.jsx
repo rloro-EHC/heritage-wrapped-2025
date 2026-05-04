@@ -1,6 +1,6 @@
 // partnerships.jsx — Part 06: Partnerships & Collaborations
 
-const ASSET_T = "?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946";
+const ASSET_T = "?t=fb77e219737809acd4f5f983ac0d69e0794668a2fbfa8d096c229f48e593fb0b.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777940247";
 const ASSET   = (f) => `https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/${encodeURIComponent(f)}${ASSET_T}`;
 
 const CHAS_GRANTS = [
