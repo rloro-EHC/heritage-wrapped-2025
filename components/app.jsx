@@ -17,6 +17,7 @@ function App() {
       <Financials />
       <LookingAhead />
       <People />
+      <ClosingSection />
     </>
   );
 }
