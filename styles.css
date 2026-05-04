@@ -128,35 +128,56 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(244, 237, 221, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--prairie-deep);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  box-shadow: 0 2px 16px rgba(39,37,37,0.22);
 }
 .microsite-anchor-inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 12px 32px;
+  padding: 0 32px;
   display: flex;
-  gap: 24px;
+  gap: 0;
   overflow-x: auto;
-  align-items: center;
+  align-items: stretch;
+  height: 46px;
+  scrollbar-width: none;
 }
-.microsite-anchor-inner .label { color: var(--ink-mute); margin-right: 8px; flex-shrink: 0; }
+.microsite-anchor-inner::-webkit-scrollbar { display: none; }
+.microsite-anchor-inner .hw-logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  padding-right: 20px;
+  margin-right: 8px;
+  border-right: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+.microsite-anchor-inner .hw-logo:hover { color: var(--sky-pale); }
 .microsite-anchor-inner a {
-  color: var(--ink);
+  color: rgba(255,255,255,0.62);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
-  padding: 4px 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s, color 0.15s;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, background 0.15s;
+  font-size: 10px;
 }
-.microsite-anchor-inner a:hover { color: var(--prairie); border-bottom-color: var(--prairie); }
-.microsite-anchor-inner a.is-active { color: var(--prairie); border-bottom-color: var(--prairie); }
+.microsite-anchor-inner a.is-active {
+  color: #fff;
+  border-bottom-color: var(--sky-pale);
+}
 
 /* ───────── Type ─────────  */
 .eyebrow {
