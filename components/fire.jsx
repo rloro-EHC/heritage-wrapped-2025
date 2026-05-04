@@ -60,7 +60,7 @@ function FireSection() {
     }}>
       <div style={{maxWidth: 1320, margin: '0 auto'}}>
         <div className="section-hd" style={{borderBottom: '1px solid rgba(244,237,221,0.2)'}}>
-          <div className="num" style={{color: '#FFFFFF'}}>Part 3.2<span style={{color: '#FFFFFF'}}>FIRE</span></div>
+          <div className="num" style={{color: '#FFFFFF'}}>03.2<span style={{color: '#FFFFFF'}}>FIRE</span></div>
           <div>
             <h2 style={{color: 'var(--cream)'}}>
               <span style={{fontStyle: 'italic'}}>Funding Indigenous Resurgence</span> in Edmonton.
