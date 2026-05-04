@@ -1,5 +1,8 @@
 // partnerships.jsx — Part 06: Partnerships & Collaborations
 
+const ASSET_T = "?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946";
+const ASSET   = (f) => `https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/${encodeURIComponent(f)}${ASSET_T}`;
+
 const CHAS_GRANTS = [
   { org: "Shawn Tse / FascinAsian Film Fest", project: "Event Promotion", award: 5000 },
   { org: "Clearwater Documentary Screening", project: "Film Screening", award: 2000 },
@@ -67,43 +70,15 @@ const COLLABORATORS = [
   { name: "Jury community members", role: "Three HCIP panels and FIRE peer assessment" },
 ];
 
-function ImgPlaceholder({ caption, ratio, src, alt }) {
+function Img({ src, caption }) {
   return (
     <figure style={{ display: 'flex', flexDirection: 'column', gap: 8, margin: 0 }}>
-      {src ? (
-        <img
-          src={src}
-          alt={alt || caption}
-          style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4 }}
-        />
-      ) : (
-        <div style={{
-          aspectRatio: ratio || '4 / 3',
-          background: 'var(--paper-warm)',
-          border: '1px solid var(--rule)',
-          borderRadius: 4,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <span className="mono" style={{
-            fontSize: 11,
-            color: 'var(--ink-mute)',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            textAlign: 'center',
-            padding: 24,
-            lineHeight: 1.6,
-          }}>{caption}</span>
-        </div>
-      )}
+      <img src={src} alt={caption}
+        style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 4 }} />
       {caption && (
         <figcaption className="mono" style={{
-          fontSize: 11,
-          letterSpacing: '0.07em',
-          textTransform: 'uppercase',
-          color: 'var(--ink-mute)',
-          lineHeight: 1.5,
+          fontSize: 11, letterSpacing: '0.07em', textTransform: 'uppercase',
+          color: 'var(--ink-mute)', lineHeight: 1.5,
         }}>{caption}</figcaption>
       )}
     </figure>
@@ -125,29 +100,25 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.1 — Iskwew Kâ-mikak */}
+      {/* 06.1 — Black History Month Initiatives Fund */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.1 — Iskwew Kâ-mikak</span>
-        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Indigenous women-led ceremonial space</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="iskwew-grid">
-          <ImgPlaceholder caption="Image placeholder · Iskwew Kâ-mikak gathering, June 2025" />
+        <span className="eyebrow eyebrow-ink">06.1 — Black History Month Initiatives Fund</span>
+        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community-led celebration and programming</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhm-grid">
+          <Img
+            src={ASSET("Black History Month Launch 2025.JPG")}
+            caption="Student performs during the Launch Event for Black History Month 2025"
+          />
           <div>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              In response to the lack of opportunities for urban Indigenous women to occupy ceremonial roles, Iskwew Kâ-mikak created a dedicated space for ceremony, cultural practice, and community connection.
+              The Black History Month Initiatives Fund supports community-led programming, events, and celebrations that honour Black histories, cultures, and contributions across Edmonton. In 2025, EHC delivered the fund in partnership with the Africa Centre, Edmonton Community Foundation, and the City of Edmonton.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              Held in June 2025, the gathering brought together 30 Indigenous women and non-binary participants, providing access to ceremonial rites of passage and teachings grounded in Indigenous knowledge systems.
+              The 2025 Black History Month Launch Event brought together Edmonton's Black communities in celebration and cultural exchange — featuring live performances, community dialogue, and programming that affirmed the richness and diversity of Black heritage in the city.
             </p>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 28 }}>
-              More than a single event, Iskwew Kâ-mikak represents a shift in how heritage is supported, moving beyond institutional models toward community-led, relational, and land-based approaches. Participants engaged in shared learning, ceremony, and intergenerational exchange, strengthening cultural continuity and identity.
+            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)' }}>
+              Funded initiatives spanned community events, arts programming, and historical research — supporting organizations and practitioners in sharing Black histories on their own terms, and in spaces that belong to their communities.
             </p>
-            <div className="stat-grid" style={{ gridTemplateColumns: '1fr', marginTop: 0 }}>
-              <div className="cell tone-prairie" style={{ minHeight: 0, padding: 24 }}>
-                <span className="stat-lbl">Participants</span>
-                <div className="stat-num sm">30</div>
-                <div className="stat-foot">Indigenous women and non-binary participants · June 2025</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -168,8 +139,8 @@ function Partnerships() {
               Delivered in collaboration with partners and community knowledge holders, the series reflected EHC's approach to partnerships as infrastructure — where relationships enable the conditions for meaningful heritage work to take place.
             </p>
           </div>
-          <ImgPlaceholder
-            src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Fire%20Spotlight%20Series%20-%20King%20Charles%20III%20Coronation%20Medal%20Ceremony.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
+          <Img
+            src={ASSET("Fire Spotlight Series - King Charles III Coronation Medal Ceremony.jpg")}
             caption="Executive Director David Ridley brings remarks on behalf of EHC, recognizing honorees Dr. Jerry Saddleback, Celina Loyer, and Matthew Hiltermann"
           />
         </div>
@@ -177,10 +148,7 @@ function Partnerships() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24, marginBottom: 32 }} className="spotlight-events">
           {FIRE_SPOTLIGHT_EVENTS.map((ev, i) => (
             <div key={i} style={{
-              background: 'var(--paper)',
-              border: '1px solid var(--rule)',
-              borderRadius: 4,
-              padding: 28,
+              background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 4, padding: 28,
             }}>
               <div className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--prairie)', marginBottom: 8 }}>{ev.date}</div>
               <h4 style={{ fontSize: 15, fontWeight: 600, lineHeight: 1.35, marginBottom: 12, color: 'var(--ink)' }}>{ev.title}</h4>
@@ -194,15 +162,39 @@ function Partnerships() {
         </p>
       </div>
 
-      {/* 06.3 — Black Heritage Caucus */}
+      {/* 06.3 — Iskwew Kâ-mikak */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.3 — Black Heritage Caucus</span>
+        <span className="eyebrow eyebrow-ink">06.3 — Iskwew Kâ-mikak</span>
+        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Indigenous women-led ceremonial space</h3>
+        <div style={{ maxWidth: '72ch' }}>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
+            In response to the lack of opportunities for urban Indigenous women to occupy ceremonial roles, Iskwew Kâ-mikak created a dedicated space for ceremony, cultural practice, and community connection.
+          </p>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
+            Held in June 2025, the gathering brought together 30 Indigenous women and non-binary participants, providing access to ceremonial rites of passage and teachings grounded in Indigenous knowledge systems.
+          </p>
+          <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 32 }}>
+            More than a single event, Iskwew Kâ-mikak represents a shift in how heritage is supported, moving beyond institutional models toward community-led, relational, and land-based approaches. Participants engaged in shared learning, ceremony, and intergenerational exchange, strengthening cultural continuity and identity.
+          </p>
+          <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
+            <div className="cell tone-prairie" style={{ minHeight: 0, padding: 24 }}>
+              <span className="stat-lbl">Participants</span>
+              <div className="stat-num sm">30</div>
+              <div className="stat-foot">Indigenous women and non-binary participants · June 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 06.4 — Black Heritage Caucus */}
+      <div style={{ marginBottom: 80 }}>
+        <span className="eyebrow eyebrow-ink">06.4 — Black Heritage Caucus</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Connecting stories across the country</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhc-grid">
-          <ImgPlaceholder
-              src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Black%20Heritage%20Caucus.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
-              caption="Black Heritage Caucus at 2025 National Trust Conference in Nova Scotia"
-            />
+          <Img
+            src={ASSET("Black Heritage Caucus.jpg")}
+            caption="Black Heritage Caucus at 2025 National Trust Conference in Nova Scotia"
+          />
           <div>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
               In 2025, EHC Research & Policy Lead, Daliso Mwanza was part of a national organizing team of the National Trust's Black Heritage Caucus, a national gathering of Black heritage practitioners from across Canada focused on sharing knowledge, building relationships, and strengthening approaches to preserving Black histories.
@@ -214,13 +206,8 @@ function Partnerships() {
               Across the gathering, practitioners identified shared priorities: preserving oral histories, securing sustainable funding, and creating multigenerational spaces for heritage engagement.
             </p>
             <blockquote style={{
-              borderLeft: '4px solid var(--ember)',
-              paddingLeft: 24,
-              margin: '0 0 16px',
-              fontStyle: 'italic',
-              fontSize: 20,
-              lineHeight: 1.4,
-              color: 'var(--ink)',
+              borderLeft: '4px solid var(--ember)', paddingLeft: 24,
+              margin: '0 0 16px', fontStyle: 'italic', fontSize: 20, lineHeight: 1.4, color: 'var(--ink)',
             }}>
               "Heritage is discovery and healing."
             </blockquote>
@@ -231,9 +218,9 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.4 — Roots & Routes */}
+      {/* 06.5 — Roots & Routes */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.4 — Roots & Routes</span>
+        <span className="eyebrow eyebrow-ink">06.5 — Roots & Routes</span>
         <h3 style={{ marginTop: 12, marginBottom: 4 }}>Member Engagement</h3>
         <p style={{ fontSize: 16, color: 'var(--prairie)', fontStyle: 'italic', marginBottom: 32, marginTop: 8 }}>Growing demand for sector connection</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="roots-grid">
@@ -255,10 +242,10 @@ function Partnerships() {
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-            <ImgPlaceholder
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Roots%20%26%20Routes%20(Journey%20of%20the%20Horse).JPG?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
-                caption="Roots & Routes visits Journey of the Horse at the Mah Society (April 2025)"
-              />
+            <Img
+              src={ASSET("Roots & Routes (Journey of the Horse).JPG")}
+              caption="Roots & Routes visits Journey of the Horse at the Mah Society (April 2025)"
+            />
             <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
               <div className="cell" style={{ minHeight: 0, padding: 24 }}>
                 <span className="stat-lbl">Peak attendance</span>
@@ -275,9 +262,9 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.5 — CHAS */}
+      {/* 06.6 — CHAS */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.5 — CHAS</span>
+        <span className="eyebrow eyebrow-ink">06.6 — CHAS</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community Heritage Activation Support</h3>
 
         <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: 40 }}>
@@ -346,9 +333,9 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.6 — Strategic Partners + Collaborators */}
+      {/* 06.7 — Strategic Partners + Collaborators */}
       <div>
-        <span className="eyebrow eyebrow-ink">06.6 — Strategic Partners & Collaborators</span>
+        <span className="eyebrow eyebrow-ink">06.7 — Strategic Partners & Collaborators</span>
         <h3 style={{ marginTop: 12, marginBottom: 32, maxWidth: '24ch' }}>Partnerships as infrastructure.</h3>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }} className="partners-grid">
@@ -359,11 +346,8 @@ function Partnerships() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderTop: '1px solid var(--rule)' }}>
               {STRATEGIC_PARTNERS.map((p, i) => (
                 <li key={i} style={{
-                  padding: '16px 0',
-                  borderBottom: '1px solid var(--rule)',
-                  display: 'grid',
-                  gridTemplateColumns: '1fr',
-                  gap: 4,
+                  padding: '16px 0', borderBottom: '1px solid var(--rule)',
+                  display: 'grid', gridTemplateColumns: '1fr', gap: 4,
                 }}>
                   <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)' }}>{p.name}</span>
                   <span style={{ fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.5 }}>{p.role}</span>
@@ -379,11 +363,8 @@ function Partnerships() {
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, borderTop: '1px solid var(--rule)' }}>
               {COLLABORATORS.map((p, i) => (
                 <li key={i} style={{
-                  padding: '16px 0',
-                  borderBottom: '1px solid var(--rule)',
-                  display: 'grid',
-                  gridTemplateColumns: '1fr',
-                  gap: 4,
+                  padding: '16px 0', borderBottom: '1px solid var(--rule)',
+                  display: 'grid', gridTemplateColumns: '1fr', gap: 4,
                 }}>
                   <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--ink)' }}>{p.name}</span>
                   <span style={{ fontSize: 13, color: 'var(--ink-soft)', lineHeight: 1.5 }}>{p.role}</span>
@@ -396,7 +377,7 @@ function Partnerships() {
 
       <style>{`
         @media (max-width: 900px) {
-          .iskwew-grid, .fire-spotlight-grid, .bhc-grid, .roots-grid { grid-template-columns: 1fr !important; }
+          .bhm-grid, .fire-spotlight-grid, .bhc-grid, .roots-grid { grid-template-columns: 1fr !important; }
           .spotlight-events { grid-template-columns: 1fr !important; }
           .partners-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
         }
