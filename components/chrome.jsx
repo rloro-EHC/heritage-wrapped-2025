@@ -4,8 +4,8 @@ const NAV_SECTIONS = [
   { id: "letters",      label: "Letters" },
   { id: "numbers",      label: "By the Numbers" },
   { id: "moments",      label: "Top Moments" },
-  { id: "grants",       label: "Grants" },
-  { id: "fire",         label: "FIRE" },
+  { id: "grants",       label: "HCIP",    group: "Grants" },
+  { id: "fire",         label: "FIRE",    group: "Grants" },
   { id: "ecamp",        label: "ECAMP" },
   { id: "kpis",         label: "Strategic Progress" },
   { id: "partnerships", label: "Partnerships" },
@@ -64,23 +64,35 @@ function MicrositeAnchorNav() {
     <div className="microsite-anchor-nav">
       <div className="microsite-anchor-inner">
         <a href="#top" className="hw-logo">Heritage Wrapped 2025</a>
-        {NAV_SECTIONS.map(s => {
-          const isActive = activeId === s.id;
-          const isHov    = hovId === s.id;
+        {NAV_SECTIONS.map((s, i) => {
+          const isActive   = activeId === s.id;
+          const isHov      = hovId === s.id;
+          const groupStart = s.group && (i === 0 || NAV_SECTIONS[i - 1].group !== s.group);
           return (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className={isActive ? 'is-active' : ''}
-              onMouseEnter={() => setHovId(s.id)}
-              onMouseLeave={() => setHovId(null)}
-              style={{
-                color: isActive ? '#fff' : (isHov ? '#fff' : 'rgba(255,255,255,0.62)'),
-                background: isHov && !isActive ? 'rgba(255,255,255,0.09)' : 'transparent',
-              }}
-            >
-              {s.label}
-            </a>
+            <React.Fragment key={s.id}>
+              {groupStart && (
+                <span style={{
+                  display: 'flex', alignItems: 'center', paddingLeft: 14, paddingRight: 6,
+                  borderLeft: '1px solid rgba(255,255,255,0.15)',
+                  color: 'rgba(255,255,255,0.32)', fontSize: 9,
+                  letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
+                }}>{s.group}</span>
+              )}
+              <a
+                href={`#${s.id}`}
+                className={isActive ? 'is-active' : ''}
+                onMouseEnter={() => setHovId(s.id)}
+                onMouseLeave={() => setHovId(null)}
+                style={{
+                  color: isActive ? '#fff' : (isHov ? '#fff' : 'rgba(255,255,255,0.62)'),
+                  background: isHov && !isActive ? 'rgba(255,255,255,0.09)' : 'transparent',
+                  paddingLeft: s.group ? 10 : 14,
+                  paddingRight: s.group ? 10 : 14,
+                }}
+              >
+                {s.label}
+              </a>
+            </React.Fragment>
           );
         })}
       </div>
