@@ -34,7 +34,6 @@ function App() {
 
   return (
     <>
-      <SqsHeader />
       <Hero />
       <MicrositeAnchorNav sections={SECTIONS} activeId={activeId} />
       <Letters />
@@ -48,7 +47,6 @@ function App() {
       <Financials />
       <LookingAhead />
       <People />
-      <SqsFooter />
     </>
   );
 }
