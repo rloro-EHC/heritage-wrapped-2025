@@ -1,5 +1,19 @@
 // chrome.jsx — Squarespace-style site chrome (header, anchor nav, footer)
 
+const NAV_SECTIONS = [
+  { id: "letters",      label: "Letters" },
+  { id: "numbers",      label: "By the Numbers" },
+  { id: "moments",      label: "Top Moments" },
+  { id: "grants",       label: "Grants" },
+  { id: "fire",         label: "FIRE" },
+  { id: "ecamp",        label: "ECAMP" },
+  { id: "kpis",         label: "Strategic Progress" },
+  { id: "partnerships", label: "Partnerships" },
+  { id: "financials",   label: "Financials" },
+  { id: "ahead",        label: "Looking Ahead" },
+  { id: "people",       label: "People" },
+];
+
 function SqsHeader() {
   return (
     <>
@@ -27,20 +41,48 @@ function SqsHeader() {
   );
 }
 
-function MicrositeAnchorNav({ sections, activeId }) {
+function MicrositeAnchorNav() {
+  const [activeId, setActiveId] = React.useState(null);
+  const [hovId, setHovId] = React.useState(null);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      const scrollY = window.scrollY + 64;
+      let current = null;
+      for (const s of NAV_SECTIONS) {
+        const el = document.getElementById(s.id);
+        if (el && el.offsetTop <= scrollY) current = s.id;
+      }
+      setActiveId(current);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <div className="microsite-anchor-nav">
       <div className="microsite-anchor-inner">
-        <span className="label">Heritage Wrapped 2025 →</span>
-        {sections.map(s => (
-          <a
-            key={s.id}
-            href={`#${s.id}`}
-            className={activeId === s.id ? "is-active" : ""}
-          >
-            {s.label}
-          </a>
-        ))}
+        <a href="#top" className="hw-logo">Heritage Wrapped 2025</a>
+        {NAV_SECTIONS.map(s => {
+          const isActive = activeId === s.id;
+          const isHov    = hovId === s.id;
+          return (
+            <a
+              key={s.id}
+              href={`#${s.id}`}
+              className={isActive ? 'is-active' : ''}
+              onMouseEnter={() => setHovId(s.id)}
+              onMouseLeave={() => setHovId(null)}
+              style={{
+                color: isActive ? '#fff' : (isHov ? '#fff' : 'rgba(255,255,255,0.62)'),
+                background: isHov && !isActive ? 'rgba(255,255,255,0.09)' : 'transparent',
+              }}
+            >
+              {s.label}
+            </a>
+          );
+        })}
       </div>
     </div>
   );
