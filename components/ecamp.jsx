@@ -1,7 +1,7 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
 const ASSET_BASE = "https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/";
-const ASSET_TOKEN = "?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645";
+const ASSET_TOKEN = "?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946";
 const a = (file) => ASSET_BASE + encodeURIComponent(file) + ASSET_TOKEN;
 
 const THEME_COLORS = {
@@ -129,13 +129,13 @@ function EcampSection() {
           {/* Walking Tours */}
           <div style={{background: 'var(--paper)', border: '1px solid var(--rule)', padding: 28, borderRadius: 4}}>
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">Heritage Walking Tours</span>
+              <span className="stat-lbl">Curiosity Walking Tours</span>
               <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>SUMMER 2025</span>
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/August%207%20Labour%20Tour%20strike%202.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
-                alt="Heritage Curiosity Tours — Labour history walking tour, August 2025"
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/August%207%20Labour%20Tour%20strike%202.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
+                alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
               <div>
