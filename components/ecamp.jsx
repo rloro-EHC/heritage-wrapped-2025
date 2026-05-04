@@ -93,7 +93,7 @@ function EcampSection() {
       <div style={{marginTop: 64}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, flexWrap: 'wrap', gap: 16}}>
           <div>
-            <span className="eyebrow eyebrow-ink">03.2 — Summer Programming</span>
+            <span className="eyebrow eyebrow-ink">04.2 — Summer Programming</span>
             <h3 style={{marginTop: 8}}>Busiest season to date.</h3>
           </div>
           <div className="mono" style={{fontSize: 12, color: 'var(--ink-mute)', letterSpacing: '0.08em'}}>
@@ -203,7 +203,7 @@ function EcampSection() {
 
       {/* Labour stories list */}
       <div style={{marginTop: 80}}>
-        <span className="eyebrow eyebrow-ink">03.1 — Labour Stories Published</span>
+        <span className="eyebrow eyebrow-ink">04.1 — Labour Stories Published</span>
         <h3 style={{marginTop: 12, marginBottom: 32}}>17 stories. 9 centre women's labour. All published in 2025.</h3>
 
         <div style={{display: 'grid', gridTemplateColumns: '1fr 380px', gap: 48}} className="stories-grid">
