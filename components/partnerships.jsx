@@ -7,7 +7,7 @@ const STRATEGIC_PARTNERS = [
   { name: "Edmonton Public Library", role: "Expanded programming partnership" },
   { name: "Explore Edmonton", role: "Tourism & community engagement collaboration" },
   { name: "Royal Alberta Museum", role: "Programming partnership" },
-  { name: "National Trust for Canada", role: "Black Heritage Network · Indigenous Heritage Circle" },
+  { name: "National Trust for Canada", role: "Black Heritage Caucus · Indigenous Heritage Circle" },
   { name: "Heritage Alberta Network", role: "Provincial heritage sector capacity" },
   { name: "Africa Centre · Edmonton Community Foundation · City of Edmonton", role: "Delivery partners — Black History Month Initiatives Fund" },
 ];
