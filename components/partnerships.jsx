@@ -1,7 +1,6 @@
 // partnerships.jsx — Part 06: Partnerships & Collaborations
 
-const ASSET_T = "?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946";
-const ASSET   = (f) => `https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/${encodeURIComponent(f)}${ASSET_T}`;
+const ASSET = (f) => "assets/" + f;
 
 const CHAS_GRANTS = [
   { org: "Shawn Tse / FascinAsian Film Fest", project: "Event Promotion", award: 5000 },
@@ -100,32 +99,9 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.1 — Black History Month Initiatives Fund */}
+      {/* 06.1 — FIRE Spotlight Speaker Series */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.1 — Black History Month Initiatives Fund</span>
-        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community-led celebration and programming</h3>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhm-grid">
-          <Img
-            src={ASSET("Black History Month Launch 2025.JPG")}
-            caption="Student performs during the Launch Event for Black History Month 2025"
-          />
-          <div>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              The Black History Month Initiatives Fund supports community-led programming, events, and celebrations that honour Black histories, cultures, and contributions across Edmonton. In 2025, EHC delivered the fund in partnership with the Africa Centre, Edmonton Community Foundation, and the City of Edmonton.
-            </p>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              The 2025 Black History Month Launch Event brought together Edmonton's Black communities in celebration and cultural exchange — featuring live performances, community dialogue, and programming that affirmed the richness and diversity of Black heritage in the city.
-            </p>
-            <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)' }}>
-              Funded initiatives spanned community events, arts programming, and historical research — supporting organizations and practitioners in sharing Black histories on their own terms, and in spaces that belong to their communities.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* 06.2 — FIRE Spotlight Speaker Series */}
-      <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.2 — FIRE Spotlight Speaker Series</span>
+        <span className="eyebrow eyebrow-ink">06.1 — FIRE Spotlight Speaker Series</span>
         <h3 style={{ marginTop: 12, marginBottom: 8 }}>Indigenous-led knowledge sharing</h3>
         <p className="mono" style={{ fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--prairie)', marginBottom: 32 }}>
           Place-based learning · 4 gatherings in 2025
@@ -164,7 +140,7 @@ function Partnerships() {
 
       {/* 06.3 — Iskwew Kâ-mikak */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.3 — Iskwew Kâ-mikak</span>
+        <span className="eyebrow eyebrow-ink">06.2 — Iskwew Kâ-mikak</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Indigenous women-led ceremonial space</h3>
         <div style={{ maxWidth: '72ch' }}>
           <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
@@ -188,7 +164,7 @@ function Partnerships() {
 
       {/* 06.4 — Black Heritage Caucus */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.4 — Black Heritage Caucus</span>
+        <span className="eyebrow eyebrow-ink">06.3 — Black Heritage Caucus</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Connecting stories across the country</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhc-grid">
           <Img
@@ -220,7 +196,7 @@ function Partnerships() {
 
       {/* 06.5 — Roots & Routes */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.5 — Roots & Routes</span>
+        <span className="eyebrow eyebrow-ink">06.4 — Roots & Routes</span>
         <h3 style={{ marginTop: 12, marginBottom: 4 }}>Member Engagement</h3>
         <p style={{ fontSize: 16, color: 'var(--prairie)', fontStyle: 'italic', marginBottom: 32, marginTop: 8 }}>Growing demand for sector connection</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="roots-grid">
@@ -264,7 +240,7 @@ function Partnerships() {
 
       {/* 06.6 — CHAS */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.6 — CHAS</span>
+        <span className="eyebrow eyebrow-ink">06.5 — CHAS</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community Heritage Activation Support</h3>
 
         <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: 40 }}>
@@ -333,10 +309,68 @@ function Partnerships() {
         </div>
       </div>
 
-      {/* 06.7 — Strategic Partners + Collaborators */}
+      {/* 06.6 — Strategic Partners & Collaborators */}
       <div>
-        <span className="eyebrow eyebrow-ink">06.7 — Strategic Partners & Collaborators</span>
+        <span className="eyebrow eyebrow-ink">06.6 — Strategic Partners & Collaborators</span>
         <h3 style={{ marginTop: 12, marginBottom: 32, maxWidth: '24ch' }}>Partnerships as infrastructure.</h3>
+
+        <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20, maxWidth: '72ch' }}>
+          Across both member engagement and community investment, EHC's partnership work in 2025 demonstrates that heritage is not created in isolation. It is built through relationships — between organizations, practitioners, and communities.
+        </p>
+        <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 56, maxWidth: '72ch' }}>
+          By investing in both connection and activation across all of our programming, EHC strengthens the conditions for heritage to thrive across Edmonton: collaborative, community-driven, and deeply connected to place.
+        </p>
+
+        {/* BHM Initiatives Fund subsection */}
+        <div style={{ marginBottom: 64, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 6, padding: '48px 48px 40px' }}>
+          <p className="mono" style={{ fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--prairie)', marginBottom: 12 }}>Partnerships in Action</p>
+          <h4 style={{ fontSize: 22, fontWeight: 600, lineHeight: 1.2, marginBottom: 32, color: 'var(--ink)' }}>Black History Month Initiatives Fund</h4>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 0, marginBottom: 40, border: '1px solid var(--rule)', borderRadius: 4, overflow: 'hidden' }} className="bhm-stats">
+            {[
+              ["28", "Community-led initiatives funded"],
+              ["$80,000", "Total investment"],
+              ["57", "Applications received"],
+              ["5,000+", "Participants engaged"],
+            ].map(([n, l], i) => (
+              <div key={i} style={{
+                padding: '24px 20px',
+                borderRight: i < 3 ? '1px solid var(--rule)' : 'none',
+                background: 'var(--cream)',
+              }}>
+                <div style={{ fontFamily: 'var(--display)', fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 600, lineHeight: 1, letterSpacing: '-0.02em', color: 'var(--ink)', marginBottom: 8 }}>{n}</div>
+                <div style={{ fontSize: 12, color: 'var(--ink-soft)', lineHeight: 1.4 }}>{l}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 48, alignItems: 'start' }} className="bhm-grid">
+            <Img
+              src={ASSET("Black History Month Launch 2025.JPG")}
+              caption="Student performs during the Launch Event for Black History Month 2025"
+            />
+            <div>
+              <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
+                The Black History Month (BHM) Initiatives Fund represents one of EHC's most impactful partnership models, bringing together community leadership, institutional support, and coordinated investment to deliver city-wide heritage outcomes.
+              </p>
+              <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
+                Delivered in collaboration with the Africa Centre, Edmonton Community Foundation, and the City of Edmonton, the fund supported 28 community-led initiatives through a total investment of $80,000, selected from 57 applications. These initiatives collectively engaged 5,000+ participants through in-person, virtual, and hybrid programming formats.
+              </p>
+              <p style={{ fontSize: 15, lineHeight: 1.6, color: 'var(--ink-soft)', marginBottom: 12 }}>
+                More than a funding program, the BHM Initiatives Fund operates as distributed heritage infrastructure. Funded projects included:
+              </p>
+              <ul style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--ink-soft)', marginBottom: 20, paddingLeft: 20 }}>
+                <li style={{ marginBottom: 6 }}>Cultural celebrations and festivals highlighting African, Caribbean, and Black Canadian identities</li>
+                <li style={{ marginBottom: 6 }}>Educational workshops and conferences advancing public understanding of Black histories</li>
+                <li style={{ marginBottom: 6 }}>Storytelling initiatives, exhibitions, and digital platforms preserving and amplifying Black voices</li>
+                <li>Youth-focused programming fostering intergenerational learning and leadership</li>
+              </ul>
+              <p style={{ fontSize: 15, lineHeight: 1.65, color: 'var(--ink-soft)', margin: 0 }}>
+                Key themes emerging from funded initiatives included cultural preservation, Black excellence, community healing, and intergenerational dialogue — reinforcing heritage as both a site of celebration and a tool for equity and belonging.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }} className="partners-grid">
           <div>
@@ -380,6 +414,10 @@ function Partnerships() {
           .bhm-grid, .fire-spotlight-grid, .bhc-grid, .roots-grid { grid-template-columns: 1fr !important; }
           .spotlight-events { grid-template-columns: 1fr !important; }
           .partners-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .bhm-stats { grid-template-columns: repeat(2, 1fr) !important; }
+        }
+        @media (max-width: 540px) {
+          .bhm-stats { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </section>
