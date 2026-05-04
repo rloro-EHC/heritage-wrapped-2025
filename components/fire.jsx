@@ -125,99 +125,12 @@ function FireSection() {
 
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 32}} className="fire-grid">
           {run === "spring" ? (
-            <div style={{alignSelf: 'start', position: 'sticky', top: 140, padding: '32px 16px', display: 'flex', flexDirection: 'column', gap: 16}}>
-              {/* Laptop mockup of courses.apihtawikosisan.com (Chelsea Vowel) */}
-              <div style={{position: 'relative', width: '100%', maxWidth: 480, margin: '0 auto'}}>
-                {/* Laptop lid / screen bezel */}
-                <div style={{
-                  background: '#1a1a1a',
-                  borderRadius: '10px 10px 4px 4px',
-                  padding: '14px 14px 10px',
-                  boxShadow: '0 12px 30px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)',
-                  border: '1px solid #2a2a2a',
-                }}>
-                  {/* Top notch / camera dot */}
-                  <div style={{display: 'flex', justifyContent: 'center', marginBottom: 6}}>
-                    <div style={{width: 4, height: 4, borderRadius: '50%', background: '#3a3a3a'}} />
-                  </div>
-                  {/* Screen */}
-                  <div style={{
-                    background: '#ffffff',
-                    aspectRatio: '16/10',
-                    borderRadius: 2,
-                    overflow: 'hidden',
-                    fontFamily: 'system-ui, -apple-system, sans-serif',
-                    color: '#222',
-                    display: 'flex',
-                    flexDirection: 'column',
-                  }}>
-                    {/* Browser chrome */}
-                    <div style={{background: '#ececec', padding: '6px 8px', display: 'flex', alignItems: 'center', gap: 6, borderBottom: '1px solid #ddd'}}>
-                      <div style={{display: 'flex', gap: 4}}>
-                        <div style={{width: 8, height: 8, borderRadius: '50%', background: '#ff5f57'}} />
-                        <div style={{width: 8, height: 8, borderRadius: '50%', background: '#febc2e'}} />
-                        <div style={{width: 8, height: 8, borderRadius: '50%', background: '#28c840'}} />
-                      </div>
-                      <div style={{flex: 1, background: '#fff', borderRadius: 3, padding: '2px 8px', fontSize: 8, color: '#666', textAlign: 'center', border: '1px solid #ddd'}}>
-                        courses.apihtawikosisan.com
-                      </div>
-                    </div>
-                    {/* Site header */}
-                    <div style={{padding: '8px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#fff', borderBottom: '1px solid #eee'}}>
-                      <div style={{display: 'flex', alignItems: 'center', gap: 6}}>
-                        <div style={{width: 18, height: 18, background: '#7a3b2e', borderRadius: 3, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 9, fontWeight: 700}}>iL</div>
-                        <div style={{fontSize: 9, fontWeight: 600, color: '#222'}}>Indigenous Learns</div>
-                      </div>
-                      <div style={{display: 'flex', gap: 10, fontSize: 8, color: '#444'}}>
-                        <span>Courses</span>
-                        <span>Home</span>
-                      </div>
-                    </div>
-                    {/* Hero banner — earthy gradient evoking the Chelsea Vowel banner */}
-                    <div style={{
-                      flex: 1,
-                      background: 'linear-gradient(135deg, #6b4226 0%, #a26b3d 45%, #d4a574 100%)',
-                      position: 'relative',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'flex-end',
-                      padding: '8px 12px 10px',
-                      color: '#fff',
-                    }}>
-                      {/* Subtle decorative beadwork-style dots */}
-                      <div style={{position: 'absolute', top: 8, right: 12, display: 'flex', gap: 3}}>
-                        {[...Array(6)].map((_, i) => (
-                          <div key={i} style={{width: 4, height: 4, borderRadius: '50%', background: 'rgba(255,255,255,0.4)'}} />
-                        ))}
-                      </div>
-                      <div style={{fontSize: 7, letterSpacing: '0.15em', textTransform: 'uppercase', opacity: 0.85, marginBottom: 2}}>Welcome to Indigenous Learns</div>
-                      <div style={{fontSize: 13, fontWeight: 700, letterSpacing: '-0.01em', lineHeight: 1.1, marginBottom: 4}}>mâci-nêhiyawêtân</div>
-                      <div style={{fontSize: 8, opacity: 0.9, marginBottom: 6, fontStyle: 'italic'}}>Let's start speaking Cree!</div>
-                      <div style={{display: 'inline-block', alignSelf: 'flex-start', background: '#fff', color: '#6b4226', fontSize: 7, fontWeight: 700, padding: '3px 8px', borderRadius: 2, letterSpacing: '0.05em', textTransform: 'uppercase'}}>
-                        Start the course →
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Laptop base */}
-                <div style={{
-                  background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)',
-                  height: 8,
-                  borderRadius: '0 0 14px 14px',
-                  margin: '0 -8px',
-                  boxShadow: '0 4px 8px rgba(0,0,0,0.3)',
-                  position: 'relative',
-                }}>
-                  <div style={{
-                    position: 'absolute',
-                    left: '50%', top: 0,
-                    transform: 'translateX(-50%)',
-                    width: 60, height: 3,
-                    background: '#0a0a0a',
-                    borderRadius: '0 0 6px 6px',
-                  }} />
-                </div>
-              </div>
+            <div style={{alignSelf: 'start', position: 'sticky', top: 140, display: 'flex', flexDirection: 'column', gap: 12}}>
+              <img
+                src="https://lh3.googleusercontent.com/sitesv/AA5AbUCybRV57FJTbTO60WKrufdyyJajU_0K2sWmuzT75zXx3zntjBxTNgisAmoWzzsCk0LCeJxJNwUU2iw1KW1KZ3FfYMS15dVwtRvq_WgVTLzw6WJLKCmdbaIEBD5Y6Ykqwy5m_Yzx8pTf9UWXBpHqO5TmfP5902jAYF_MJU9wzEJN3snpRuZNWgkwrnCfJKiqCc1QpaS8Sm517FRt2AWX9D79MYBd-XLSSx1Jagg=w1280"
+                alt="Tipi Confessions Speaker Series — Ashleigh Cardinal"
+                style={{width: '100%', borderRadius: 4, display: 'block'}}
+              />
               <div className="mono" style={{
                 fontSize: 11,
                 letterSpacing: '0.12em',
@@ -225,10 +138,9 @@ function FireSection() {
                 color: 'rgba(244,237,221,0.65)',
                 textAlign: 'center',
                 lineHeight: 1.5,
-                marginTop: 8,
               }}>
-                tâpwê kinitawêyihtênaw — Chelsea Vowel<br/>
-                <span style={{color: 'rgba(244,237,221,0.45)'}}>courses.apihtawikosisan.com</span>
+                Tipi Confessions · Speaker Series<br/>
+                <a href="https://www.tipiconfessions.com/" target="_blank" rel="noopener noreferrer" style={{color: 'rgba(244,237,221,0.45)', textDecoration: 'none'}}>tipiconfessions.com</a>
               </div>
             </div>
           ) : (
