@@ -48,11 +48,11 @@ const HERO_ROTATIONS = [
   },
 ];
 
+const TRACK_ACCENTS  = ['#517fa3', '#3D6184', '#4a7a5c', '#7a3b2e', '#2d5a6b'];
+const TRACK_BG_HOV   = ['rgba(81,127,163,0.05)','rgba(61,97,132,0.05)','rgba(74,122,92,0.05)','rgba(122,59,46,0.05)','rgba(45,90,107,0.05)'];
+const TRACK_BG_OPEN  = ['rgba(81,127,163,0.09)','rgba(61,97,132,0.09)','rgba(74,122,92,0.09)','rgba(122,59,46,0.09)','rgba(45,90,107,0.09)'];
+
 function Hero() {
-  const [open, setOpen] = React.useState(0); // first track expanded by default
-
-  const toggle = (i) => setOpen((cur) => (cur === i ? -1 : i));
-
   return (
     <section className="hero" id="top">
       <div className="hero-eyebrow">
@@ -72,8 +72,18 @@ function Hero() {
         A year of connection, impact, and growth — your 2025 in grants, programming,
         stories, and the Edmontonians whose work made it possible.
       </p>
+    </section>
+  );
+}
 
-      <div className="hero-tracks">
+function HeroTracks() {
+  const [open, setOpen] = React.useState(-1);
+  const [hov, setHov]   = React.useState(null);
+  const toggle = (i) => setOpen(cur => cur === i ? -1 : i);
+
+  return (
+    <div className="hero" style={{paddingTop: 0, paddingBottom: 80}}>
+      <div style={{borderTop: '1px solid var(--rule)'}}>
         <div className="hero-tracks-head">
           <span className="mono" style={{fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--ink-mute)'}}>2025 · Top Five Tracks</span>
           <span className="mono" style={{fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-mute)'}}>Click any track to expand</span>
@@ -81,46 +91,92 @@ function Hero() {
         <ol className="hero-tracks-list">
           {HERO_ROTATIONS.map((r, i) => {
             const isOpen = i === open;
+            const isHov  = i === hov;
+            const accent = TRACK_ACCENTS[i];
+            const bg     = isOpen ? TRACK_BG_OPEN[i] : (isHov ? TRACK_BG_HOV[i] : 'transparent');
             return (
               <li key={i}
-                  className={"hero-track" + (isOpen ? " active" : "")}
                   onClick={() => toggle(i)}
-                  style={{display: 'block', padding: 0}}>
+                  onMouseEnter={() => setHov(i)}
+                  onMouseLeave={() => setHov(null)}
+                  style={{
+                    display: 'block',
+                    cursor: 'pointer',
+                    borderBottom: '1px solid var(--rule-soft)',
+                    borderLeft: `4px solid ${(isOpen || isHov) ? accent : 'transparent'}`,
+                    background: bg,
+                    transition: 'background 0.18s, border-left-color 0.18s',
+                  }}>
                 <div style={{
                   display: 'grid',
                   gridTemplateColumns: '56px 1fr auto 24px',
                   gap: 24,
                   alignItems: 'center',
-                  padding: isOpen ? '24px 16px' : '24px 0',
+                  padding: (isOpen || isHov) ? '24px 20px' : '24px 4px',
+                  transition: 'padding 0.18s ease',
                 }}>
-                  <div className="track-num">{String(i + 1).padStart(2, "0")}</div>
-                  <div className="track-body">
-                    <div className="track-label">{r.lbl.replace(/^Track \d+ · /, '')}</div>
-                    <div className="track-cap">{r.cap}</div>
+                  <div style={{
+                    fontFamily: 'var(--mono)',
+                    fontSize: 13,
+                    letterSpacing: '0.12em',
+                    color: (isOpen || isHov) ? accent : 'var(--ink-mute)',
+                    transition: 'color 0.18s',
+                  }}>{String(i + 1).padStart(2, '0')}</div>
+
+                  <div>
+                    <div style={{
+                      fontFamily: 'var(--display)',
+                      fontSize: 'clamp(20px, 2.2vw, 28px)',
+                      fontWeight: 600,
+                      lineHeight: 1.15,
+                      letterSpacing: '-0.01em',
+                      color: isOpen ? accent : (isHov ? 'var(--ink)' : 'var(--ink)'),
+                      transition: 'color 0.18s',
+                      marginBottom: 4,
+                    }}>{r.lbl.replace(/^Track \d+ · /, '')}</div>
+                    <div style={{fontSize: 14, lineHeight: 1.45, color: 'var(--ink-soft)', maxWidth: '60ch'}}>
+                      {r.cap}
+                    </div>
                   </div>
-                  <div className="track-stat">{r.stat}</div>
-                  <div className="track-toggle" aria-hidden="true" style={{
+
+                  <div style={{
+                    fontFamily: 'var(--display)',
+                    fontSize: 'clamp(36px, 4.5vw, 64px)',
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    letterSpacing: '-0.02em',
+                    color: (isOpen || isHov) ? accent : 'var(--ink)',
+                    textAlign: 'right',
+                    whiteSpace: 'nowrap',
+                    transition: 'color 0.18s',
+                  }}>{r.stat}</div>
+
+                  <div style={{
                     fontFamily: 'var(--mono)',
                     fontSize: 18,
-                    color: 'var(--ink-mute)',
+                    color: (isOpen || isHov) ? accent : 'var(--ink-mute)',
                     width: 24,
                     textAlign: 'center',
                     transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
-                    transition: 'transform 0.2s ease',
+                    transition: 'transform 0.2s ease, color 0.18s',
                     lineHeight: 1,
                   }}>+</div>
                 </div>
+
                 {isOpen && (
-                  <div className="track-narrative" style={{
-                    padding: '0 16px 32px calc(56px + 24px + 16px)',
+                  <div style={{
+                    padding: '0 20px 32px calc(56px + 24px + 4px)',
                     fontSize: 16,
                     lineHeight: 1.65,
                     color: 'var(--ink-soft)',
                     maxWidth: '64ch',
                     cursor: 'default',
-                  }} onClick={(e) => e.stopPropagation()}>
+                    borderLeft: `3px solid ${accent}`,
+                    marginLeft: 4,
+                    marginBottom: 0,
+                  }} onClick={e => e.stopPropagation()}>
                     {r.body.map((p, j) => (
-                      <p key={j} style={{margin: j === 0 ? '0 0 12px 0' : '0 0 12px 0'}}>{p}</p>
+                      <p key={j} style={{margin: '0 0 12px'}}>{p}</p>
                     ))}
                   </div>
                 )}
@@ -129,29 +185,15 @@ function Hero() {
           })}
         </ol>
       </div>
-
-      <div className="scroll-hint">Scroll · The year in five parts</div>
+      <div className="scroll-hint" style={{marginTop: 48}}>Scroll · The year in five parts</div>
 
       <style>{`
         @media (max-width: 720px) {
-          .track-narrative {
-            padding-left: 16px !important;
-          }
-          .hero-track > div:first-child {
-            grid-template-columns: 40px 1fr auto !important;
-            gap: 12px !important;
-          }
-          .hero-track .track-stat {
-            grid-column: 2 / span 2 !important;
-            text-align: left !important;
-          }
-          .hero-track .track-toggle {
-            grid-column: 3 !important;
-          }
+          .hero-tracks-head { flex-wrap: wrap; gap: 8px; }
         }
       `}</style>
-    </section>
+    </div>
   );
 }
 
-Object.assign(window, { Hero });
+Object.assign(window, { Hero, HeroTracks });
