@@ -115,13 +115,13 @@ function ByTheNumbers() {
       </div>
 
       {/* Reach */}
-      <div>
+      <div style={{ marginBottom: 0 }}>
         <span className="eyebrow eyebrow-ink">01.3 — Community Reach & Engagement</span>
-        <h3 style={{ marginTop: 12, marginBottom: 32 }}>
+        <h3 style={{ marginTop: 12, marginBottom: 24 }}>
           From walking tours to podcasts — heritage met Edmontonians where they live.
         </h3>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, alignItems: 'stretch' }} className="reach-grid">
-          <figure style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start' }} className="reach-grid">
+          <figure style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             <div style={{ aspectRatio: '4 / 3', position: 'relative', overflow: 'hidden', background: 'var(--paper-warm)' }}>
               <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.kDaysExhibit) || "assets/k-days-exhibit.jpg"} alt="K-Days heritage exhibit, summer 2025 — Edmonton City as Museum Project booth with visitors viewing storyboards" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
@@ -130,17 +130,17 @@ function ByTheNumbers() {
             </figcaption>
           </figure>
           <div className="stat-grid" style={{ gridTemplateColumns: '1fr', alignSelf: 'stretch' }}>
-            <div className="cell">
+            <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">K-Days & Walking Tours</span>
               <div className="stat-num sm">5,000+</div>
               <div className="stat-foot">Edmontonians engaged in person</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">Indigenous Spotlight Series</span>
               <div className="stat-num sm">130+</div>
               <div className="stat-foot">Speaker series participants</div>
             </div>
-            <div className="cell">
+            <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">Operational Grant orgs</span>
               <div className="stat-num sm">278,576</div>
               <div className="stat-foot">Reached through funded organizations</div>
