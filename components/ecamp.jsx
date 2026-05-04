@@ -74,6 +74,94 @@ function EcampSection() {
         </div>
       </div>
 
+      {/* Labour stories grid — 04.1 */}
+      <div style={{marginTop: 64}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 16, marginBottom: 12}}>
+          <span className="eyebrow eyebrow-ink">04.1 — Labour Stories Published</span>
+          <a href="https://citymuseumedmonton.ca" target="_blank" rel="noopener noreferrer"
+            className="mono" style={{fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--prairie)', textDecoration: 'none'}}>
+            citymuseumedmonton.ca ↗
+          </a>
+        </div>
+        <h3 style={{marginTop: 0, marginBottom: 8}}>17 stories. 9 centre women's labour. All published in 2025.</h3>
+        <p style={{fontSize: 15, color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: 40, maxWidth: '72ch'}}>
+          Women's work & visibility · immigrant labour & advocacy · bodies & labour · community building as work.
+        </p>
+
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2}} className="labour-grid">
+          {LABOUR_STORIES.map((s, i) => {
+            const tc = THEME_COLORS[s.theme] || { bg: 'var(--prairie)', text: '#fff' };
+            return (
+              <a
+                key={i}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="labour-card"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  background: 'var(--paper)',
+                  overflow: 'hidden',
+                }}
+              >
+                <div style={{
+                  position: 'relative',
+                  background: tc.bg,
+                  minHeight: s.img ? 0 : 120,
+                  flexShrink: 0,
+                }}>
+                  {s.img && (
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      style={{width: '100%', height: 'auto', display: 'block'}}
+                      onError={e => { e.target.parentNode.style.minHeight = '120px'; e.target.style.display = 'none'; }}
+                    />
+                  )}
+                  <span style={{
+                    position: 'absolute', bottom: 10, left: 10,
+                    background: 'rgba(0,0,0,0.55)', color: '#fff',
+                    fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase',
+                    padding: '4px 8px', borderRadius: 2, backdropFilter: 'blur(4px)',
+                  }}>{s.theme}</span>
+                  <span style={{
+                    position: 'absolute', top: 10, right: 10,
+                    fontFamily: 'var(--mono)', fontSize: 10, color: 'rgba(255,255,255,0.7)', letterSpacing: '0.08em',
+                  }}>{String(i + 1).padStart(2, '0')}</span>
+                </div>
+                <div style={{
+                  padding: '16px 18px 18px', display: 'flex', flexDirection: 'column', gap: 6, flex: 1,
+                  borderBottom: '1px solid var(--rule-soft)', borderLeft: `3px solid ${tc.bg}`,
+                }}>
+                  <p style={{fontSize: 14, fontWeight: 600, lineHeight: 1.35, color: 'var(--ink)', margin: 0}}>{s.title}</p>
+                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: 4}}>
+                    <span style={{fontSize: 12, color: 'var(--ink-mute)', fontStyle: s.author ? 'italic' : 'normal'}}>
+                      {s.author ? `by ${s.author}` : ''}
+                    </span>
+                    <span className="mono" style={{fontSize: 11, color: 'var(--ink-mute)'}}>{s.date} ↗</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+
+        <style>{`
+          .labour-card { transition: transform 0.15s, box-shadow 0.15s; }
+          .labour-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 1; position: relative; }
+          @media (max-width: 900px) {
+            .labour-grid { grid-template-columns: repeat(2, 1fr) !important; }
+            .ecamp-pull { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+          @media (max-width: 560px) {
+            .labour-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
+      </div>
+
       {/* Clock In Podcast — featured */}
       <div className="stat-grid" style={{gridTemplateColumns: '1.6fr 1fr', marginBottom: 24}}>
         <div className="cell tone-prairie">
@@ -240,122 +328,6 @@ function EcampSection() {
         `}</style>
       </div>
 
-      {/* Labour stories grid */}
-      <div style={{marginTop: 80}}>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 16, marginBottom: 12}}>
-          <span className="eyebrow eyebrow-ink">04.1 — Labour Stories Published</span>
-          <a href="https://citymuseumedmonton.ca" target="_blank" rel="noopener noreferrer"
-            className="mono" style={{fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--prairie)', textDecoration: 'none'}}>
-            citymuseumedmonton.ca ↗
-          </a>
-        </div>
-        <h3 style={{marginTop: 0, marginBottom: 8}}>17 stories. 9 centre women's labour. All published in 2025.</h3>
-        <p style={{fontSize: 15, color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: 40, maxWidth: '72ch'}}>
-          Women's work & visibility · immigrant labour & advocacy · bodies & labour · community building as work.
-        </p>
-
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2}} className="labour-grid">
-          {LABOUR_STORIES.map((s, i) => {
-            const tc = THEME_COLORS[s.theme] || { bg: 'var(--prairie)', text: '#fff' };
-            return (
-              <a
-                key={i}
-                href={s.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="labour-card"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  background: 'var(--paper)',
-                  overflow: 'hidden',
-                }}
-              >
-                {/* Image area */}
-                <div style={{
-                  position: 'relative',
-                  background: tc.bg,
-                  minHeight: s.img ? 0 : 120,
-                  flexShrink: 0,
-                }}>
-                  {s.img && (
-                    <img
-                      src={s.img}
-                      alt={s.title}
-                      style={{width: '100%', height: 'auto', display: 'block'}}
-                      onError={e => { e.target.parentNode.style.minHeight = '120px'; e.target.style.display = 'none'; }}
-                    />
-                  )}
-                  {/* Theme badge */}
-                  <span style={{
-                    position: 'absolute',
-                    bottom: 10,
-                    left: 10,
-                    background: 'rgba(0,0,0,0.55)',
-                    color: '#fff',
-                    fontFamily: 'var(--mono)',
-                    fontSize: 9,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    padding: '4px 8px',
-                    borderRadius: 2,
-                    backdropFilter: 'blur(4px)',
-                  }}>{s.theme}</span>
-                  {/* Story number */}
-                  <span style={{
-                    position: 'absolute',
-                    top: 10,
-                    right: 10,
-                    fontFamily: 'var(--mono)',
-                    fontSize: 10,
-                    color: 'rgba(255,255,255,0.7)',
-                    letterSpacing: '0.08em',
-                  }}>{String(i + 1).padStart(2, '0')}</span>
-                </div>
-
-                {/* Card body */}
-                <div style={{
-                  padding: '16px 18px 18px',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 6,
-                  flex: 1,
-                  borderBottom: '1px solid var(--rule-soft)',
-                  borderLeft: `3px solid ${tc.bg}`,
-                }}>
-                  <p style={{
-                    fontSize: 14,
-                    fontWeight: 600,
-                    lineHeight: 1.35,
-                    color: 'var(--ink)',
-                    margin: 0,
-                  }}>{s.title}</p>
-                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: 4}}>
-                    <span style={{fontSize: 12, color: 'var(--ink-mute)', fontStyle: s.author ? 'italic' : 'normal'}}>
-                      {s.author ? `by ${s.author}` : ''}
-                    </span>
-                    <span className="mono" style={{fontSize: 11, color: 'var(--ink-mute)'}}>{s.date} ↗</span>
-                  </div>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-
-        <style>{`
-          .labour-card { transition: transform 0.15s, box-shadow 0.15s; }
-          .labour-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 1; position: relative; }
-          @media (max-width: 900px) {
-            .labour-grid { grid-template-columns: repeat(2, 1fr) !important; }
-            .ecamp-pull { grid-template-columns: 1fr !important; gap: 32px !important; }
-          }
-          @media (max-width: 560px) {
-            .labour-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
-      </div>
     </section>
   );
 }
