@@ -126,7 +126,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
 /* ───────── Microsite shell ───────── */
 .microsite-anchor-nav {
   position: sticky;
-  top: 73px;
+  top: 0px;
   z-index: 40;
   background: rgba(244, 237, 221, 0.95);
   backdrop-filter: blur(8px);
