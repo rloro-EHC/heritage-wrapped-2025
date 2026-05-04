@@ -59,10 +59,17 @@ function Hero() {
         <span className="hero-tag">Annual Report 2025</span>
         <span className="hero-meta">Edmonton Heritage Council · Year 7 of Connections & Exchanges</span>
       </div>
-      <h1>
-        Heritage<br />
-        <span className="accent">Wrapped.</span>
-      </h1>
+      <div style={{display: 'flex', alignItems: 'center', gap: 32, flexWrap: 'wrap'}}>
+        <img
+          src="assets/ehc-logo-color.png"
+          alt="Edmonton Heritage Council"
+          style={{height: 120, width: 'auto', display: 'block', flexShrink: 0}}
+        />
+        <h1 style={{margin: 0}}>
+          Heritage<br />
+          <span className="accent">Wrapped.</span>
+        </h1>
+      </div>
       <p className="hero-lede">
         A year of connection, impact, and growth — your 2025 in grants, programming,
         stories, and the Edmontonians whose work made it possible.
