@@ -46,7 +46,7 @@ const KPIS = [
     bullets: [
       "Career Development grantees travelled to Barbados, Taiwan, Halifax, Perth, Ottawa, Inuvik, Toronto, Trinidad",
       "Provincial Indigitization Workshop (in partnership with UBC's Indigitization Program): 17 attendees from 11 communities",
-      "National Trust: Black Heritage Network and Indigenous Heritage Circle",
+      "National Trust: Black Heritage Caucus and Indigenous Heritage Circle",
       "Daliso Mwanza on Black Heritage Caucus national organizing team",
     ],
   },
