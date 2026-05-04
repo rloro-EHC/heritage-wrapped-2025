@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upload Assets → GitHub</title>
+<style>
+  body { font-family: monospace; background: #111; color: #eee; padding: 32px; max-width: 800px; margin: 0 auto; }
+  h1 { font-size: 18px; color: #fff; margin-bottom: 8px; }
+  p { color: #999; font-size: 13px; margin-bottom: 24px; }
+  button { background: #c97a3f; color: white; border: none; padding: 12px 28px; font-size: 14px; font-family: monospace; cursor: pointer; border-radius: 3px; }
+  button:disabled { opacity: 0.4; cursor: default; }
+  #log { margin-top: 24px; font-size: 12px; line-height: 1.8; }
+  .ok  { color: #5c9; }
+  .err { color: #e55; }
+  .skip{ color: #fa0; }
+  .inf { color: #89b; }
+  #progress { margin-top: 16px; height: 6px; background: #333; border-radius: 3px; overflow: hidden; }
+  #bar { height: 100%; width: 0; background: #c97a3f; transition: width 0.2s; }
+  label { display: block; margin-bottom: 8px; font-size: 13px; color: #aaa; }
+  input { width: 100%; background: #222; color: #eee; border: 1px solid #444; padding: 8px; font-family: monospace; font-size: 12px; border-radius: 3px; box-sizing: border-box; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+
+<h1>Upload Claude Design Assets → GitHub</h1>
+<p>Open this file in the same browser you use Claude in. Click Upload — it will fetch each image from Claude Design and push it to GitHub automatically.</p>
+
+<label>GitHub Personal Access Token (needs repo write access)</label>
+<input id="ghToken" placeholder="ghp_..." />
+
+<label>Claude Design Token (paste any claudeusercontent.com image URL — token will be extracted automatically)</label>
+<input id="tokenInput" placeholder="Paste a claudeusercontent.com image URL here, or just the token string after ?t=" />
+
+<button id="btn" onclick="run()">Upload All Images to GitHub</button>
+<div id="progress"><div id="bar"></div></div>
+<div id="log"></div>
+
+<script>
+const GITHUB_TOKEN = document.getElementById("ghToken").value.trim();
+const GITHUB_REPO  = "rloro-EHC/heritage-wrapped-2025";
+const GITHUB_BRANCH = "master";
+const ASSET_BASE = "https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/";
+
+const FILES = [
+  "Making Home.png",
+  "The Company and the Combination.png",
+  "The Grads Take Flight.png",
+  "Hard Times.png",
+  "Laura Lindsay, First Lady of Daytime TV in Alberta from 1955-68.png",
+  "Station of Broken Promises.png",
+  "More Than a Prize Scholar or Bookworm.png",
+  "She Can Move Mountains.png",
+  "Hot Wheelz.png",
+  "Happyland.png",
+  "Big Jim Stone.png",
+  "the Mainframe Computer, and Women's Work.png",
+  "Queen of the Link.png",
+  "Bridging Alberta.png",
+  "Working at Woodwards.png",
+  "More than Half Day.png",
+  "Chinese Hand Laundries.png",
+  "August 7 Labour Tour strike 2.jpg",
+  "Trivia Night September 2025 11.JPG",
+  "Momentary Museum-Senses-223 2.jpg",
+  "Tipi Confessions.png",
+  "Fire Spotlight Series - King Charles III Coronation Medal Ceremony.jpg",
+  "Black Heritage Caucus.jpg",
+  "Black History Month Launch 2025.JPG",
+  "Roots & Routes (Journey of the Horse).JPG",
+];
+
+function log(msg, cls) {
+  const d = document.getElementById("log");
+  d.innerHTML += `<div class="${cls||''}">${msg}</div>`;
+  d.scrollTop = d.scrollHeight;
+}
+
+function setBar(pct) {
+  document.getElementById("bar").style.width = pct + "%";
+}
+
+async function getGitHubSha(path) {
+  const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${path}?ref=${GITHUB_BRANCH}`, {
+    headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json" }
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data.sha;
+}
+
+async function uploadToGitHub(path, base64Content, sha) {
+  const body = { message: `Add asset: ${path.split("/").pop()}`, content: base64Content, branch: GITHUB_BRANCH };
+  if (sha) body.sha = sha;
+  const res = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${path}`, {
+    method: "PUT",
+    headers: { Authorization: `token ${GITHUB_TOKEN}`, Accept: "application/vnd.github.v3+json", "Content-Type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  return res.ok;
+}
+
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result.split(",")[1]);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function run() {
+  const btn = document.getElementById("btn");
+  btn.disabled = true;
+
+  if (!GITHUB_TOKEN) { log("❌ Please enter your GitHub token first.", "err"); btn.disabled = false; return; }
+
+  // Extract token from input
+  let raw = document.getElementById("tokenInput").value.trim();
+  let token = raw;
+  const m = raw.match(/[?&]t=([^&\s]+)/);
+  if (m) token = m[1];
+  if (!token) { log("❌ Please paste a token or image URL first.", "err"); btn.disabled = false; return; }
+
+  const tokenParam = "?t=" + token;
+  log(`Starting upload of ${FILES.length} files…`, "inf");
+
+  let ok = 0, fail = 0;
+  for (let i = 0; i < FILES.length; i++) {
+    const name = FILES[i];
+    const url  = ASSET_BASE + encodeURIComponent(name) + tokenParam;
+    const ghPath = `assets/${name}`;
+    setBar(Math.round((i / FILES.length) * 100));
+
+    try {
+      // Fetch image from Claude Design
+      const res = await fetch(url);
+      if (!res.ok) { log(`⚠ SKIP ${name} — fetch ${res.status}`, "skip"); fail++; continue; }
+      const blob = await res.blob();
+      const b64  = await blobToBase64(blob);
+
+      // Get existing SHA if file already exists
+      const sha = await getGitHubSha(ghPath);
+
+      // Upload to GitHub
+      const pushed = await uploadToGitHub(ghPath, b64, sha);
+      if (pushed) { log(`✓ ${name}`, "ok"); ok++; }
+      else         { log(`✗ ${name} — GitHub upload failed`, "err"); fail++; }
+    } catch (e) {
+      log(`✗ ${name} — ${e.message}`, "err");
+      fail++;
+    }
+    await new Promise(r => setTimeout(r, 200));
+  }
+
+  setBar(100);
+  log(`Done: ${ok} uploaded, ${fail} failed.`, ok === FILES.length ? "ok" : "skip");
+  btn.disabled = false;
+}
+</script>
+</body>
+</html>
