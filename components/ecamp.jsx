@@ -261,17 +261,16 @@ function EcampSection() {
                 {/* Image area */}
                 <div style={{
                   position: 'relative',
-                  aspectRatio: '3 / 2',
                   background: tc.bg,
-                  overflow: 'hidden',
+                  minHeight: s.img ? 0 : 120,
                   flexShrink: 0,
                 }}>
                   {s.img && (
                     <img
                       src={s.img}
                       alt={s.title}
-                      style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
-                      onError={e => { e.target.style.display = 'none'; }}
+                      style={{width: '100%', height: 'auto', display: 'block'}}
+                      onError={e => { e.target.parentNode.style.minHeight = '120px'; e.target.style.display = 'none'; }}
                     />
                   )}
                   {/* Theme badge */}
