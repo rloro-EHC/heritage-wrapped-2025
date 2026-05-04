@@ -127,7 +127,7 @@ function FireSection() {
           {run === "spring" ? (
             <div style={{alignSelf: 'start', position: 'sticky', top: 140, display: 'flex', flexDirection: 'column', gap: 12}}>
               <img
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Tipi%20Confessions.png?t=b9e12b5def6cf273f1f0dd9744fb45f7cca53272183cf987ca6574a6ac491cef.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777930345"
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Tipi%20Confessions.png?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
                 alt="Tipi Confessions Speaker Series — Ashleigh Cardinal"
                 style={{width: '100%', borderRadius: 4, display: 'block'}}
               />
