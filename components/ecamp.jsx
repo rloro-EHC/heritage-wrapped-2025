@@ -1,7 +1,7 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
 const ASSET_BASE = "https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/";
-const ASSET_TOKEN = "?t=b9e12b5def6cf273f1f0dd9744fb45f7cca53272183cf987ca6574a6ac491cef.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777930345";
+const ASSET_TOKEN = "?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645";
 const a = (file) => ASSET_BASE + encodeURIComponent(file) + ASSET_TOKEN;
 
 const THEME_COLORS = {
