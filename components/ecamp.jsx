@@ -133,7 +133,11 @@ function EcampSection() {
               <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>SUMMER 2025</span>
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
-              <div className="img-ph" style={{aspectRatio: '1/1', fontSize: 10, padding: 6, textAlign: 'center'}}>Walking tour photo</div>
+              <img
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/August%207%20Labour%20Tour%20strike%202.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+                alt="Heritage Curiosity Tours — Labour history walking tour, August 2025"
+                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+              />
               <div>
                 <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>365</div>
                 <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4, fontWeight: 500}}>guests · nearly all tours sold out</div>
@@ -169,24 +173,31 @@ function EcampSection() {
             </p>
           </div>
 
-          {/* Churchill Square */}
+          {/* YEG Trivia Night */}
           <div style={{background: 'var(--cream-deep)', border: '1px solid var(--rule)', padding: 28, borderRadius: 4}}>
             <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">Churchill Square Sound Exhibit</span>
-              <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>AUG 19, 2025</span>
+              <span className="stat-lbl">ECAMP YEG Trivia Night</span>
+              <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>2025</span>
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
-              <div className="img-ph" style={{aspectRatio: '1/1', fontSize: 10, padding: 6, textAlign: 'center'}}>Sound exhibit photo</div>
+              <img
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Trivia%20Night%20September%202025%2011.JPG?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
+                alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
+                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+              />
               <div>
-                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>200+</div>
-                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4, fontWeight: 500}}>visitors including Mayor Sohi</div>
+                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>128+</div>
+                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4, fontWeight: 500}}>participants · 4 events · 3+ venues</div>
               </div>
             </div>
-            <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)'}}>
-              ECAMP summer student Emily Horrill created a pop-up sound exhibit in Churchill Square on August 19th, engaging
-              over 200 visitors including Mayor Sohi. The installation exemplifies ECAMP's commitment to bringing heritage into
-              unexpected public spaces — and its investment in early-career practitioners shaping how heritage gets staged in
-              the city.
+            <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', marginBottom: 10}}>
+              YEG Trivia Night brings Edmontonians together to explore the city's history through interactive, social learning.
+              Hosted in informal community venues including Teddy's Pub and in collaboration with Taproot, themed trivia rounds
+              span neighbourhood histories, elections, labour, and cultural heritage — with guest quizmasters including
+              musicians, historians, and community storytellers.
+            </p>
+            <p style={{fontSize: 12, fontStyle: 'italic', color: 'var(--ink-mute)', lineHeight: 1.5, margin: 0}}>
+              Co-hosted by Stephanie Swensrude and Chris Chang-Yen Phillips at Canadian Brewhouse - Edmonton North.
             </p>
           </div>
 
@@ -197,7 +208,11 @@ function EcampSection() {
               <span className="mono" style={{fontSize: 11, opacity: 0.7, letterSpacing: '0.08em'}}>4 EPL BRANCHES</span>
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
-              <div className="img-ph tone-dark" style={{aspectRatio: '1/1', fontSize: 10, padding: 6, textAlign: 'center', borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.7)'}}>Momentary Museum photo</div>
+              <img
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Momentary%20Museum-Senses-223%202.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
+                alt="Momentary Museum — Senses exhibit"
+                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+              />
               <div>
                 <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'white'}}>400+</div>
                 <div style={{fontSize: 13, opacity: 0.85, marginTop: 4, fontWeight: 500}}>participants · 6 partnerships</div>
