@@ -1,23 +1,47 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
+const ASSET_BASE = "https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/";
+const ASSET_TOKEN = "?t=b9e12b5def6cf273f1f0dd9744fb45f7cca53272183cf987ca6574a6ac491cef.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777930345";
+const a = (file) => ASSET_BASE + encodeURIComponent(file) + ASSET_TOKEN;
+
+const THEME_COLORS = {
+  "Indigenous Domesticity": { bg: "#4a7a5c", text: "#fff" },
+  "Labour & Organizing":    { bg: "#3d3228", text: "#f4eddd" },
+  "Sport & Gender":         { bg: "#a84d2e", text: "#fff" },
+  "Carceral History":       { bg: "#2c3347", text: "#f4eddd" },
+  "Gender & Television":    { bg: "#7a3b2e", text: "#fff" },
+  "Migration & Memory":     { bg: "#517fa3", text: "#fff" },
+  "Women in Academia":      { bg: "#3D6184", text: "#fff" },
+  "Nursing & Immigration":  { bg: "#5c8a7a", text: "#fff" },
+  "Disability & Performance":{ bg: "#8B4513", text: "#fff" },
+  "Place & Memory":         { bg: "#7a6a52", text: "#fff" },
+  "Military Leadership":    { bg: "#2d3a2d", text: "#f4eddd" },
+  "Technology & Labour":    { bg: "#395a7a", text: "#fff" },
+  "Aviation & Gender":      { bg: "#1a4a6b", text: "#fff" },
+  "Engineering & Immigration":{ bg: "#5c462b", text: "#fff" },
+  "Retail & Immigration":   { bg: "#8b6914", text: "#fff" },
+  "Indigenous Resistance":  { bg: "#3d5c2e", text: "#fff" },
+  "Chinese Heritage":       { bg: "#8B2020", text: "#fff" },
+};
+
 const LABOUR_STORIES = [
-  { title: "Making Home: Homemakers' Clubs in Life on Reserve", author: "", date: "Jan 14", theme: "Indigenous Domesticity", url: "https://citymuseumedmonton.ca/2025/01/14/making-home-the-role-of-homemakers-clubs-in-life-on-reserve/" },
-  { title: "The Company and the Combination: Collective Bargaining at the River's Edge", author: "", date: "Jan 28", theme: "Labour & Organizing", url: "https://citymuseumedmonton.ca/2025/01/28/the-company-and-the-combination-collective-bargaining-at-the-rivers-edge/" },
-  { title: "Women Wanted: To Work and to Win — The Grads Take Flight", author: "", date: "Feb 11", theme: "Sport & Gender", url: "https://citymuseumedmonton.ca/2025/02/11/women-wanted-to-work-and-win-the-grads-take-flight/" },
-  { title: "Hard Times in the Alberta Penitentiary, 1906–1920", author: "", date: "Feb 25", theme: "Carceral History", url: "https://citymuseumedmonton.ca/2025/02/25/hard-times-in-the-alberta-penitentiary-1906-1920/" },
-  { title: "Laura Lindsay, First Lady of Daytime TV in Alberta (1955–68)", author: "Katherine Koller", date: "Mar 11", theme: "Gender & Television", url: "https://citymuseumedmonton.ca/2025/03/11/laura-lindsay-first-lady-of-daytime-tv-in-alberta-from-1955-68/" },
-  { title: "Station of Broken Promises", author: "", date: "Mar 25", theme: "Migration & Memory", url: "https://citymuseumedmonton.ca/2025/03/25/station-of-broken-promises/" },
-  { title: "More Than a Prize Scholar or Bookworm: Dr. Geneva Misener", author: "Pamela Young", date: "May 20", theme: "Women in Academia", url: "https://citymuseumedmonton.ca/2025/05/20/more-than-a-prize-scholar-or-bookworm-the-leadership-and-legacy-of-dr-geneva-misener/" },
-  { title: "She Can Move Mountains: Tessie Oliva's Impact on Nursing in Edmonton", author: "Giselle General", date: "Jun 03", theme: "Nursing & Immigration", url: "https://citymuseumedmonton.ca/2025/06/03/she-can-move-mountains-tessie-olivas-impact-on-the-nursing-sector-in-edmonton/" },
-  { title: "Hot Wheelz: Raising a Middle Finger and Building World-Class Accessible Drag", author: "Kels Valenzuela Delamarter", date: "Jun 17", theme: "Disability & Performance", url: "https://citymuseumedmonton.ca/2025/06/17/hot-wheelz-raising-a-middle-finger-and-building-world-class-accessible-drag/" },
-  { title: "Happyland", author: "", date: "Jul 02", theme: "Place & Memory", url: "https://citymuseumedmonton.ca/2025/07/02/happyland/" },
-  { title: "James Big Jim Stone, The People's Commander", author: "Tiffany Chan", date: "Jul 15", theme: "Military Leadership", url: "https://citymuseumedmonton.ca/2025/07/15/james-big-jim-stone-the-peoples-commander/" },
-  { title: "Alberta's Government, the Mainframe Computer, and Women's Work", author: "Cathy Roy", date: "Jul 29", theme: "Technology & Labour", url: "https://citymuseumedmonton.ca/2025/07/29/albertas-government-the-mainframe-computer-and-womens-work/" },
-  { title: "Queen of the Link: Margaret Littlewood", author: "Bruce Cinnamon", date: "Aug 12", theme: "Aviation & Gender", url: "https://citymuseumedmonton.ca/2025/08/12/queen-of-the-link-margaret-littlewood/" },
-  { title: "Bridging Alberta: Dilip Dasmohapatra's YEG Origin Story", author: "Soni Dasmohapatra", date: "Aug 27", theme: "Engineering & Immigration", url: "https://citymuseumedmonton.ca/2025/08/27/bridging-alberta-dilip-dasmohapatras-yeg-origin-story/" },
-  { title: "My Grandma Going Out into the World: Working at Woodward's", author: "Harma-Mae Smit", date: "Sep 09", theme: "Retail & Immigration", url: "https://citymuseumedmonton.ca/2025/09/09/my-grandma-going-out-into-the-world-working-at-woodwards/" },
-  { title: "More Than Half a Day: Child Labour at the St. Albert Youville Indian Residential School", author: "Crystal Gail Fraser", date: "Sep 30", theme: "Indigenous Resistance", url: "https://citymuseumedmonton.ca/2025/09/30/more-than-half-a-day-child-labour-at-the-st-albert-youville-indian-residential-school/" },
-  { title: "Chinese Hand Laundries: A History of the First Chinese Entrepreneurs in Edmonton", author: "", date: "Dec 03", theme: "Chinese Heritage", url: "https://citymuseumedmonton.ca/2025/12/03/chinese-hand-laundries-a-history-of-the-first-chinese-entrepreneurs-in-edmonton/" },
+  { title: "Making Home: Homemakers' Clubs in Life on Reserve", author: "", date: "Jan 14", theme: "Indigenous Domesticity", url: "https://citymuseumedmonton.ca/2025/01/14/making-home-the-role-of-homemakers-clubs-in-life-on-reserve/", img: a("Making Home.png") },
+  { title: "The Company and the Combination: Collective Bargaining at the River's Edge", author: "", date: "Jan 28", theme: "Labour & Organizing", url: "https://citymuseumedmonton.ca/2025/01/28/the-company-and-the-combination-collective-bargaining-at-the-rivers-edge/", img: a("The Company and the Combination.png") },
+  { title: "Women Wanted: To Work and to Win — The Grads Take Flight", author: "", date: "Feb 11", theme: "Sport & Gender", url: "https://citymuseumedmonton.ca/2025/02/11/women-wanted-to-work-and-win-the-grads-take-flight/", img: a("The Grads Take Flight.png") },
+  { title: "Hard Times in the Alberta Penitentiary, 1906–1920", author: "", date: "Feb 25", theme: "Carceral History", url: "https://citymuseumedmonton.ca/2025/02/25/hard-times-in-the-alberta-penitentiary-1906-1920/", img: a("Hard Times.png") },
+  { title: "Laura Lindsay, First Lady of Daytime TV in Alberta (1955–68)", author: "Katherine Koller", date: "Mar 11", theme: "Gender & Television", url: "https://citymuseumedmonton.ca/2025/03/11/laura-lindsay-first-lady-of-daytime-tv-in-alberta-from-1955-68/", img: a("Laura Lindsay, First Lady of Daytime TV in Alberta from 1955-68.png") },
+  { title: "Station of Broken Promises", author: "", date: "Mar 25", theme: "Migration & Memory", url: "https://citymuseumedmonton.ca/2025/03/25/station-of-broken-promises/", img: a("Station of Broken Promises.png") },
+  { title: "More Than a Prize Scholar or Bookworm: Dr. Geneva Misener", author: "Pamela Young", date: "May 20", theme: "Women in Academia", url: "https://citymuseumedmonton.ca/2025/05/20/more-than-a-prize-scholar-or-bookworm-the-leadership-and-legacy-of-dr-geneva-misener/", img: a("More Than a Prize Scholar or Bookworm.png") },
+  { title: "She Can Move Mountains: Tessie Oliva's Impact on Nursing in Edmonton", author: "Giselle General", date: "Jun 03", theme: "Nursing & Immigration", url: "https://citymuseumedmonton.ca/2025/06/03/she-can-move-mountains-tessie-olivas-impact-on-the-nursing-sector-in-edmonton/", img: a("She Can Move Mountains.png") },
+  { title: "Hot Wheelz: Raising a Middle Finger and Building World-Class Accessible Drag", author: "Kels Valenzuela Delamarter", date: "Jun 17", theme: "Disability & Performance", url: "https://citymuseumedmonton.ca/2025/06/17/hot-wheelz-raising-a-middle-finger-and-building-world-class-accessible-drag/", img: a("Hot Wheelz.png") },
+  { title: "Happyland", author: "", date: "Jul 02", theme: "Place & Memory", url: "https://citymuseumedmonton.ca/2025/07/02/happyland/", img: a("Happyland.png") },
+  { title: "James Big Jim Stone, The People's Commander", author: "Tiffany Chan", date: "Jul 15", theme: "Military Leadership", url: "https://citymuseumedmonton.ca/2025/07/15/james-big-jim-stone-the-peoples-commander/", img: a("Big Jim Stone.png") },
+  { title: "Alberta's Government, the Mainframe Computer, and Women's Work", author: "Cathy Roy", date: "Jul 29", theme: "Technology & Labour", url: "https://citymuseumedmonton.ca/2025/07/29/albertas-government-the-mainframe-computer-and-womens-work/", img: a("the Mainframe Computer, and Women's Work.png") },
+  { title: "Queen of the Link: Margaret Littlewood", author: "Bruce Cinnamon", date: "Aug 12", theme: "Aviation & Gender", url: "https://citymuseumedmonton.ca/2025/08/12/queen-of-the-link-margaret-littlewood/", img: a("Queen of the Link.png") },
+  { title: "Bridging Alberta: Dilip Dasmohapatra's YEG Origin Story", author: "Soni Dasmohapatra", date: "Aug 27", theme: "Engineering & Immigration", url: "https://citymuseumedmonton.ca/2025/08/27/bridging-alberta-dilip-dasmohapatras-yeg-origin-story/", img: a("Bridging Alberta.png") },
+  { title: "My Grandma Going Out into the World: Working at Woodward's", author: "Harma-Mae Smit", date: "Sep 09", theme: "Retail & Immigration", url: "https://citymuseumedmonton.ca/2025/09/09/my-grandma-going-out-into-the-world-working-at-woodwards/", img: a("Working at Woodwards.png") },
+  { title: "More Than Half a Day: Child Labour at the St. Albert Youville Indian Residential School", author: "Crystal Gail Fraser", date: "Sep 30", theme: "Indigenous Resistance", url: "https://citymuseumedmonton.ca/2025/09/30/more-than-half-a-day-child-labour-at-the-st-albert-youville-indian-residential-school/", img: a("More than Half Day.png") },
+  { title: "Chinese Hand Laundries: A History of the First Chinese Entrepreneurs in Edmonton", author: "", date: "Dec 03", theme: "Chinese Heritage", url: "https://citymuseumedmonton.ca/2025/12/03/chinese-hand-laundries-a-history-of-the-first-chinese-entrepreneurs-in-edmonton/", img: a("Chinese Hand Laundries.png") },
 ];
 
 function EcampSection() {
@@ -201,68 +225,120 @@ function EcampSection() {
         `}</style>
       </div>
 
-      {/* Labour stories list */}
+      {/* Labour stories grid */}
       <div style={{marginTop: 80}}>
-        <span className="eyebrow eyebrow-ink">04.1 — Labour Stories Published</span>
-        <h3 style={{marginTop: 12, marginBottom: 32}}>17 stories. 9 centre women's labour. All published in 2025.</h3>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 16, marginBottom: 12}}>
+          <span className="eyebrow eyebrow-ink">04.1 — Labour Stories Published</span>
+          <a href="https://citymuseumedmonton.ca" target="_blank" rel="noopener noreferrer"
+            className="mono" style={{fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--prairie)', textDecoration: 'none'}}>
+            citymuseumedmonton.ca ↗
+          </a>
+        </div>
+        <h3 style={{marginTop: 0, marginBottom: 8}}>17 stories. 9 centre women's labour. All published in 2025.</h3>
+        <p style={{fontSize: 15, color: 'var(--ink-soft)', lineHeight: 1.6, marginBottom: 40, maxWidth: '72ch'}}>
+          Women's work & visibility · immigrant labour & advocacy · bodies & labour · community building as work.
+        </p>
 
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 380px', gap: 48}} className="stories-grid">
-          <div>
-            {LABOUR_STORIES.map((s, i) => (
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 2}} className="labour-grid">
+          {LABOUR_STORIES.map((s, i) => {
+            const tc = THEME_COLORS[s.theme] || { bg: 'var(--prairie)', text: '#fff' };
+            return (
               <a
                 key={i}
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                onMouseEnter={() => setHovered(i)}
-                onMouseLeave={() => setHovered(null)}
+                className="labour-card"
                 style={{
-                  display: 'grid',
-                  gridTemplateColumns: '50px 1fr 180px 70px 24px',
-                  gap: 16,
-                  padding: '20px 0',
-                  borderBottom: '1px solid var(--rule-soft)',
-                  alignItems: 'baseline',
-                  cursor: 'pointer',
-                  background: hovered === i ? 'var(--paper)' : 'transparent',
-                  transition: 'background 0.15s, padding 0.15s',
-                  paddingLeft: hovered === i ? 16 : 0,
-                  paddingRight: hovered === i ? 16 : 0,
-                  marginLeft: hovered === i ? -16 : 0,
-                  marginRight: hovered === i ? -16 : 0,
+                  display: 'flex',
+                  flexDirection: 'column',
                   textDecoration: 'none',
                   color: 'inherit',
+                  background: 'var(--paper)',
+                  overflow: 'hidden',
                 }}
               >
-                <div className="mono" style={{fontSize: 11, color: 'var(--ink-mute)'}}>{String(i+1).padStart(2,'0')}</div>
-                <div>
-                  <div className="serif" style={{fontSize: 20, lineHeight: 1.2, fontWeight: 500, color: hovered === i ? 'var(--brick)' : 'var(--ink)', transition: 'color 0.15s'}}>{s.title}</div>
-                  <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4}}>by {s.author}</div>
+                {/* Image area */}
+                <div style={{
+                  position: 'relative',
+                  aspectRatio: '3 / 2',
+                  background: tc.bg,
+                  overflow: 'hidden',
+                  flexShrink: 0,
+                }}>
+                  {s.img && (
+                    <img
+                      src={s.img}
+                      alt={s.title}
+                      style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
+                      onError={e => { e.target.style.display = 'none'; }}
+                    />
+                  )}
+                  {/* Theme badge */}
+                  <span style={{
+                    position: 'absolute',
+                    bottom: 10,
+                    left: 10,
+                    background: 'rgba(0,0,0,0.55)',
+                    color: '#fff',
+                    fontFamily: 'var(--mono)',
+                    fontSize: 9,
+                    letterSpacing: '0.12em',
+                    textTransform: 'uppercase',
+                    padding: '4px 8px',
+                    borderRadius: 2,
+                    backdropFilter: 'blur(4px)',
+                  }}>{s.theme}</span>
+                  {/* Story number */}
+                  <span style={{
+                    position: 'absolute',
+                    top: 10,
+                    right: 10,
+                    fontFamily: 'var(--mono)',
+                    fontSize: 10,
+                    color: 'rgba(255,255,255,0.7)',
+                    letterSpacing: '0.08em',
+                  }}>{String(i + 1).padStart(2, '0')}</span>
                 </div>
-                <div className="mono" style={{fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--prairie)'}}>{s.theme}</div>
-                <div className="mono" style={{fontSize: 11, color: 'var(--ink-mute)', textAlign: 'right'}}>{s.date}</div>
-                <div style={{fontSize: 16, color: hovered === i ? 'var(--brick)' : 'var(--ink-mute)', textAlign: 'right', transition: 'color 0.15s, transform 0.15s', transform: hovered === i ? 'translateX(2px)' : 'translateX(0)'}}>↗</div>
-              </a>
-            ))}
-          </div>
 
-          <div style={{position: 'sticky', top: 140, alignSelf: 'start'}}>
-            <div className="img-ph" style={{aspectRatio: '4/5', marginBottom: 16}}>
-              {hovered !== null ? `Story ${hovered + 1}` : "Story image"} · {hovered !== null ? LABOUR_STORIES[hovered].title.slice(0, 40) : "hover to preview"}
-            </div>
-            <div style={{padding: 16, background: 'var(--paper)', border: '1px solid var(--rule)', borderRadius: 4}}>
-              <div className="mono" style={{fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--prairie)'}}>Key Themes</div>
-              <div style={{fontSize: 14, marginTop: 12, lineHeight: 1.5, color: 'var(--ink-soft)'}}>
-                Women's work & visibility · immigrant labour & advocacy · bodies & labour · community building as work.
-              </div>
-            </div>
-          </div>
+                {/* Card body */}
+                <div style={{
+                  padding: '16px 18px 18px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 6,
+                  flex: 1,
+                  borderBottom: '1px solid var(--rule-soft)',
+                  borderLeft: `3px solid ${tc.bg}`,
+                }}>
+                  <p style={{
+                    fontSize: 14,
+                    fontWeight: 600,
+                    lineHeight: 1.35,
+                    color: 'var(--ink)',
+                    margin: 0,
+                  }}>{s.title}</p>
+                  <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: 4}}>
+                    <span style={{fontSize: 12, color: 'var(--ink-mute)', fontStyle: s.author ? 'italic' : 'normal'}}>
+                      {s.author ? `by ${s.author}` : ''}
+                    </span>
+                    <span className="mono" style={{fontSize: 11, color: 'var(--ink-mute)'}}>{s.date} ↗</span>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
         </div>
 
         <style>{`
+          .labour-card { transition: transform 0.15s, box-shadow 0.15s; }
+          .labour-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 1; position: relative; }
           @media (max-width: 900px) {
-            .stories-grid { grid-template-columns: 1fr !important; }
+            .labour-grid { grid-template-columns: repeat(2, 1fr) !important; }
             .ecamp-pull { grid-template-columns: 1fr !important; gap: 32px !important; }
+          }
+          @media (max-width: 560px) {
+            .labour-grid { grid-template-columns: 1fr !important; }
           }
         `}</style>
       </div>
