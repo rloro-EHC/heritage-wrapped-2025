@@ -169,7 +169,7 @@ function Partnerships() {
             </p>
           </div>
           <ImgPlaceholder
-            src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Fire%20Spotlight%20Series%20-%20King%20Charles%20III%20Coronation%20Medal%20Ceremony.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+            src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Fire%20Spotlight%20Series%20-%20King%20Charles%20III%20Coronation%20Medal%20Ceremony.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
             caption="Executive Director David Ridley brings remarks on behalf of EHC, recognizing honorees Dr. Jerry Saddleback, Celina Loyer, and Matthew Hiltermann"
           />
         </div>
@@ -200,7 +200,7 @@ function Partnerships() {
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Connecting stories across the country</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhc-grid">
           <ImgPlaceholder
-              src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Black%20Heritage%20Caucus.jpg?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+              src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Black%20Heritage%20Caucus.jpg?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
               caption="Black Heritage Caucus at 2025 National Trust Conference in Nova Scotia"
             />
           <div>
@@ -256,7 +256,7 @@ function Partnerships() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             <ImgPlaceholder
-                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Roots%20%26%20Routes%20(Journey%20of%20the%20Horse).JPG?t=4192828012d108656a816c19c487fcf770e104e4659d3c9c1882b968b073b168.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777933645"
+                src="https://019ddfa9-ba64-75fe-97af-cd0227cf96a7.claudeusercontent.com/v1/design/projects/019ddfa9-ba64-75fe-97af-cd0227cf96a7/serve/assets/Roots%20%26%20Routes%20(Journey%20of%20the%20Horse).JPG?t=141cef7877d06b3945a53758567619c9d6f68759a43ccbed9148e434f223b8eb.1fd584e8-b4b2-4bee-9539-d62d17f2f045.adf9aaf9-f3c7-4c29-a5ac-a7ac474c8d25.1777936946"
                 caption="Roots & Routes visits Journey of the Horse at the Mah Society (April 2025)"
               />
             <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
