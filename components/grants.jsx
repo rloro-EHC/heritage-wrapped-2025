@@ -118,7 +118,7 @@ function Grants() {
       <div style={{marginBottom: 64}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, flexWrap: 'wrap', gap: 16}}>
           <div>
-            <span className="eyebrow eyebrow-ink">02.1 — HCIP Streams</span>
+            <span className="eyebrow eyebrow-ink">03.1 — HCIP Streams</span>
             <h3 style={{marginTop: 8}}>Heritage Community Investment Program</h3>
           </div>
           <div className="mono" style={{fontSize: 12, color: 'var(--ink-mute)', letterSpacing: '0.08em'}}>
@@ -209,31 +209,6 @@ function Grants() {
         `}</style>
       </div>
 
-      {/* CHAS + BHM */}
-      <div className="stat-grid" style={{gridTemplateColumns: 'repeat(2, 1fr)'}}>
-        <div className="cell tone-cream">
-          <span className="stat-lbl">Community Heritage Activation Support (CHAS)</span>
-          <div style={{display: 'flex', gap: 24, alignItems: 'baseline'}}>
-            <div className="stat-num med">$58,905</div>
-            <div>
-              <div className="mono" style={{fontSize: 12}}>24 INITIATIVES</div>
-              <div className="mono" style={{fontSize: 12, color: 'var(--ink-mute)'}}>24 APPLICATIONS</div>
-            </div>
-          </div>
-          <div className="stat-cap">Small-scale, flexible funding for grassroots heritage initiatives — festivals, screenings, archives.</div>
-        </div>
-        <div className="cell tone-prairie">
-          <span className="stat-lbl">Black History Month Initiatives Fund</span>
-          <div style={{display: 'flex', gap: 24, alignItems: 'baseline'}}>
-            <div className="stat-num med">$80,000</div>
-            <div>
-              <div className="mono" style={{fontSize: 12}}>28 INITIATIVES</div>
-              <div className="mono" style={{fontSize: 12, opacity: 0.7}}>5,000+ PARTICIPANTS</div>
-            </div>
-          </div>
-          <div className="stat-cap">Delivered with Africa Centre, ECF, and the City of Edmonton — selected from 57 applications.</div>
-        </div>
-      </div>
     </section>
   );
 }
