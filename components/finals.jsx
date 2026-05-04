@@ -242,7 +242,7 @@ function Financials() {
   return (
     <section className="section" id="financials">
       <div className="section-hd">
-        <div className="num">Part 06<span>Financial Overview</span></div>
+        <div className="num">Part 07<span>Financial Overview</span></div>
         <div>
           <h2>The numbers behind the year.</h2>
           <p className="lede" style={{marginTop: 24}}>
@@ -271,7 +271,7 @@ function Financials() {
 
       <div style={{display: 'grid', gridTemplateColumns: '1fr', gap: 64}} className="fin-grid">
         <div>
-          <span className="eyebrow eyebrow-ink">06.1 — Revenue</span>
+          <span className="eyebrow eyebrow-ink">07.1 — Revenue</span>
           <h3 style={{marginTop: 12, marginBottom: 24}}>Where it came from</h3>
           <div style={{display: 'grid', gridTemplateColumns: '280px minmax(0, 480px)', gap: 32, alignItems: 'center'}} className="donut-row">
             <Donut data={REVENUE} total={totalRev} centerLabel="Total Revenue" centerValue={fmtShort(totalRev)} accent="#3D6184" hoverIdx={revHover} setHoverIdx={setRevHover} />
@@ -311,7 +311,7 @@ function Financials() {
           </p>
         </div>
         <div>
-          <span className="eyebrow eyebrow-ink">06.2 — Expenses</span>
+          <span className="eyebrow eyebrow-ink">07.2 — Expenses</span>
           <h3 style={{marginTop: 12, marginBottom: 24}}>Where it went</h3>
           <div style={{display: 'grid', gridTemplateColumns: '280px minmax(0, 480px)', gap: 32, alignItems: 'center'}} className="donut-row">
             <Donut data={EXPENSES} total={totalExp} centerLabel="Total Expenses" centerValue={fmtShort(totalExp)} accent="#C97A3F" hoverIdx={expHover} setHoverIdx={setExpHover} />
@@ -397,7 +397,7 @@ function LookingAhead() {
     }}>
       <div style={{maxWidth: 1320, margin: '0 auto'}}>
         <div className="section-hd" style={{borderBottom: '1px solid rgba(244,237,221,0.2)'}}>
-          <div className="num" style={{color: 'var(--ember-soft)'}}>Part 07<span style={{color: 'rgba(244,237,221,0.6)'}}>Looking Ahead</span></div>
+          <div className="num" style={{color: 'var(--ember-soft)'}}>Part 08<span style={{color: 'rgba(244,237,221,0.6)'}}>Looking Ahead</span></div>
           <div>
             <h2 style={{color: 'var(--cream)'}}>The demand for heritage funding has <span style={{color:'var(--sky-pale)', fontStyle:'italic'}}>never been higher</span>.</h2>
             <p className="lede" style={{marginTop: 24, color: 'rgba(244,237,221,0.8)'}}>
@@ -499,7 +499,7 @@ function People() {
   return (
     <section className="section" id="people">
       <div className="section-hd">
-        <div className="num">Part 08<span>People</span></div>
+        <div className="num">Part 09<span>People</span></div>
         <div>
           <h2>The team behind 2025.</h2>
           <p className="lede" style={{marginTop: 24}}>
