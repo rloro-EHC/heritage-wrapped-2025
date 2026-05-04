@@ -185,13 +185,6 @@ function HeroTracks() {
           })}
         </ol>
       </div>
-      <div className="scroll-hint" style={{marginTop: 48}}>Scroll · The year in five parts</div>
-
-      <style>{`
-        @media (max-width: 720px) {
-          .hero-tracks-head { flex-wrap: wrap; gap: 8px; }
-        }
-      `}</style>
     </div>
   );
 }
