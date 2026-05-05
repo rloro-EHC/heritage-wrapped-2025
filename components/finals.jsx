@@ -447,23 +447,6 @@ function LookingAhead() {
             @media (max-width: 720px) { .ahead-grid { grid-template-columns: 1fr !important; } }
           `}</style>
         </div>
-
-        <div style={{marginTop: 64, padding: 48, background: 'var(--prairie)', borderRadius: 4, display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 32, alignItems: 'center'}}
-             className="cta-grid">
-          <div>
-            <h3 style={{color: 'var(--cream)', maxWidth: '20ch', marginBottom: 12}}>
-              Help us bring heritage to every Edmonton neighbourhood.
-            </h3>
-            <p style={{color: 'rgba(244,237,221,0.75)', margin: 0}}>
-              Donations support the Edmonton Heritage Places Endowment Fund and community programming citywide.
-            </p>
-          </div>
-          <div style={{display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start'}}>
-            <a href="#" className="btn btn--ember">Donate to EHC →</a>
-            <a href="#" className="btn" style={{borderColor: 'var(--cream)', color: 'var(--cream)'}}>Become a member</a>
-          </div>
-        </div>
-        <style>{`@media (max-width: 720px) { .cta-grid { grid-template-columns: 1fr !important; } }`}</style>
       </div>
     </section>
   );
