@@ -128,12 +128,13 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--prairie-deep);
+  background: #f4eddd;
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  box-shadow: 0 2px 16px rgba(39,37,37,0.22);
+  box-shadow: 0 2px 12px rgba(39,37,37,0.10);
+  border-bottom: 1px solid rgba(39,37,37,0.10);
 }
 .microsite-anchor-inner {
   max-width: 1320px;
@@ -148,7 +149,7 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
 }
 .microsite-anchor-inner::-webkit-scrollbar { display: none; }
 .microsite-anchor-inner .hw-logo {
-  color: #fff;
+  color: var(--ink);
   text-decoration: none;
   font-weight: 700;
   font-size: 12px;
@@ -156,14 +157,14 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   flex-shrink: 0;
   padding-right: 20px;
   margin-right: 8px;
-  border-right: 1px solid rgba(255,255,255,0.18);
+  border-right: 1px solid rgba(39,37,37,0.15);
   display: flex;
   align-items: center;
   transition: color 0.15s;
 }
-.microsite-anchor-inner .hw-logo:hover { color: var(--sky-pale); }
+.microsite-anchor-inner .hw-logo:hover { color: var(--prairie); }
 .microsite-anchor-inner a {
-  color: rgba(255,255,255,0.62);
+  color: rgba(39,37,37,0.55);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
@@ -175,8 +176,8 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   font-size: 10px;
 }
 .microsite-anchor-inner a.is-active {
-  color: #fff;
-  border-bottom-color: var(--sky-pale);
+  color: var(--ink);
+  border-bottom-color: var(--prairie);
 }
 
 /* ───────── Type ─────────  */
