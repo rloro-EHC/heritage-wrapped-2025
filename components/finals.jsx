@@ -350,6 +350,22 @@ function Financials() {
             Materiality set at $104,200 · Three minor audit adjustments · Revenue recognition transitioned to
             deferral method, applied retrospectively.
           </p>
+          <div style={{marginTop: 24}}>
+            <a
+              href="https://static1.squarespace.com/static/66d0c79a7e14aa1c7990537c/t/69fa0ae2f9e8cb53cbced390/1777994466194/Edmonton+Heritage+Council+Society+2025+Financial+Statements.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                fontFamily: 'var(--mono)', fontSize: 12, letterSpacing: '0.08em',
+                textTransform: 'uppercase', color: 'var(--prairie)',
+                textDecoration: 'none', borderBottom: '1px solid var(--prairie)',
+                paddingBottom: 2,
+              }}
+            >
+              Review the full 2025 Audit Report ↗
+            </a>
+          </div>
         </div>
       </div>
 
