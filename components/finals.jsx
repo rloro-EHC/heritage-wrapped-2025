@@ -592,30 +592,29 @@ function ClosingSection() {
 
         </div>
 
-        {/* Support message */}
+        {/* Land acknowledgement */}
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: 48,
           padding: '56px 0 72px',
           borderBottom: '1px solid rgba(244,237,221,0.18)',
-        }} className="closing-grid">
-          <div>
-            <h3 style={{fontSize: 22, fontWeight: 600, color: 'var(--cream)', marginBottom: 16, lineHeight: 1.25}}>
-              Help us bring heritage to every Edmonton neighbourhood.
-            </h3>
-            <p style={{fontSize: 16, lineHeight: 1.7, color: 'rgba(244,237,221,0.72)', margin: 0}}>
-              Donations support the Edmonton Heritage Places Endowment Fund and community programming citywide — ensuring that heritage remains a living, shared resource for all Edmontonians.
-            </p>
-          </div>
-          <div>
-            <h3 style={{fontSize: 22, fontWeight: 600, color: 'var(--cream)', marginBottom: 16, lineHeight: 1.25}}>
-              Join a community of heritage champions.
-            </h3>
-            <p style={{fontSize: 16, lineHeight: 1.7, color: 'rgba(244,237,221,0.72)', margin: 0}}>
-              EHC membership connects you to practitioners, organizations, and communities working to preserve, celebrate, and activate Edmonton's heritage — with invitations to exclusive events, publications, and programming throughout the year.
-            </p>
-          </div>
+        }}>
+          <p className="mono" style={{fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(244,237,221,0.4)', marginBottom: 16}}>
+            Land Acknowledgement
+          </p>
+          <p style={{fontSize: 15, lineHeight: 1.75, color: 'rgba(244,237,221,0.65)', maxWidth: '72ch', margin: '0'}}>
+            Edmonton Heritage Council acknowledges that we are located on Treaty 6 Territory, and the Homeland of the Métis Nation. We acknowledge the many First Nations, Métis and Inuit peoples whose footsteps have marked this land for generations.
+          </p>
         </div>
 
-         {/* Acknowledgement */}
+        {/* Copyright */}
+        <div style={{padding: '32px 0', textAlign: 'center'}}>
+          <p className="mono" style={{fontSize: 11, letterSpacing: '0.12em', color: 'rgba(244,237,221,0.3)', margin: 0}}>
+            © 2026 Edmonton Heritage Council · All rights reserved
+          </p>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { TopMoments, Financials, LookingAhead, People, ClosingSection });
