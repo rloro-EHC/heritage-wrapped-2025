@@ -60,10 +60,18 @@ function MicrositeAnchorNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const scrollTo = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.scrollY - 46;
+    window.scrollTo({ top, behavior: 'smooth' });
+  };
+
   return (
     <div className="microsite-anchor-nav">
       <div className="microsite-anchor-inner">
-        <a href="#top" className="hw-logo">Heritage Wrapped 2025</a>
+        <a href="#top" className="hw-logo" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Heritage Wrapped 2025</a>
         {NAV_SECTIONS.map((s, i) => {
           const isActive   = activeId === s.id;
           const isHov      = hovId === s.id;
@@ -73,19 +81,20 @@ function MicrositeAnchorNav() {
               {groupStart && (
                 <span style={{
                   display: 'flex', alignItems: 'center', paddingLeft: 14, paddingRight: 6,
-                  borderLeft: '1px solid rgba(255,255,255,0.15)',
-                  color: 'rgba(255,255,255,0.32)', fontSize: 9,
+                  borderLeft: '1px solid rgba(39,37,37,0.15)',
+                  color: 'rgba(39,37,37,0.4)', fontSize: 9,
                   letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
                 }}>{s.group}</span>
               )}
               <a
                 href={`#${s.id}`}
                 className={isActive ? 'is-active' : ''}
+                onClick={e => scrollTo(e, s.id)}
                 onMouseEnter={() => setHovId(s.id)}
                 onMouseLeave={() => setHovId(null)}
                 style={{
-                  color: isActive ? '#fff' : (isHov ? '#fff' : 'rgba(255,255,255,0.62)'),
-                  background: isHov && !isActive ? 'rgba(255,255,255,0.09)' : 'transparent',
+                  color: isActive ? 'var(--ink)' : (isHov ? 'var(--ink)' : 'rgba(39,37,37,0.55)'),
+                  background: isHov && !isActive ? 'rgba(39,37,37,0.06)' : 'transparent',
                   paddingLeft: s.group ? 10 : 14,
                   paddingRight: s.group ? 10 : 14,
                 }}
