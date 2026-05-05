@@ -67,8 +67,12 @@ function EcampSection() {
             — work as a site of <span style={{color: 'var(--brick)', fontStyle: 'italic'}}>resistance, creativity, and belonging</span>.
           </p>
         </div>
-        <div className="img-ph" style={{aspectRatio: '4/3'}}>
-          Hero image · Clock In podcast recording session
+        <div style={{overflow: 'hidden', borderRadius: 4}}>
+          <img
+            src="assets/ecamp-clock-in-elsa-and-shima.jpg"
+            alt="Shima and Elsa Robinson during the recording of their episode for the Clock-In Podcast"
+            style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
+          />
         </div>
       </div>
 
@@ -161,7 +165,7 @@ function EcampSection() {
       </div>
 
       {/* Clock In Podcast — featured */}
-      <div className="stat-grid" style={{gridTemplateColumns: '1.6fr 1fr', marginBottom: 24}}>
+      <div className="stat-grid" style={{gridTemplateColumns: '1.6fr 1fr', marginTop: 80, marginBottom: 24}}>
         <div className="cell tone-prairie">
           <span className="stat-lbl">Clock In Podcast — launched 2025</span>
           <h3 style={{color:'var(--cream)', maxWidth:'24ch'}}>
