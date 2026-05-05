@@ -29,7 +29,7 @@ const SPOTLIGHTS = [
     tag: "Provincial Hub · Indigitization",
     title: "A Hub for Indigenous Digital Heritage",
     body: "In partnership with the Indigitization Program — originally founded at UBC — EHC hosted a provincial Indigitization workshop bringing together 17 Indigenous heritage practitioners from 11 communities, including Piikani, Frog Lake, Saddle Lake Cree, Siksika, and Tsuut'ina. The work extends a growing practice of Indigenous data sovereignty — ensuring communities retain ownership and governance of their own heritage as it moves into digital form — and positions Alberta as a hub for that ongoing work.",
-    media: { type: 'image', src: 'assets/indigitization-workshop.jpg', alt: 'Provincial Indigitization workshop — instructor mid-gesture beside seated participants and digitization equipment.' },
+    media: { type: 'youtube', src: 'https://www.youtube-nocookie.com/embed/RYT9wkhRga0?rel=0&modestbranding=1', caption: 'Provincial Indigitization Workshop' },
     img: "Indigitization workshop participants",
     color: "var(--prairie-deep)",
   },
