@@ -67,13 +67,21 @@ function EcampSection() {
             — work as a site of <span style={{color: 'var(--brick)', fontStyle: 'italic'}}>resistance, creativity, and belonging</span>.
           </p>
         </div>
-        <div style={{overflow: 'hidden', borderRadius: 4}}>
-          <img
-            src="assets/ecamp-clock-in-elsa-and-shima.jpg"
-            alt="Shima and Elsa Robinson during the recording of their episode for the Clock-In Podcast"
-            style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
-          />
-        </div>
+        <figure style={{margin: 0, display: 'flex', flexDirection: 'column', gap: 10}}>
+          <div style={{overflow: 'hidden', borderRadius: 4}}>
+            <img
+              src="assets/ecamp-clock-in-elsa-and-shima.jpg"
+              alt="Shima and Elsa Robinson during the recording of their episode for the Clock-In Podcast"
+              style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
+            />
+          </div>
+          <figcaption className="mono" style={{
+            fontSize: 11, letterSpacing: '0.07em', textTransform: 'uppercase',
+            color: 'var(--ink-mute)', lineHeight: 1.5,
+          }}>
+            Shima and Elsa Robinson during the recording of their episode for the Clock-In Podcast
+          </figcaption>
+        </figure>
       </div>
 
       {/* Labour stories grid — 04.1 */}
