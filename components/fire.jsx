@@ -7,8 +7,7 @@ const FIRE_SPRING = [
     note: "Career and cultural mentorship for Indigenous post-secondary students, connecting traditional teachings with professional pathways." },
   { name: "Jessica Daniels", project: "pisim (Moon Teachings Camp)", award: 10000,
     note: "A land-based gathering centred on women’s moon teachings, ceremony, and intergenerational knowledge transfer at Moose Hills." },
-  { name: "Brad Kauffman", project: "Kiskinohamâkosiwin (Cree Cultural Conference)", award: 10000,
-    note: "Convening Cree knowledge keepers, language teachers, and youth in a multi-day cultural conference rooted in nêhiyaw practice." },
+
   { name: "Kirsten Lindquist", project: "Tipi Confessions (Body Sovereignty Workshops)", award: 9975,
     note: "Workshops on Indigenous body sovereignty, sexual health, and consent — centring teachings and community-led conversation." },
   { name: "Jayroy Makokis", project: "Cultural Continuity through Land-Based Practices", award: 9998.82,
@@ -111,7 +110,7 @@ function FireSection() {
               color: run === "spring" ? 'white' : 'var(--cream)',
               borderColor: run === "spring" ? 'var(--ember)' : 'rgba(244,237,221,0.3)'
             }}>
-            Spring 2025 · Run 1 · 9 funded
+            Spring 2025 · Run 1 · 8 funded
           </button>
           <button onClick={() => setRun("fall")} className="pill"
             style={{
