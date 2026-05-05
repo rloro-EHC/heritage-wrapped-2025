@@ -163,7 +163,7 @@ function TopMoments() {
 const REVENUE = [
   { label: "City of Edmonton & Provincial Grants", value: 2573486, pct: 97.7, color: "#3D6184", desc: "Operating funding via the City of Edmonton's Community Investment Operating Grant, plus complementary provincial support. Anchors EHC's capacity to deliver every program in this report." },
   { label: "Casino (AGLC)", value: 25907, pct: 1.0, color: "#C97A3F", desc: "Proceeds from EHC's biennial AGLC casino fundraiser — volunteer-staffed shifts that fund unrestricted programming." },
-  { label: "Iskwew & Ihkwew Kamik Sponsorships", value: 17500, pct: 0.7, color: "#7A9C5A", desc: "Sponsorship revenue dedicated to Iskwew & Ihkwew Kamik — the Indigenous Women's Lodge programming stream." },
+  { label: "Iskwehew Kamik Sponsorships", value: 17500, pct: 0.7, color: "#7A9C5A", desc: "Sponsorship revenue dedicated to Iskwehew Kamik — the Indigenous Women's Lodge programming stream." },
   { label: "Symposium", value: 7409, pct: 0.3, color: "#B8A24A", desc: "Registration and partner contributions from the annual Heritage Symposium." },
   { label: "Amortization of Deferred Capital", value: 3744, pct: 0.1, color: "#A85D7A", desc: "Non-cash recognition of previously received capital contributions, amortized over the useful life of associated assets." },
   { label: "Membership · Donations · Interest", value: 5142, pct: 0.2, color: "#5C8AA8", desc: "Individual memberships, donations to the Heritage Places Endowment Fund, and interest income on operating reserves." },
