@@ -4,7 +4,7 @@
 [[headers]]
   for = "/components/*.jsx"
   [headers.values]
-    Content-Type = "application/javascript"
+    Content-Type = "text/plain"
 
 [[headers]]
   for = "/assets/*"
