@@ -1,6 +1,6 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
-const a = (file) => "assets/" + encodeURIComponent(file);
+const a = (file) => "assets/" + file;
 
 const THEME_COLORS = {
   "Indigenous Domesticity": { bg: "#4a7a5c", text: "#fff" },
@@ -23,23 +23,23 @@ const THEME_COLORS = {
 };
 
 const LABOUR_STORIES = [
-  { title: "Making Home: Homemakers' Clubs in Life on Reserve", author: "", date: "Jan 14", theme: "Indigenous Domesticity", url: "https://citymuseumedmonton.ca/2025/01/14/making-home-the-role-of-homemakers-clubs-in-life-on-reserve/", img: a("Making Home.png") },
-  { title: "The Company and the Combination: Collective Bargaining at the River's Edge", author: "", date: "Jan 28", theme: "Labour & Organizing", url: "https://citymuseumedmonton.ca/2025/01/28/the-company-and-the-combination-collective-bargaining-at-the-rivers-edge/", img: a("The Company and the Combination.png") },
-  { title: "Women Wanted: To Work and to Win — The Grads Take Flight", author: "", date: "Feb 11", theme: "Sport & Gender", url: "https://citymuseumedmonton.ca/2025/02/11/women-wanted-to-work-and-win-the-grads-take-flight/", img: a("The Grads Take Flight.png") },
-  { title: "Hard Times in the Alberta Penitentiary, 1906–1920", author: "", date: "Feb 25", theme: "Carceral History", url: "https://citymuseumedmonton.ca/2025/02/25/hard-times-in-the-alberta-penitentiary-1906-1920/", img: a("Hard Times.png") },
-  { title: "Laura Lindsay, First Lady of Daytime TV in Alberta (1955–68)", author: "Katherine Koller", date: "Mar 11", theme: "Gender & Television", url: "https://citymuseumedmonton.ca/2025/03/11/laura-lindsay-first-lady-of-daytime-tv-in-alberta-from-1955-68/", img: a("Laura Lindsay, First Lady of Daytime TV in Alberta from 1955-68.png") },
-  { title: "Station of Broken Promises", author: "", date: "Mar 25", theme: "Migration & Memory", url: "https://citymuseumedmonton.ca/2025/03/25/station-of-broken-promises/", img: a("Station of Broken Promises.png") },
-  { title: "More Than a Prize Scholar or Bookworm: Dr. Geneva Misener", author: "Pamela Young", date: "May 20", theme: "Women in Academia", url: "https://citymuseumedmonton.ca/2025/05/20/more-than-a-prize-scholar-or-bookworm-the-leadership-and-legacy-of-dr-geneva-misener/", img: a("More Than a Prize Scholar or Bookworm.png") },
-  { title: "She Can Move Mountains: Tessie Oliva's Impact on Nursing in Edmonton", author: "Giselle General", date: "Jun 03", theme: "Nursing & Immigration", url: "https://citymuseumedmonton.ca/2025/06/03/she-can-move-mountains-tessie-olivas-impact-on-the-nursing-sector-in-edmonton/", img: a("She Can Move Mountains.png") },
-  { title: "Hot Wheelz: Raising a Middle Finger and Building World-Class Accessible Drag", author: "Kels Valenzuela Delamarter", date: "Jun 17", theme: "Disability & Performance", url: "https://citymuseumedmonton.ca/2025/06/17/hot-wheelz-raising-a-middle-finger-and-building-world-class-accessible-drag/", img: a("Hot Wheelz.png") },
-  { title: "Happyland", author: "", date: "Jul 02", theme: "Place & Memory", url: "https://citymuseumedmonton.ca/2025/07/02/happyland/", img: a("Happyland.png") },
-  { title: "James Big Jim Stone, The People's Commander", author: "Tiffany Chan", date: "Jul 15", theme: "Military Leadership", url: "https://citymuseumedmonton.ca/2025/07/15/james-big-jim-stone-the-peoples-commander/", img: a("Big Jim Stone.png") },
-  { title: "Alberta's Government, the Mainframe Computer, and Women's Work", author: "Cathy Roy", date: "Jul 29", theme: "Technology & Labour", url: "https://citymuseumedmonton.ca/2025/07/29/albertas-government-the-mainframe-computer-and-womens-work/", img: a("the Mainframe Computer, and Women's Work.png") },
-  { title: "Queen of the Link: Margaret Littlewood", author: "Bruce Cinnamon", date: "Aug 12", theme: "Aviation & Gender", url: "https://citymuseumedmonton.ca/2025/08/12/queen-of-the-link-margaret-littlewood/", img: a("Queen of the Link.png") },
-  { title: "Bridging Alberta: Dilip Dasmohapatra's YEG Origin Story", author: "Soni Dasmohapatra", date: "Aug 27", theme: "Engineering & Immigration", url: "https://citymuseumedmonton.ca/2025/08/27/bridging-alberta-dilip-dasmohapatras-yeg-origin-story/", img: a("Bridging Alberta.png") },
-  { title: "My Grandma Going Out into the World: Working at Woodward's", author: "Harma-Mae Smit", date: "Sep 09", theme: "Retail & Immigration", url: "https://citymuseumedmonton.ca/2025/09/09/my-grandma-going-out-into-the-world-working-at-woodwards/", img: a("Working at Woodwards.png") },
-  { title: "More Than Half a Day: Child Labour at the St. Albert Youville Indian Residential School", author: "Crystal Gail Fraser", date: "Sep 30", theme: "Indigenous Resistance", url: "https://citymuseumedmonton.ca/2025/09/30/more-than-half-a-day-child-labour-at-the-st-albert-youville-indian-residential-school/", img: a("More than Half Day.png") },
-  { title: "Chinese Hand Laundries: A History of the First Chinese Entrepreneurs in Edmonton", author: "", date: "Dec 03", theme: "Chinese Heritage", url: "https://citymuseumedmonton.ca/2025/12/03/chinese-hand-laundries-a-history-of-the-first-chinese-entrepreneurs-in-edmonton/", img: a("Chinese Hand Laundries.png") },
+  { title: "Making Home: Homemakers' Clubs in Life on Reserve", author: "", date: "Jan 14", theme: "Indigenous Domesticity", url: "https://citymuseumedmonton.ca/2025/01/14/making-home-the-role-of-homemakers-clubs-in-life-on-reserve/", img: a("making-home.png") },
+  { title: "The Company and the Combination: Collective Bargaining at the River's Edge", author: "", date: "Jan 28", theme: "Labour & Organizing", url: "https://citymuseumedmonton.ca/2025/01/28/the-company-and-the-combination-collective-bargaining-at-the-rivers-edge/", img: a("the-company-and-the-combination.png") },
+  { title: "Women Wanted: To Work and to Win — The Grads Take Flight", author: "", date: "Feb 11", theme: "Sport & Gender", url: "https://citymuseumedmonton.ca/2025/02/11/women-wanted-to-work-and-win-the-grads-take-flight/", img: a("the-grads-take-flight.png") },
+  { title: "Hard Times in the Alberta Penitentiary, 1906–1920", author: "", date: "Feb 25", theme: "Carceral History", url: "https://citymuseumedmonton.ca/2025/02/25/hard-times-in-the-alberta-penitentiary-1906-1920/", img: a("hard-times.png") },
+  { title: "Laura Lindsay, First Lady of Daytime TV in Alberta (1955–68)", author: "Katherine Koller", date: "Mar 11", theme: "Gender & Television", url: "https://citymuseumedmonton.ca/2025/03/11/laura-lindsay-first-lady-of-daytime-tv-in-alberta-from-1955-68/", img: a("laura-lindsay.png") },
+  { title: "Station of Broken Promises", author: "", date: "Mar 25", theme: "Migration & Memory", url: "https://citymuseumedmonton.ca/2025/03/25/station-of-broken-promises/", img: a("station-of-broken-promises.png") },
+  { title: "More Than a Prize Scholar or Bookworm: Dr. Geneva Misener", author: "Pamela Young", date: "May 20", theme: "Women in Academia", url: "https://citymuseumedmonton.ca/2025/05/20/more-than-a-prize-scholar-or-bookworm-the-leadership-and-legacy-of-dr-geneva-misener/", img: a("more-than-a-prize-scholar.png") },
+  { title: "She Can Move Mountains: Tessie Oliva's Impact on Nursing in Edmonton", author: "Giselle General", date: "Jun 03", theme: "Nursing & Immigration", url: "https://citymuseumedmonton.ca/2025/06/03/she-can-move-mountains-tessie-olivas-impact-on-the-nursing-sector-in-edmonton/", img: a("she-can-move-mountains.png") },
+  { title: "Hot Wheelz: Raising a Middle Finger and Building World-Class Accessible Drag", author: "Kels Valenzuela Delamarter", date: "Jun 17", theme: "Disability & Performance", url: "https://citymuseumedmonton.ca/2025/06/17/hot-wheelz-raising-a-middle-finger-and-building-world-class-accessible-drag/", img: a("hot-wheelz.png") },
+  { title: "Happyland", author: "", date: "Jul 02", theme: "Place & Memory", url: "https://citymuseumedmonton.ca/2025/07/02/happyland/", img: a("happyland.png") },
+  { title: "James Big Jim Stone, The People's Commander", author: "Tiffany Chan", date: "Jul 15", theme: "Military Leadership", url: "https://citymuseumedmonton.ca/2025/07/15/james-big-jim-stone-the-peoples-commander/", img: a("big-jim-stone.png") },
+  { title: "Alberta's Government, the Mainframe Computer, and Women's Work", author: "Cathy Roy", date: "Jul 29", theme: "Technology & Labour", url: "https://citymuseumedmonton.ca/2025/07/29/albertas-government-the-mainframe-computer-and-womens-work/", img: a("the-mainframe-computer.png") },
+  { title: "Queen of the Link: Margaret Littlewood", author: "Bruce Cinnamon", date: "Aug 12", theme: "Aviation & Gender", url: "https://citymuseumedmonton.ca/2025/08/12/queen-of-the-link-margaret-littlewood/", img: a("queen-of-the-link.png") },
+  { title: "Bridging Alberta: Dilip Dasmohapatra's YEG Origin Story", author: "Soni Dasmohapatra", date: "Aug 27", theme: "Engineering & Immigration", url: "https://citymuseumedmonton.ca/2025/08/27/bridging-alberta-dilip-dasmohapatras-yeg-origin-story/", img: a("bridging-alberta.png") },
+  { title: "My Grandma Going Out into the World: Working at Woodward's", author: "Harma-Mae Smit", date: "Sep 09", theme: "Retail & Immigration", url: "https://citymuseumedmonton.ca/2025/09/09/my-grandma-going-out-into-the-world-working-at-woodwards/", img: a("working-at-woodwards.png") },
+  { title: "More Than Half a Day: Child Labour at the St. Albert Youville Indian Residential School", author: "Crystal Gail Fraser", date: "Sep 30", theme: "Indigenous Resistance", url: "https://citymuseumedmonton.ca/2025/09/30/more-than-half-a-day-child-labour-at-the-st-albert-youville-indian-residential-school/", img: a("more-than-half-day.png") },
+  { title: "Chinese Hand Laundries: A History of the First Chinese Entrepreneurs in Edmonton", author: "", date: "Dec 03", theme: "Chinese Heritage", url: "https://citymuseumedmonton.ca/2025/12/03/chinese-hand-laundries-a-history-of-the-first-chinese-entrepreneurs-in-edmonton/", img: a("chinese-hand-laundries.png") },
 ];
 
 function EcampSection() {
@@ -220,7 +220,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/August%207%20Labour%20Tour%20strike%202.jpg"
+                src="assets/august-7-labour-tour.jpg"
                 alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -267,7 +267,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/Trivia%20Night%20September%202025%2011.JPG"
+                src="assets/trivia-night-2025.jpg"
                 alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -295,7 +295,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/Momentary%20Museum-Senses-223%202.jpg"
+                src="assets/momentary-museum.jpg"
                 alt="Momentary Museum — Senses exhibit"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
