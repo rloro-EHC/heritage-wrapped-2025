@@ -127,7 +127,7 @@ function FireSection() {
           {run === "spring" ? (
             <div style={{alignSelf: 'start', position: 'sticky', top: 140, display: 'flex', flexDirection: 'column', gap: 12}}>
               <img
-                src="assets/Tipi Confessions.png"
+                src="assets/Tipi%20Confessions.png"
                 alt="Tipi Confessions Speaker Series — Ashleigh Cardinal"
                 style={{width: '100%', borderRadius: 4, display: 'block'}}
               />
