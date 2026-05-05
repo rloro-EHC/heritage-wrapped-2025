@@ -11,10 +11,10 @@ const SPOTLIGHTS = [
   },
   {
     tag: "Grant Recipient · HCIP",
-    title: "Palestine 101 — Educational Resources",
-    body: "The Canada Palestine Cultural Association received a Heritage Project Grant to develop comprehensive K–12 educational resources on Palestinian culture, history, and heritage — a testament to the breadth of heritage EHC supports.",
-    media: { type: 'instagram', src: 'https://www.instagram.com/reel/DBerva5tGSx/embed', orientation: 'portrait', caption: '@canadapalestine on Instagram' },
-    img: "Palestine 101 classroom resource",
+    title: "New Grocery Movement — Cooking as Resilience",
+    body: "New Grocery Movement received a Heritage Project Grant for Cooking4Community: Cooking As Resilience — establishing community cooking programs that celebrate diverse food traditions and build belonging through intergenerational food story exchange.",
+    media: { type: 'instagram', src: 'https://www.instagram.com/p/DWAMFTSgTup/embed', orientation: 'portrait', caption: 'New Grocery Movement on Instagram' },
+    img: "New Grocery Movement cooking program",
     color: "var(--brick)",
   },
   {
