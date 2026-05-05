@@ -268,7 +268,7 @@ function EcampSection() {
                 <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>K-DAYS GROUNDS</span>
               </div>
               <div>
-                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>4,000+</div>
+                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>4,000</div>
                 <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 6, fontWeight: 500}}>interactions · work-themed display</div>
               </div>
               <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', margin: 0}}>
