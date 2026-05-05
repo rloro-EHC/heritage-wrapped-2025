@@ -138,20 +138,20 @@ function Partnerships() {
         </p>
       </div>
 
-      {/* 06.3 — Iskwew Kâ-mikak */}
+      {/* 06.2 — Iskwehew Kamik */}
       <div style={{ marginBottom: 80 }}>
-        <span className="eyebrow eyebrow-ink">06.2 — Iskwew Kâ-mikak</span>
+        <span className="eyebrow eyebrow-ink">06.2 — Iskwehew Kamik</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Indigenous women-led ceremonial space</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="iskwew-grid">
           <div>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
-              In response to the lack of opportunities for urban Indigenous women to occupy ceremonial roles, Iskwew Kâ-mikak created a dedicated space for ceremony, cultural practice, and community connection.
+              In response to the lack of opportunities for urban Indigenous women to occupy ceremonial roles, Iskwehew Kamik created a dedicated space for ceremony, cultural practice, and community connection.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 20 }}>
               Held in June 2025, the gathering brought together 30 Indigenous women and non-binary participants, providing access to ceremonial rites of passage and teachings grounded in Indigenous knowledge systems.
             </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'var(--ink-soft)', marginBottom: 32 }}>
-              More than a single event, Iskwew Kâ-mikak represents a shift in how heritage is supported, moving beyond institutional models toward community-led, relational, and land-based approaches. Participants engaged in shared learning, ceremony, and intergenerational exchange, strengthening cultural continuity and identity.
+              More than a single event, Iskwehew Kamik represents a shift in how heritage is supported, moving beyond institutional models toward community-led, relational, and land-based approaches. Participants engaged in shared learning, ceremony, and intergenerational exchange, strengthening cultural continuity and identity.
             </p>
             <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
               <div className="cell tone-prairie" style={{ minHeight: 0, padding: 24 }}>
@@ -163,7 +163,7 @@ function Partnerships() {
           </div>
           <Img
             src={ASSET("iskwehew-kamik.jpg")}
-            caption="Former Indigenous Initiatives Lead Jess Johns and her brother Ben help raise the tipi ahead of the Iskwehew-Kamik ceremonial gathering"
+            caption="Former Indigenous Initiatives Lead Jess Johns and her brother Ben help raise the tipi ahead of the Iskwehew Kamik ceremonial gathering"
           />
         </div>
       </div>
