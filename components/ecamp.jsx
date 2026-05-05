@@ -1,6 +1,6 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
-const a = (file) => "assets/" + file;
+const a = (file) => "assets/" + encodeURIComponent(file);
 
 const THEME_COLORS = {
   "Indigenous Domesticity": { bg: "#4a7a5c", text: "#fff" },
@@ -220,7 +220,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/August 7 Labour Tour strike 2.jpg"
+                src="assets/August%207%20Labour%20Tour%20strike%202.jpg"
                 alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -267,7 +267,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/Trivia Night September 2025 11.JPG"
+                src="assets/Trivia%20Night%20September%202025%2011.JPG"
                 alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
@@ -295,7 +295,7 @@ function EcampSection() {
             </div>
             <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
               <img
-                src="assets/Momentary Museum-Senses-223 2.jpg"
+                src="assets/Momentary%20Museum-Senses-223%202.jpg"
                 alt="Momentary Museum — Senses exhibit"
                 style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
               />
