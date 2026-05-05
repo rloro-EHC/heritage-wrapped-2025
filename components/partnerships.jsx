@@ -1,6 +1,6 @@
 // partnerships.jsx — Part 06: Partnerships & Collaborations
 
-const ASSET = (f) => "assets/" + encodeURIComponent(f);
+const ASSET = (f) => "assets/" + f;
 
 const CHAS_GRANTS = [
   { org: "Shawn Tse / FascinAsian Film Fest", project: "Event Promotion", award: 5000 },
@@ -116,7 +116,7 @@ function Partnerships() {
             </p>
           </div>
           <Img
-            src={ASSET("Fire Spotlight Series - King Charles III Coronation Medal Ceremony.jpg")}
+            src={ASSET("fire-spotlight-coronation.jpg")}
             caption="Executive Director David Ridley brings remarks on behalf of EHC, recognizing honorees Dr. Jerry Saddleback, Celina Loyer, and Matthew Hiltermann"
           />
         </div>
@@ -168,7 +168,7 @@ function Partnerships() {
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>Connecting stories across the country</h3>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="bhc-grid">
           <Img
-            src={ASSET("Black Heritage Caucus.jpg")}
+            src={ASSET("black-heritage-caucus.jpg")}
             caption="Black Heritage Caucus at 2025 National Trust Conference in Nova Scotia"
           />
           <div>
@@ -219,7 +219,7 @@ function Partnerships() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
             <Img
-              src={ASSET("Roots & Routes (Journey of the Horse).JPG")}
+              src={ASSET("roots-and-routes-journey.jpg")}
               caption="Roots & Routes visits Journey of the Horse at the Mah Society (April 2025)"
             />
             <div className="stat-grid" style={{ gridTemplateColumns: '1fr 1fr', marginTop: 0 }}>
@@ -346,7 +346,7 @@ function Partnerships() {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 48, alignItems: 'start' }} className="bhm-grid">
             <Img
-              src={ASSET("Black History Month Launch 2025.JPG")}
+              src={ASSET("bhm-launch-2025.jpg")}
               caption="Student performs during the Launch Event for Black History Month 2025"
             />
             <div>
