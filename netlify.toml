@@ -5,8 +5,3 @@
   for = "/components/*.jsx"
   [headers.values]
     Content-Type = "text/plain"
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
