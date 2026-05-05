@@ -211,11 +211,11 @@ function EcampSection() {
         </div>
       </div>
 
-      {/* Summer programming — expanded with descriptive blurbs */}
+      {/* ECAMP Programming */}
       <div style={{marginTop: 64}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 24, flexWrap: 'wrap', gap: 16}}>
           <div>
-            <span className="eyebrow eyebrow-ink">04.2 — Summer Programming</span>
+            <span className="eyebrow eyebrow-ink">04.2 — ECAMP Programming</span>
             <h3 style={{marginTop: 8}}>Busiest season to date.</h3>
           </div>
           <div className="mono" style={{fontSize: 12, color: 'var(--ink-mute)', letterSpacing: '0.08em'}}>
@@ -223,112 +223,126 @@ function EcampSection() {
           </div>
         </div>
 
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginBottom: 24}} className="ecamp-progs">
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, marginBottom: 24}} className="ecamp-progs">
+
           {/* Walking Tours */}
-          <div style={{background: 'var(--paper)', border: '1px solid var(--rule)', padding: 28, borderRadius: 4}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">Curiosity Walking Tours</span>
-              <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>SUMMER 2025</span>
-            </div>
-            <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
+          <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
                 src="assets/august-7-labour-tour.jpg"
                 alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
-                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+                style={{width: '100%', height: 'auto', display: 'block'}}
               />
-              <div>
-                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>365</div>
-                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4, fontWeight: 500}}>guests · nearly all tours sold out</div>
-              </div>
             </div>
-            <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)'}}>
-              ECAMP commissioned two walking tours from community heritage practitioners and provided two early-career heritage
-              practitioners with full-time summer employment delivering them. The tours moved through Strathcona, McCauley, and the
-              River Valley — and were covered by GlobalTV, CBC Radio, AUPE, and the Edmonton Journal.
-              Abigail Struthers explored connections with the McCauley neighbourhood; her story will be published in
-              <em> Boyle McCauley News</em> and ECAMP.
-            </p>
-          </div>
+            <div style={{padding: 32, display: 'flex', flexDirection: 'column', gap: 12, flex: 1}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8}}>
+                <span className="stat-lbl">Curiosity Walking Tours</span>
+                <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>SUMMER 2025</span>
+              </div>
+              <div>
+                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>365</div>
+                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 6, fontWeight: 500}}>guests · nearly all tours sold out</div>
+              </div>
+              <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', margin: 0}}>
+                ECAMP commissioned two walking tours from community heritage practitioners and provided two early-career heritage
+                practitioners with full-time summer employment delivering them. The tours moved through Strathcona, McCauley, and the
+                River Valley — and were covered by GlobalTV, CBC Radio, AUPE, and the Edmonton Journal.
+                Abigail Struthers explored connections with the McCauley neighbourhood; her story will be published in
+                <em> Boyle McCauley News</em> and ECAMP.
+              </p>
+            </div>
+          </article>
 
           {/* K-Days */}
-          <div className="cell tone-ember" style={{padding: 28, borderRadius: 4}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">K-Days Heritage Exhibit</span>
-              <span className="mono" style={{fontSize: 11, opacity: 0.7, letterSpacing: '0.08em'}}>K-DAYS GROUNDS</span>
+          <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
+              <img
+                src="assets/k-days-exhibit-2025.jpg"
+                alt="K-Days Heritage Exhibit 2025 — work-themed display"
+                style={{width: '100%', height: 'auto', display: 'block'}}
+              />
             </div>
-            <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
-              <div className="img-ph tone-dark" style={{aspectRatio: '1/1', fontSize: 10, padding: 6, textAlign: 'center', borderColor: 'rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.7)'}}>K-Days photo</div>
-              <div>
-                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'white'}}>4,000+</div>
-                <div style={{fontSize: 13, opacity: 0.85, marginTop: 4, fontWeight: 500}}>interactions · work-themed display</div>
+            <div style={{padding: 32, display: 'flex', flexDirection: 'column', gap: 12, flex: 1}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8}}>
+                <span className="stat-lbl">K-Days Heritage Exhibit</span>
+                <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>K-DAYS GROUNDS</span>
               </div>
+              <div>
+                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>4,000+</div>
+                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 6, fontWeight: 500}}>interactions · work-themed display</div>
+              </div>
+              <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', margin: 0}}>
+                The K-Days heritage exhibit returned with a work-themed display tied to ECAMP's 2025 Heritage of Work focus —
+                featuring reusable materials sourced from local builders and businesses, and staffed with volunteer support.
+                The exhibit met Edmontonians where they already gather, threading labour heritage into the rhythm of the
+                city's biggest summer festival.
+              </p>
             </div>
-            <p style={{fontSize: 14, lineHeight: 1.55, opacity: 0.9}}>
-              The K-Days heritage exhibit returned with a work-themed display tied to ECAMP's 2025 Heritage of Work focus —
-              featuring reusable materials sourced from local builders and businesses, and staffed with volunteer support.
-              The exhibit met Edmontonians where they already gather, threading labour heritage into the rhythm of the
-              city's biggest summer festival.
-            </p>
-          </div>
+          </article>
 
           {/* YEG Trivia Night */}
-          <div style={{background: 'var(--cream-deep)', border: '1px solid var(--rule)', padding: 28, borderRadius: 4}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">ECAMP YEG Trivia Night</span>
-              <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>2025</span>
-            </div>
-            <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
+          <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
                 src="assets/trivia-night-2025.jpg"
                 alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
-                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+                style={{width: '100%', height: 'auto', display: 'block'}}
               />
-              <div>
-                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>128+</div>
-                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 4, fontWeight: 500}}>participants · 4 events · 3+ venues</div>
-              </div>
             </div>
-            <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', marginBottom: 10}}>
-              YEG Trivia Night brings Edmontonians together to explore the city's history through interactive, social learning.
-              Hosted in informal community venues including Teddy's Pub and in collaboration with Taproot, themed trivia rounds
-              span neighbourhood histories, elections, labour, and cultural heritage — with guest quizmasters including
-              musicians, historians, and community storytellers.
-            </p>
-            <p style={{fontSize: 12, fontStyle: 'italic', color: 'var(--ink-mute)', lineHeight: 1.5, margin: 0}}>
-              Co-hosted by Stephanie Swensrude and Chris Chang-Yen Phillips at Canadian Brewhouse - Edmonton North.
-            </p>
-          </div>
+            <div style={{padding: 32, display: 'flex', flexDirection: 'column', gap: 12, flex: 1}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8}}>
+                <span className="stat-lbl">ECAMP YEG Trivia Night</span>
+                <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>2025</span>
+              </div>
+              <div>
+                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>128+</div>
+                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 6, fontWeight: 500}}>participants · 4 events · 3+ venues</div>
+              </div>
+              <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', marginBottom: 8}}>
+                YEG Trivia Night brings Edmontonians together to explore the city's history through interactive, social learning.
+                Hosted in informal community venues including Teddy's Pub and in collaboration with Taproot, themed trivia rounds
+                span neighbourhood histories, elections, labour, and cultural heritage — with guest quizmasters including
+                musicians, historians, and community storytellers.
+              </p>
+              <p style={{fontSize: 12, fontStyle: 'italic', color: 'var(--ink-mute)', lineHeight: 1.5, margin: 0}}>
+                Co-hosted by Stephanie Swensrude and Chris Chang-Yen Phillips at Canadian Brewhouse - Edmonton North.
+              </p>
+            </div>
+          </article>
 
           {/* Momentary Museum */}
-          <div className="cell tone-prairie" style={{padding: 28, borderRadius: 4}}>
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 16}}>
-              <span className="stat-lbl">Momentary Museum</span>
-              <span className="mono" style={{fontSize: 11, opacity: 0.7, letterSpacing: '0.08em'}}>4 EPL BRANCHES</span>
-            </div>
-            <div style={{display: 'grid', gridTemplateColumns: '120px 1fr', gap: 16, alignItems: 'center', marginBottom: 16}}>
+          <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
+            <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
                 src="assets/momentary-museum.jpg"
                 alt="Momentary Museum — Senses exhibit"
-                style={{width: '100%', aspectRatio: '1/1', objectFit: 'cover', display: 'block', borderRadius: 2}}
+                style={{width: '100%', height: 'auto', display: 'block'}}
               />
+            </div>
+            <div style={{padding: 32, display: 'flex', flexDirection: 'column', gap: 12, flex: 1}}>
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: 8}}>
+                <span className="stat-lbl">Momentary Museum</span>
+                <span className="mono" style={{fontSize: 11, color: 'var(--prairie)', letterSpacing: '0.08em'}}>4 EPL BRANCHES</span>
+              </div>
               <div>
-                <div className="stat-num" style={{fontSize: 'clamp(48px, 5vw, 72px)', lineHeight: 0.95, fontWeight: 600, color: 'white'}}>400+</div>
-                <div style={{fontSize: 13, opacity: 0.85, marginTop: 4, fontWeight: 500}}>participants · 6 partnerships</div>
+                <div className="stat-num" style={{fontSize: 'clamp(56px, 6vw, 80px)', lineHeight: 0.95, fontWeight: 600, color: 'var(--ink)'}}>400+</div>
+                <div style={{fontSize: 13, color: 'var(--ink-mute)', marginTop: 6, fontWeight: 500}}>participants · 6 partnerships</div>
+              </div>
+              <p style={{fontSize: 14, lineHeight: 1.55, color: 'var(--ink-soft)', marginBottom: 12}}>
+                Momentary Museum transforms accessible public spaces — including Edmonton Public Library branches — into
+                pop-up museums where Edmontonians contribute their own objects, stories, and perspectives to temporary,
+                community-based exhibitions. Delivered in partnership with the Royal Alberta Museum, the Provincial Archives
+                of Alberta, and EPL.
+              </p>
+              <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8, fontSize: 12, color: 'var(--ink-mute)'}} className="mono">
+                <div>STANLEY MILNER · 136</div>
+                <div>MILL WOODS · 150+</div>
+                <div>LOIS HOLE · 76</div>
+                <div>CAPILANO · 46+</div>
               </div>
             </div>
-            <p style={{fontSize: 14, lineHeight: 1.55, opacity: 0.9, marginBottom: 12}}>
-              Momentary Museum transforms accessible public spaces — including Edmonton Public Library branches — into
-              pop-up museums where Edmontonians contribute their own objects, stories, and perspectives to temporary,
-              community-based exhibitions. Delivered in partnership with the Royal Alberta Museum, the Provincial Archives
-              of Alberta, and EPL.
-            </p>
-            <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8, fontSize: 12, opacity: 0.85}} className="mono">
-              <div>STANLEY MILNER · 136</div>
-              <div>MILL WOODS · 150+</div>
-              <div>LOIS HOLE · 76</div>
-              <div>CAPILANO · 46+</div>
-            </div>
-          </div>
+          </article>
+
         </div>
 
         <style>{`
