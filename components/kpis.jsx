@@ -92,7 +92,7 @@ const KPIS = [
     headline: "5,000+ Edmontonians engaged in person.",
     bullets: [
       "365 guests on heritage walking tours, summer 2025",
-      "4,000 interactions at K-Days heritage exhibit",
+      "4,000+ interactions at K-Days heritage exhibit",
       "Churchill Square pop-up sound exhibit engaged 200+ including Mayor Sohi",
       "Programming in Strathcona, McCauley, River Valley, K-Days grounds",
     ],
