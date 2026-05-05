@@ -131,7 +131,7 @@ function ByTheNumbers() {
           </figure>
           <div className="stat-grid" style={{ gridTemplateColumns: '1fr', alignSelf: 'stretch' }}>
             <div className="cell" style={{ minHeight: 0, padding: 24 }}>
-              <span className="stat-lbl">K-Days & Walking Tours</span>
+              <span className="stat-lbl">K-Days · Walking Tours · Trivia Night · Momentary Museum</span>
               <div className="stat-num sm">5,000+</div>
               <div className="stat-foot">Edmontonians engaged in person</div>
             </div>
