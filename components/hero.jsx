@@ -60,7 +60,7 @@ function Hero() {
         <span className="hero-meta">Edmonton Heritage Council · Year 7 of Connections & Exchanges</span>
       </div>
       <img
-        src="assets/ehc-logo-color.png"
+        src="assets/ehc-logo-color.png?v=2"
         alt="Edmonton Heritage Council"
         style={{height: 64, width: 'auto', display: 'block', marginBottom: 16}}
       />
