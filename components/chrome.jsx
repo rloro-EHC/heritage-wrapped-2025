@@ -24,7 +24,7 @@ function SqsHeader() {
       <header className="sqs-header">
         <div className="sqs-header-inner">
           <a href="#" className="sqs-logo">
-            <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.ehcLogoWhite) || "assets/ehc-logo-white.webp"} alt="Edmonton Heritage Council" />
+            <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.ehcLogoWhite) || "assets/ehc-logo-white.webp?v=2"} alt="Edmonton Heritage Council" />
           </a>
           <nav className="sqs-nav">
             <a href="#">About</a>
