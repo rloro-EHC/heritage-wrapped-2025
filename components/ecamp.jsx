@@ -1,6 +1,6 @@
 // ecamp.jsx — Part 3: ECAMP Edmonton City as Museum Project
 
-const a = (file) => "assets/" + file;
+const a = (file) => "assets/" + file + "?v=2";
 
 const THEME_COLORS = {
   "Indigenous Domesticity": { bg: "#4a7a5c", text: "#fff" },
@@ -70,7 +70,7 @@ function EcampSection() {
         <figure style={{margin: 0, display: 'flex', flexDirection: 'column', gap: 10}}>
           <div style={{overflow: 'hidden', borderRadius: 4}}>
             <img
-              src="assets/ecamp-clock-in-elsa-and-shima.jpg"
+              src="assets/ecamp-clock-in-elsa-and-shima.jpg?v=2"
               alt="Shima and Elsa Robinson during the recording of their episode for the Clock-In Podcast"
               style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}}
             />
@@ -229,7 +229,7 @@ function EcampSection() {
           <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
             <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
-                src="assets/august-7-labour-tour.jpg"
+                src="assets/august-7-labour-tour.jpg?v=2"
                 alt="Curiosity Walking Tours — Labour history walking tour, August 2025"
                 style={{width: '100%', height: 'auto', display: 'block'}}
               />
@@ -257,7 +257,7 @@ function EcampSection() {
           <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
             <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
-                src="assets/k-days-exhibit-2025.jpg"
+                src="assets/k-days-exhibit-2025.jpg?v=2"
                 alt="K-Days Heritage Exhibit 2025 — work-themed display"
                 style={{width: '100%', height: 'auto', display: 'block'}}
               />
@@ -284,7 +284,7 @@ function EcampSection() {
           <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
             <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
-                src="assets/trivia-night-2025.jpg"
+                src="assets/trivia-night-2025.jpg?v=2"
                 alt="YEG Trivia Night at Canadian Brewhouse — Edmonton North"
                 style={{width: '100%', height: 'auto', display: 'block'}}
               />
@@ -314,7 +314,7 @@ function EcampSection() {
           <article style={{border: '1px solid var(--rule)', background: 'var(--paper)', borderRadius: 4, overflow: 'hidden', display: 'flex', flexDirection: 'column'}}>
             <div style={{borderBottom: '1px solid var(--rule)', overflow: 'hidden'}}>
               <img
-                src="assets/momentary-museum.jpg"
+                src="assets/momentary-museum.jpg?v=2"
                 alt="Momentary Museum — Senses exhibit"
                 style={{width: '100%', height: 'auto', display: 'block'}}
               />
