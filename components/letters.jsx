@@ -31,8 +31,8 @@ function Letters() {
   };
 
   const photos = {
-    ed: "assets/david-ridley.jpg",
-    chair: "assets/jessica-burylo.webp",
+    ed: "assets/david-ridley.jpg?v=2",
+    chair: "assets/jessica-burylo.webp?v=2",
   };
 
   const L = letters[active];
