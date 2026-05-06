@@ -123,7 +123,7 @@ function ByTheNumbers() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start' }} className="reach-grid">
           <figure style={{ margin: 0, display: 'flex', flexDirection: 'column', gap: 8 }}>
             <div style={{ aspectRatio: '4 / 3', position: 'relative', overflow: 'hidden', background: 'var(--paper-warm)' }}>
-              <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.kDaysExhibit) || "assets/k-days-exhibit.jpg"} alt="K-Days heritage exhibit, summer 2025 — Edmonton City as Museum Project booth with visitors viewing storyboards" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.kDaysExhibit) || "assets/k-days-exhibit.jpg?v=2"} alt="K-Days heritage exhibit, summer 2025 — Edmonton City as Museum Project booth with visitors viewing storyboards" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
             </div>
             <figcaption className="mono" style={{ fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink-mute)' }}>
               K-Days heritage exhibit · Summer 2025
