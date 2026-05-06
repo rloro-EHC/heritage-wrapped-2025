@@ -1,6 +1,6 @@
 // partnerships.jsx — Part 06: Partnerships & Collaborations
 
-const ASSET = (f) => "assets/" + f;
+const ASSET = (f) => "assets/" + f + "?v=2";
 
 const CHAS_GRANTS = [
   { org: "Shawn Tse / FascinAsian Film Fest", project: "Event Promotion", award: 5000 },
