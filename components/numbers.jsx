@@ -81,7 +81,7 @@ function ByTheNumbers() {
           </div>
           <div className="cell">
             <span className="stat-lbl">Increase in FIRE applications</span>
-            <div className="stat-num med">↑ 80%</div>
+            <div className="stat-num med">↑ 35%</div>
             <div className="stat-foot">93 applications across two intakes</div>
           </div>
           <div className="cell" style={{ background: 'var(--sky-pale)' }}>
