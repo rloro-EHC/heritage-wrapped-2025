@@ -80,10 +80,11 @@ function MicrositeAnchorNav() {
             <React.Fragment key={s.id}>
               {groupStart && (
                 <span style={{
-                  display: 'flex', alignItems: 'center', paddingLeft: 14, paddingRight: 6,
-                  borderLeft: '1px solid rgba(39,37,37,0.15)',
-                  color: 'rgba(39,37,37,0.4)', fontSize: 9,
-                  letterSpacing: '0.14em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
+                  display: 'flex', alignItems: 'center', paddingLeft: 12, paddingRight: 4,
+                  borderLeft: '1px solid rgba(39,37,37,0.12)',
+                  color: 'rgba(39,37,37,0.35)', fontSize: 11,
+                  letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
+                  fontFamily: 'var(--mono)',
                 }}>{s.group}</span>
               )}
               <a
@@ -93,10 +94,11 @@ function MicrositeAnchorNav() {
                 onMouseEnter={() => setHovId(s.id)}
                 onMouseLeave={() => setHovId(null)}
                 style={{
-                  color: isActive ? 'var(--ink)' : (isHov ? 'var(--ink)' : 'rgba(39,37,37,0.55)'),
-                  background: isHov && !isActive ? 'rgba(39,37,37,0.06)' : 'transparent',
-                  paddingLeft: s.group ? 10 : 14,
-                  paddingRight: s.group ? 10 : 14,
+                  color: isActive ? '#ffffff' : (isHov ? 'var(--ink)' : 'var(--ink-soft)'),
+                  background: isActive ? 'var(--ink)' : (isHov ? 'rgba(39,37,37,0.07)' : 'transparent'),
+                  paddingLeft: s.group ? 10 : 16,
+                  paddingRight: s.group ? 10 : 16,
+                  borderRadius: 999,
                 }}
               >
                 {s.label}
