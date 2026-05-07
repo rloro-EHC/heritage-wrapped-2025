@@ -16,7 +16,7 @@ const HERO_ROTATIONS = [
     cap: "Grant applications received — the highest in EHC history.",
     body: [
       "We received 146 HCIP applications in 2025 — the highest in program history, a 49% increase from 2024 — alongside continued demand through FIRE.",
-      "While our success rate decreased to 28% due to limited funding relative to demand, the volume of applications confirmed the depth and breadth of heritage work happening in Edmonton's communities.",
+      "While our funding rate decreased to 28% due to limited funding relative to demand, the volume of applications confirmed the depth and breadth of heritage work happening in Edmonton's communities.",
     ],
   },
   {
