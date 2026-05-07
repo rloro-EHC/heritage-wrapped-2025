@@ -172,27 +172,27 @@ function Grants() {
 
           <div style={{background: 'var(--paper)', border: '1px solid var(--rule)', padding: 32, borderRadius: 4}}>
             {stream === "Heritage Project" && (
-              <StreamPanel title="Heritage Project Grants" foot="11 funded · 74 applications · 15% success rate"
+              <StreamPanel title="Heritage Project Grants" foot="11 funded · 74 applications · 15% funding rate"
                 blurb="Heritage Project applications doubled from 2024 — a clear signal of how vibrant Edmonton's heritage community has become. The 11 funded projects span language preservation, digital platforms, educational resources, and oral history."
                 rows={HERITAGE_PROJECTS.map(p => ({a: p.org, b: p.project, c: fmt(p.award), note: p.note}))} />
             )}
             {stream === "Career Development" && (
-              <StreamPanel title="Career Development Grants" foot="11 practitioners · 21 applications · 52% success rate"
+              <StreamPanel title="Career Development Grants" foot="11 practitioners · 21 applications · 52% funding rate"
                 blurb="Practitioners travelled to conferences and training opportunities from Barbados to Taiwan, from Halifax to Australia — bringing new skills and international networks back to Edmonton."
                 rows={CAREER_DEV.map(p => ({a: p.name, b: p.dest, c: fmt(p.award), note: p.note}))} />
             )}
             {stream === "Operational" && (
-              <StreamPanel title="Operational Grants — Sector Backbone" foot="12 organizations · 23 applications · 52% success rate"
+              <StreamPanel title="Operational Grants — Sector Backbone" foot="12 organizations · 23 applications · 52% funding rate"
                 blurb="These organizations collectively serve tens of thousands of Edmontonians annually, maintain significant heritage collections, deliver educational programming, and provide employment for heritage professionals."
                 rows={OPERATIONAL.map(p => ({a: p.org, b: "", c: fmt(p.award)}))} />
             )}
             {stream === "Research & Development" && (
-              <StreamPanel title="Research & Development Grants" foot="6 projects · 25 applications · 24% success rate"
+              <StreamPanel title="Research & Development Grants" foot="6 projects · 25 applications · 24% funding rate"
                 blurb="Supporting heritage practitioners in the critical research and planning phases that lay the groundwork for future community impact."
                 rows={RND_PROJECTS} />
             )}
             {stream === "Community Archives" && (
-              <StreamPanel title="Community Archives Support" foot="2 archives · 3 applications · 67% success rate"
+              <StreamPanel title="Community Archives Support" foot="2 archives · 3 applications · 67% funding rate"
                 blurb="Supporting grassroots preservation to ensure diverse community stories are collected and made accessible for future generations."
                 rows={[
                   {a: "Usha Gupta", b: "Artistic Records", c: "$3,000"},
