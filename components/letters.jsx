@@ -40,16 +40,19 @@ function Letters() {
 
   return (
     <section className="section section--tight" id="letters">
-      <div style={{display: 'flex', gap: 12, marginBottom: 40}}>
-        {Object.entries(letters).map(([key, l]) => (
-          <button
-            key={key}
-            className={"pill" + (active === key ? " is-active" : "")}
-            onClick={() => setActive(key)}
-          >
-            Letter from the {l.tab}
-          </button>
-        ))}
+      <div style={{marginBottom: 40}}>
+        <div className="mono" style={{fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-mute)', marginBottom: 14}}>Select a letter to read →</div>
+        <div style={{display: 'flex', gap: 12, flexWrap: 'wrap'}}>
+          {Object.entries(letters).map(([key, l]) => (
+            <button
+              key={key}
+              className={"pill" + (active === key ? " is-active" : "")}
+              onClick={() => setActive(key)}
+            >
+              Letter from the {l.tab}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'start'}}
