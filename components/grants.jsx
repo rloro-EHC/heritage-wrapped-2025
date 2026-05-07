@@ -128,6 +128,7 @@ function Grants() {
 
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32}} className="grants-grid">
           <div>
+            <div className="mono" style={{fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--ink-mute)', marginBottom: 8}}>Select a stream to explore recipients →</div>
             {HCIP_STREAMS.map(s => (
               <button
                 key={s.name}
