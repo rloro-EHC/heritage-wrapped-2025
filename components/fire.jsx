@@ -79,7 +79,7 @@ function FireSection() {
           {[
             ["$189,943", "Total FIRE distributed", "Spring + Fall 2025"],
             ["19", "Indigenous-led projects funded", "Across two intakes"],
-            ["93", "Applications received", "↑ 80% from 2024"],
+            ["93", "Applications received", "↑ 35% from 2024"],
             ["4", "Evaluation criteria", "Relationality · Resurgence · Impact · Expectations"],
           ].map(([n, l, f], i) => (
             <div key={i} style={{
