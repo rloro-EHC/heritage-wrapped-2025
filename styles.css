@@ -128,23 +128,21 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   position: sticky;
   top: 0;
   z-index: 40;
-  background: #f4eddd;
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  box-shadow: 0 2px 12px rgba(39,37,37,0.10);
-  border-bottom: 1px solid rgba(39,37,37,0.10);
+  background: #ffffff;
+  font-family: var(--body);
+  letter-spacing: 0;
+  text-transform: none;
+  box-shadow: 0 1px 0 rgba(39,37,37,0.10);
 }
 .microsite-anchor-inner {
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   display: flex;
-  gap: 0;
+  gap: 4px;
   overflow-x: auto;
-  align-items: stretch;
-  height: 46px;
+  align-items: center;
+  height: 54px;
   scrollbar-width: none;
 }
 .microsite-anchor-inner::-webkit-scrollbar { display: none; }
@@ -152,32 +150,35 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
   color: var(--ink);
   text-decoration: none;
   font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-size: 13px;
+  letter-spacing: 0;
   flex-shrink: 0;
   padding-right: 20px;
-  margin-right: 8px;
-  border-right: 1px solid rgba(39,37,37,0.15);
+  margin-right: 4px;
+  border-right: 1px solid rgba(39,37,37,0.12);
   display: flex;
   align-items: center;
   transition: color 0.15s;
+  text-transform: none;
 }
 .microsite-anchor-inner .hw-logo:hover { color: var(--prairie); }
 .microsite-anchor-inner a {
-  color: rgba(39,37,37,0.55);
+  color: var(--ink-soft);
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
-  padding: 0 14px;
+  padding: 7px 16px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid transparent;
+  border-radius: 999px;
   transition: color 0.15s, background 0.15s;
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 .microsite-anchor-inner a.is-active {
-  color: var(--ink);
-  border-bottom-color: var(--prairie);
+  color: #ffffff;
+  background: var(--ink);
+  font-weight: 700;
 }
 
 /* ───────── Type ─────────  */
