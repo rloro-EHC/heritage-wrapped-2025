@@ -43,17 +43,23 @@ function SqsHeader() {
 
 function MicrositeAnchorNav() {
   const [activeId, setActiveId] = React.useState(null);
-  const [hovId, setHovId] = React.useState(null);
+  const [hovId, setHovId]   = React.useState(null);
+  const [stuck, setStuck]   = React.useState(false);
+  const sentinelRef = React.useRef(null);
+  const NAV_H = 54;
 
   React.useEffect(() => {
     const onScroll = () => {
-      const scrollY = window.scrollY + 64;
+      const scrollY = window.scrollY + NAV_H + 10;
       let current = null;
       for (const s of NAV_SECTIONS) {
         const el = document.getElementById(s.id);
         if (el && el.offsetTop <= scrollY) current = s.id;
       }
       setActiveId(current);
+      if (sentinelRef.current) {
+        setStuck(sentinelRef.current.getBoundingClientRect().top < 0);
+      }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -64,50 +70,57 @@ function MicrositeAnchorNav() {
     e.preventDefault();
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 46;
+    const top = el.getBoundingClientRect().top + window.scrollY - NAV_H;
     window.scrollTo({ top, behavior: 'smooth' });
   };
 
   return (
-    <div className="microsite-anchor-nav">
-      <div className="microsite-anchor-inner">
-        <a href="#top" className="hw-logo" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Heritage Wrapped 2025</a>
-        {NAV_SECTIONS.map((s, i) => {
-          const isActive   = activeId === s.id;
-          const isHov      = hovId === s.id;
-          const groupStart = s.group && (i === 0 || NAV_SECTIONS[i - 1].group !== s.group);
-          return (
-            <React.Fragment key={s.id}>
-              {groupStart && (
-                <span style={{
-                  display: 'flex', alignItems: 'center', paddingLeft: 12, paddingRight: 4,
-                  borderLeft: '1px solid rgba(39,37,37,0.12)',
-                  color: 'rgba(39,37,37,0.35)', fontSize: 11,
-                  letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
-                  fontFamily: 'var(--mono)',
-                }}>{s.group}</span>
-              )}
-              <a
-                href={`#${s.id}`}
-                className={isActive ? 'is-active' : ''}
-                onClick={e => scrollTo(e, s.id)}
-                onMouseEnter={() => setHovId(s.id)}
-                onMouseLeave={() => setHovId(null)}
-                style={{
-                  color: isActive ? '#ffffff' : (isHov ? 'var(--ink)' : 'var(--ink-soft)'),
-                  background: isActive ? 'var(--ink)' : (isHov ? 'rgba(39,37,37,0.07)' : 'transparent'),
-                  paddingLeft: s.group ? 10 : 16,
-                  paddingRight: s.group ? 10 : 16,
-                  borderRadius: 999,
-                }}
-              >
-                {s.label}
-              </a>
-            </React.Fragment>
-          );
-        })}
+    <>
+      <div ref={sentinelRef} style={{ height: 0 }} />
+      {stuck && <div style={{ height: NAV_H }} />}
+      <div
+        className="microsite-anchor-nav"
+        style={stuck ? { position: 'fixed', top: 0, left: 0, right: 0, width: '100%', zIndex: 40 } : {}}
+      >
+        <div className="microsite-anchor-inner">
+          <a href="#top" className="hw-logo" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Heritage Wrapped 2025</a>
+          {NAV_SECTIONS.map((s, i) => {
+            const isActive   = activeId === s.id;
+            const isHov      = hovId === s.id;
+            const groupStart = s.group && (i === 0 || NAV_SECTIONS[i - 1].group !== s.group);
+            return (
+              <React.Fragment key={s.id}>
+                {groupStart && (
+                  <span style={{
+                    display: 'flex', alignItems: 'center', paddingLeft: 12, paddingRight: 4,
+                    borderLeft: '1px solid rgba(39,37,37,0.12)',
+                    color: 'rgba(39,37,37,0.35)', fontSize: 11,
+                    letterSpacing: '0.08em', textTransform: 'uppercase', whiteSpace: 'nowrap', flexShrink: 0,
+                    fontFamily: 'var(--mono)',
+                  }}>{s.group}</span>
+                )}
+                <a
+                  href={`#${s.id}`}
+                  className={isActive ? 'is-active' : ''}
+                  onClick={e => scrollTo(e, s.id)}
+                  onMouseEnter={() => setHovId(s.id)}
+                  onMouseLeave={() => setHovId(null)}
+                  style={{
+                    color: isActive ? '#ffffff' : (isHov ? 'var(--ink)' : 'var(--ink-soft)'),
+                    background: isActive ? 'var(--ink)' : (isHov ? 'rgba(39,37,37,0.07)' : 'transparent'),
+                    paddingLeft: s.group ? 10 : 16,
+                    paddingRight: s.group ? 10 : 16,
+                    borderRadius: 999,
+                  }}
+                >
+                  {s.label}
+                </a>
+              </React.Fragment>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
