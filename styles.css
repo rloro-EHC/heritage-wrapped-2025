@@ -634,20 +634,20 @@ p.lede { font-family: var(--display); font-size: clamp(20px, 2vw, 26px); line-he
 .pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border: 1px solid var(--rule);
+  gap: 8px;
+  padding: 11px 22px;
+  border: 1.5px solid var(--rule);
   background: var(--paper);
   color: var(--ink-soft);
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   border-radius: 999px;
   cursor: pointer;
   transition: all 0.15s;
 }
-.pill:hover { border-color: var(--ink); color: var(--ink); }
+.pill:hover { border-color: var(--ink); color: var(--ink); background: var(--cream-deep); }
 .pill.is-active {
   background: var(--ink);
   color: var(--cream);
