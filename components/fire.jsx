@@ -103,23 +103,26 @@ function FireSection() {
         </div>
 
         {/* Tabs */}
-        <div style={{display: 'flex', gap: 12, marginBottom: 32}}>
-          <button onClick={() => setRun("spring")} className="pill"
-            style={{
-              background: run === "spring" ? 'var(--ember)' : 'transparent',
-              color: run === "spring" ? 'white' : 'var(--cream)',
-              borderColor: run === "spring" ? 'var(--ember)' : 'rgba(244,237,221,0.3)'
-            }}>
-            Spring 2025 · Run 1 · 8 funded
-          </button>
-          <button onClick={() => setRun("fall")} className="pill"
-            style={{
-              background: run === "fall" ? 'var(--ember)' : 'transparent',
-              color: run === "fall" ? 'white' : 'var(--cream)',
-              borderColor: run === "fall" ? 'var(--ember)' : 'rgba(244,237,221,0.3)'
-            }}>
-            Fall 2025 · Run 2 · 11 funded
-          </button>
+        <div style={{marginBottom: 32}}>
+          <div className="mono" style={{fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(244,237,221,0.5)', marginBottom: 14}}>Select a grant intake to view recipients →</div>
+          <div style={{display: 'flex', gap: 12, flexWrap: 'wrap'}}>
+            <button onClick={() => setRun("spring")} className="pill"
+              style={{
+                background: run === "spring" ? 'var(--ember)' : 'transparent',
+                color: run === "spring" ? 'white' : 'var(--cream)',
+                borderColor: run === "spring" ? 'var(--ember)' : 'rgba(244,237,221,0.3)'
+              }}>
+              Spring 2025 · Run 1 · 8 funded
+            </button>
+            <button onClick={() => setRun("fall")} className="pill"
+              style={{
+                background: run === "fall" ? 'var(--ember)' : 'transparent',
+                color: run === "fall" ? 'white' : 'var(--cream)',
+                borderColor: run === "fall" ? 'var(--ember)' : 'rgba(244,237,221,0.3)'
+              }}>
+              Fall 2025 · Run 2 · 11 funded
+            </button>
+          </div>
         </div>
 
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 32}} className="fire-grid">
