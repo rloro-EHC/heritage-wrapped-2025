@@ -275,6 +275,10 @@ p.lede { font-family: var(--display); font-size: clamp(20px, 2vw, 26px); line-he
 @media (max-width: 720px) {
   .section-hd { grid-template-columns: 1fr; gap: 16px; }
 }
+@media (max-width: 600px) {
+  .section { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .section-hd { margin-bottom: 28px !important; padding-bottom: 20px !important; }
+}
 
 /* ───────── Hero ───────── */
 .hero {
