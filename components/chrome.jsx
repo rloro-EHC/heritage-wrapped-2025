@@ -15,13 +15,33 @@ const NAV_SECTIONS = [
 ];
 
 function SqsHeader() {
+  const [hidden, setHidden] = React.useState(false);
+  const lastY = React.useRef(0);
+
+  React.useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (y > lastY.current && y > 60) setHidden(true);
+      else if (y < lastY.current) setHidden(false);
+      lastY.current = y;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <>
+    <div style={{
+      position: 'sticky',
+      top: 0,
+      zIndex: 55,
+      transform: hidden ? 'translateY(-100%)' : 'translateY(0)',
+      transition: 'transform 0.3s ease',
+    }}>
       <div className="sqs-banner">
         <span>Edmonton Heritage Council · 2025 Annual Report just released →</span>
         <span className="sqs-banner-cta">Read the report</span>
       </div>
-      <header className="sqs-header">
+      <header className="sqs-header" style={{ position: 'relative', top: 'auto' }}>
         <div className="sqs-header-inner">
           <a href="#" className="sqs-logo">
             <img src={(typeof window !== 'undefined' && window.__resources && window.__resources.ehcLogoWhite) || "assets/ehc-logo-white.webp?v=2"} alt="Edmonton Heritage Council" />
@@ -37,7 +57,7 @@ function SqsHeader() {
           </nav>
         </div>
       </header>
-    </>
+    </div>
   );
 }
 
