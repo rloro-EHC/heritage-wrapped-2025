@@ -107,7 +107,7 @@ function HeroTracks() {
                     background: bg,
                     transition: 'background 0.18s, border-left-color 0.18s',
                   }}>
-                <div style={{
+                <div className="hero-track-inner" style={{
                   display: 'grid',
                   gridTemplateColumns: '56px 1fr auto 24px',
                   gap: 24,
@@ -139,7 +139,7 @@ function HeroTracks() {
                     </div>
                   </div>
 
-                  <div style={{
+                  <div className="hero-track-stat" style={{
                     fontFamily: 'var(--display)',
                     fontSize: 'clamp(36px, 4.5vw, 64px)',
                     fontWeight: 600,
@@ -164,7 +164,7 @@ function HeroTracks() {
                 </div>
 
                 {isOpen && (
-                  <div style={{
+                  <div className="hero-track-expanded" style={{
                     padding: '0 20px 32px calc(56px + 24px + 4px)',
                     fontSize: 16,
                     lineHeight: 1.65,
