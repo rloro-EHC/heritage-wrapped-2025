@@ -45,7 +45,7 @@ function MicrositeAnchorNav() {
   const [activeId, setActiveId] = React.useState(null);
   const [hovId, setHovId]   = React.useState(null);
   const [stuck, setStuck]   = React.useState(false);
-  const sentinelRef = React.useRef(null);
+  const wrapRef = React.useRef(null);
   const NAV_H = 54;
 
   React.useEffect(() => {
@@ -57,8 +57,10 @@ function MicrositeAnchorNav() {
         if (el && el.offsetTop <= scrollY) current = s.id;
       }
       setActiveId(current);
-      if (sentinelRef.current) {
-        setStuck(sentinelRef.current.getBoundingClientRect().top < 0);
+      // Sticky: detect when wrapper has scrolled off the top.
+      // Wrapper is always NAV_H tall, so no layout shift when nav goes fixed.
+      if (wrapRef.current) {
+        setStuck(wrapRef.current.getBoundingClientRect().top < 0);
       }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -75,12 +77,14 @@ function MicrositeAnchorNav() {
   };
 
   return (
-    <>
-      <div ref={sentinelRef} style={{ height: 0 }} />
-      {stuck && <div style={{ height: NAV_H }} />}
+    // Permanent NAV_H-tall wrapper — always holds the space in flow.
+    // When nav goes fixed it leaves flow, but the wrapper prevents layout shift.
+    <div ref={wrapRef} style={{ height: NAV_H }}>
       <div
         className="microsite-anchor-nav"
-        style={stuck ? { position: 'fixed', top: 0, left: 0, right: 0, width: '100%', zIndex: 40 } : {}}
+        style={stuck
+          ? { position: 'fixed', top: 0, left: 0, right: 0, width: '100%', zIndex: 40 }
+          : { position: 'relative' }}
       >
         <div className="microsite-anchor-inner">
           <a href="#top" className="hw-logo" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>Heritage Wrapped 2025</a>
@@ -120,7 +124,7 @@ function MicrositeAnchorNav() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
