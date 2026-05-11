@@ -3,7 +3,6 @@
 function App() {
   return (
     <>
-      <SqsHeader />
       <Hero />
       <MicrositeAnchorNav />
       <HeroTracks />
