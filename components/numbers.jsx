@@ -20,7 +20,7 @@ function ByTheNumbers() {
         <h3 style={{ marginTop: 12, marginBottom: 32, maxWidth: '20ch' }}>
           What Edmontonians say about heritage.
         </h3>
-        <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+        <div className="stat-grid">
           <div className="cell tone-prairie" style={{ backgroundColor: "rgb(81, 127, 163)" }}>
             <span className="stat-lbl">Sector value</span>
             <div className="stat-num">77<span style={{ fontSize: '0.5em' }}>%</span></div>
