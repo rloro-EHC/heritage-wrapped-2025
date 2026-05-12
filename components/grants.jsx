@@ -14,7 +14,7 @@ const HERITAGE_PROJECTS = [
   { org: "Catherine C. Cole", project: "Imagining Mill Woods", award: 20000,
     note: "Documenting the history of Mill Woods through archival research and oral history — a community heritage record of this significant post-war neighbourhood." },
   { org: "Société historique francophone de l'Alberta", project: "Flying Canoë Volant: Memory in Motion", award: 20000,
-    note: "Supporting the beloved winter festival that brings together Métis, Indigenous, and Francophone storytelling traditions through illuminated trails, music, and shared cultural memory." },
+    note: "Creating interpretation panels that share Francophone history at the Flying Canoë Volant festival — connecting winter celebration with the community stories and cultural memory that have shaped it." },
   { org: "Silver Skate Festival Society", project: "mâmawâyâwin", award: 20000,
     note: "Activating Indigenous-led programming and ceremony at one of Edmonton's longest-running winter festivals — centring Treaty 6 traditions and intergenerational gathering." },
   { org: "La Société généalogique du Nord-Ouest", project: "REMEMBER — Registry of Early Métis and Francophone Obituaries", award: 20000,
@@ -78,7 +78,7 @@ const RND_PROJECTS = [
 const OPERATIONAL = [
   { org: "Alberta Aviation Museum", award: 178429 },
   { org: "Société historique francophone de l'Alberta", award: 56638 },
-  { org: "Northern Alberta Pioneers & Descendants", award: 30000 },
+  { org: "Northern Alberta Pioneers & Descendants Association", award: 30000 },
   { org: "Alberta Railway Museum", award: 29971 },
   { org: "Alberta Genealogical Society", award: 28000 },
   { org: "Edmonton Radial Railway Society", award: 26105 },
@@ -171,7 +171,7 @@ function Grants() {
             ))}
           </div>
 
-          <div style={{background: 'var(--paper)', border: '1px solid var(--rule)', padding: 32, borderRadius: 4}}>
+          <div style={{background: 'var(--cream)', border: '1px solid var(--rule)', borderTop: '3px solid var(--prairie)', padding: 32, borderRadius: 4}}>
             {stream === "Heritage Project" && (
               <StreamPanel title="Heritage Project Grants" foot="11 funded · 74 applications · 15% funding rate"
                 blurb="Heritage Project applications doubled from 2024 — a clear signal of how vibrant Edmonton's heritage community has become. The 11 funded projects span language preservation, digital platforms, educational resources, and oral history."
@@ -196,8 +196,8 @@ function Grants() {
               <StreamPanel title="Community Archives Support" foot="2 archives · 3 applications · 67% funding rate"
                 blurb="Supporting grassroots preservation to ensure diverse community stories are collected and made accessible for future generations."
                 rows={[
-                  {a: "Usha Gupta", b: "Artistic Records", c: "$3,000"},
-                  {a: "Al Rashid Mosque Records", b: "", c: "$4,000"},
+                  {a: "Usha Gupta", b: "Artistic Records", c: "$3,000", note: "Donating artistic and personal records — programs, posters, photographs, recordings, and dance teaching material — to ensure this legacy is preserved and accessible."},
+                  {a: "Al Rashid Mosque", b: "Community Archives Project", c: "$4,000", note: "Hiring and training a community archivist to organize and donate construction project records, administrative records, and promotional materials related to the Edmonton Islamic Academy and the Al Rashid Mosque."},
                 ]} />
             )}
           </div>
