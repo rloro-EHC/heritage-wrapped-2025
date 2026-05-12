@@ -130,6 +130,11 @@ function ByTheNumbers() {
             </figcaption>
           </figure>
           <div className="stat-grid" style={{ gridTemplateColumns: '1fr', alignSelf: 'stretch' }}>
+            <div className="cell tone-prairie" style={{ minHeight: 0, padding: 24 }}>
+              <span className="stat-lbl">Digital Reach — EHC · ECAMP · Social</span>
+              <div className="stat-num sm">186.5K</div>
+              <div className="stat-foot">Across EHC and ECAMP platforms and social channels</div>
+            </div>
             <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">K-Days · Walking Tours · Trivia Night · Momentary Museum</span>
               <div className="stat-num sm">5,000+</div>
@@ -137,8 +142,8 @@ function ByTheNumbers() {
             </div>
             <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">Indigenous Spotlight Series</span>
-              <div className="stat-num sm">130+</div>
-              <div className="stat-foot">Speaker series participants</div>
+              <div className="stat-num sm">130</div>
+              <div className="stat-foot">Speaker series participants · 4 events</div>
             </div>
             <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">Operational Grant orgs</span>
