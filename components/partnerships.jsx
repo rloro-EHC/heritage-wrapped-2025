@@ -203,7 +203,7 @@ function Partnerships() {
       {/* 06.5 — Roots & Routes */}
       <div style={{ marginBottom: 80 }}>
         <span className="eyebrow eyebrow-ink">06.4 — Roots & Routes</span>
-        <h3 style={{ marginTop: 12, marginBottom: 4 }}>Member Engagement</h3>
+        <h3 style={{ marginTop: 12, marginBottom: 4 }}>Member engagement</h3>
         <p style={{ fontSize: 16, color: 'var(--prairie)', fontStyle: 'italic', marginBottom: 32, marginTop: 8 }}>Growing demand for sector connection</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'start' }} className="roots-grid">
           <div>
@@ -247,7 +247,7 @@ function Partnerships() {
       {/* 06.6 — CHAS */}
       <div style={{ marginBottom: 80 }}>
         <span className="eyebrow eyebrow-ink">06.5 — CHAS</span>
-        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community Heritage Activation Support</h3>
+        <h3 style={{ marginTop: 12, marginBottom: 32 }}>Community heritage activation support</h3>
 
         <div className="stat-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', marginBottom: 40 }}>
           <div className="cell tone-cream" style={{ minHeight: 0, padding: 24 }}>
