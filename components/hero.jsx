@@ -30,19 +30,19 @@ const HERO_ROTATIONS = [
   },
   {
     lbl: "Track 04 · Reach",
-    stat: "5,000+",
-    cap: "Edmontonians engaged through K-Days and walking tours alone.",
+    stat: "186.5K",
+    cap: "Edmontonians engaged digitally — plus 5,000+ more at in-person events.",
     body: [
-      "ECAMP had its busiest year yet. The Edmonton City as Museum Project welcomed 365 guests on heritage walking tours and drew over 4,000 interactions at the K-Days exhibit.",
-      "The 2025 Heritage Pulse Survey confirmed what these numbers suggest: residents see heritage as core to identity and belonging — not nostalgia, but living infrastructure for a city still figuring out who it is.",
+      "186,500 Edmontonians engaged digitally across EHC and ECAMP sites and social channels — plus 5,000+ more at in-person events. Sold-out walking tours welcomed 365 guests, the K-Days heritage exhibit drew 4,000+ interactions, and Momentary Museum pop-ups brought 400+ participants to four Edmonton Public Library branches.",
+      "Our 12 operational grantees reached another 278,576 Edmontonians through their own programming — making the total community reach far larger than any single number can capture.",
     ],
   },
   {
     lbl: "Track 05 · Stories",
     stat: "17",
-    cap: "Labour Stories published, plus the launch of Clock In podcast on CJSR.",
+    cap: "Labour Stories published, plus Clock In on CJSR reaching 20,000+ listeners.",
     body: [
-      "We launched the Clock In podcast on CJSR and published 17 Labour Stories, centering work as a site of resistance, creativity, and belonging across Edmonton's neighbourhoods.",
+      "We launched the Clock In podcast on CJSR — reaching 20,000+ listeners through broadcast alongside 935 direct plays — and published 17 Labour Stories centering work as a site of resistance, creativity, and belonging across Edmonton's neighbourhoods.",
       "From the loading docks to the kitchens, from the picket lines to the studios, Labour Stories made plain how the work people do shapes the city they share.",
     ],
   },
