@@ -34,7 +34,7 @@ const HERO_ROTATIONS = [
     cap: "Edmontonians engaged digitally — plus 5,000+ more at in-person events.",
     body: [
       "186,500 Edmontonians engaged digitally across EHC and ECAMP sites and social channels — plus 5,000+ more at in-person events. Sold-out walking tours welcomed 365 guests, the K-Days heritage exhibit drew 4,000+ interactions, and Momentary Museum pop-ups brought 400+ participants to four Edmonton Public Library branches.",
-      "Our 12 operational grantees reached another 278,576 Edmontonians through their own programming — making the total community reach far larger than any single number can capture.",
+      "Our 12 operational grantees reached another 229,594 Edmontonians through their own programming — making the total community reach far larger than any single number can capture.",
     ],
   },
   {
