@@ -177,10 +177,10 @@ function EcampSection() {
         <div className="cell tone-prairie">
           <span className="stat-lbl">Clock In Podcast — launched 2025</span>
           <h3 style={{color:'var(--cream)', maxWidth:'24ch'}}>
-            Hosted by musician and postal worker Jay Gilday, exploring labour as heritage.
+            Hosted by musician and postal worker Jay Gilday, exploring Edmonton's labour heritage.
           </h3>
           <p style={{color: 'rgba(255,255,255,0.85)', fontSize: 14, lineHeight: 1.55, marginTop: 16, maxWidth: '60ch'}}>
-            ECAMP launched <em>Clock In</em>, exploring labour as a form of heritage and a lens into Edmonton's social and cultural history.
+            ECAMP launched <em>Clock In</em>, exploring Edmonton's labour heritage and its role in shaping the city's social and cultural history.
             The series featured 6 episodes (165 minutes of audio) and brought together <strong style={{color:'var(--cream)'}}>14 storytellers</strong> in intergenerational conversations
             about work, identity, and belonging. The podcast reached audiences through both digital platforms and CJSR radio broadcast,
             generating 935 direct plays alongside an estimated 20,000 listeners through repeated on-air programming.
