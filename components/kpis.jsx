@@ -207,8 +207,8 @@ function Kpis() {
                 {EQUITY_TREND.map(y => (
                   <div key={y.year} style={{display: 'flex', flexDirection: 'column', gap: 6, height: '100%'}}>
                     <div style={{flex: 1, display: 'flex', alignItems: 'flex-end', gap: 4}}>
-                      <div style={{flex: 1, height: `${y.grants}%`, background: 'var(--prairie)', borderRadius: '2px 2px 0 0'}} title={`Grants: ${y.grants}%`}/>
-                      <div style={{flex: 1, height: `${y.funding}%`, background: 'var(--brick)', borderRadius: '2px 2px 0 0'}} title={`Funding: ${y.funding}%`}/>
+                      <div style={{flex: 1, height: `${y.grants}%`, background: '#3D6184', borderRadius: '2px 2px 0 0'}} title={`Grants: ${y.grants}%`}/>
+                      <div style={{flex: 1, height: `${y.funding}%`, background: '#C97A3F', borderRadius: '2px 2px 0 0'}} title={`Funding: ${y.funding}%`}/>
                     </div>
                     <div className="mono" style={{fontSize: 11, textAlign: 'center', color: 'var(--ink-mute)'}}>{y.year}</div>
                     <div className="mono" style={{fontSize: 10, textAlign: 'center', color: 'var(--ink-mute)'}}>{y.grants}/{y.funding}%</div>
@@ -217,10 +217,10 @@ function Kpis() {
               </div>
               <div style={{display: 'flex', gap: 24, marginTop: 24, fontSize: 12}}>
                 <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-                  <span style={{width:12, height:12, background:'var(--prairie)'}}/> % grants to equity-deserving
+                  <span style={{width:12, height:12, background:'#3D6184'}}/> % grants to equity-deserving
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', gap: 8}}>
-                  <span style={{width:12, height:12, background:'var(--brick)'}}/> % funding to equity-deserving
+                  <span style={{width:12, height:12, background:'#C97A3F'}}/> % funding to equity-deserving
                 </div>
               </div>
             </div>
