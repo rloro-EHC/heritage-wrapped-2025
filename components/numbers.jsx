@@ -147,7 +147,7 @@ function ByTheNumbers() {
             </div>
             <div className="cell" style={{ minHeight: 0, padding: 24 }}>
               <span className="stat-lbl">Operational Grant orgs</span>
-              <div className="stat-num sm">278,576</div>
+              <div className="stat-num sm">229,594</div>
               <div className="stat-foot">Reached through funded organizations</div>
             </div>
           </div>
