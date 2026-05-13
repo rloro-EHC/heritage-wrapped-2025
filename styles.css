@@ -282,7 +282,8 @@ p.lede { font-family: var(--display); font-size: clamp(20px, 2vw, 26px); line-he
   #fire, #ahead { padding-left: 0 !important; padding-right: 0 !important; }
   #fire > div, #ahead > div { padding-left: 20px !important; padding-right: 20px !important; }
   .section-hd { margin-bottom: 28px !important; padding-bottom: 20px !important; }
-  .hero { padding: 32px 20px 40px !important; }
+  section#top { padding: 32px 20px 40px !important; }
+  div.hero { padding-left: 20px !important; padding-right: 20px !important; }
   .hero-lede { font-size: 18px !important; margin-bottom: 32px !important; }
   .stat-grid .cell { padding: 20px !important; min-height: 120px !important; }
   .stat-grid .cell .stat-num { font-size: clamp(36px, 9vw, 64px) !important; }
