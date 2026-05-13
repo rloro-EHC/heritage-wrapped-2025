@@ -49,19 +49,19 @@ function ByTheNumbers() {
       <div style={{ marginBottom: 64 }}>
         <span className="eyebrow eyebrow-ink">01.2 — Our Investment in Community</span>
         <h3 style={{ marginTop: 12, marginBottom: 32 }}>
-          $914,290 distributed to 61 funded projects.
+          $914,289.20 distributed to 61 funded projects.
         </h3>
 
         <div className="stat-grid">
           <div className="cell tone-prairie span-2" style={{ minHeight: 280 }}>
             <span className="stat-lbl">Total Heritage Grants</span>
             <div>
-              <div className="stat-num" style={{ fontSize: 'clamp(72px, 9vw, 140px)' }}>$914,290</div>
+              <div className="stat-num" style={{ fontSize: 'clamp(52px, 6.5vw, 108px)' }}>$914,289.20</div>
               <div className="stat-cap" style={{ marginTop: 12, maxWidth: '40ch' }}>
                 HCIP and FIRE combined — the largest annual grant distribution in EHC history.
               </div>
             </div>
-            <div className="stat-foot">HCIP $724,347 · FIRE $189,943</div>
+            <div className="stat-foot">HCIP $724,346.63 · FIRE $189,942.57</div>
           </div>
           <div className="cell">
             <span className="stat-lbl">HCIP & FIRE Applications</span>
