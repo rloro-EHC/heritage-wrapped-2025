@@ -88,6 +88,7 @@ function Letters() {
       <style>{`
         @media (max-width: 720px) {
           .letter-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .letter-grid > div:first-child { aspect-ratio: 3/2 !important; max-height: 260px; }
         }
       `}</style>
     </section>
