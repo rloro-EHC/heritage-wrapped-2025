@@ -561,7 +561,7 @@ function ClosingSection() {
       maxWidth: 'none',
       padding: '80px 0 0',
     }}>
-      <div style={{maxWidth: 1320, margin: '0 auto', padding: '0 48px'}}>
+      <div style={{maxWidth: 1320, margin: '0 auto', padding: '0 clamp(20px, 4vw, 48px)'}}>
 
         {/* Thank you banner */}
         <div style={{
