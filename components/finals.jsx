@@ -246,7 +246,7 @@ function Financials() {
         <div>
           <h2>The numbers behind the year.</h2>
           <p className="lede" style={{marginTop: 24}}>
-            For the year ended December 31, 2025. Audited by Metrix Group LLP with a clean opinion.
+            For the year ended December 31, 2025.
           </p>
         </div>
       </div>
