@@ -350,31 +350,36 @@ function Financials() {
             Materiality set at $104,200 · Three minor audit adjustments · Revenue recognition transitioned to
             deferral method, applied retrospectively.
           </p>
-          <div style={{marginTop: 24, display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'center'}}>
+          <div style={{marginTop: 32, display: 'flex', gap: 16, flexWrap: 'wrap'}}>
             <a
               href="https://static1.squarespace.com/static/66d0c79a7e14aa1c7990537c/t/69fa0ae2f9e8cb53cbced390/1777994466194/Edmonton+Heritage+Council+Society+2025+Financial+Statements.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
+                display: 'inline-flex', alignItems: 'center', gap: 10,
                 fontFamily: 'var(--mono)', fontSize: 12, letterSpacing: '0.08em',
-                textTransform: 'uppercase', color: 'var(--prairie)',
-                textDecoration: 'none', borderBottom: '1px solid var(--prairie)',
-                paddingBottom: 2,
+                textTransform: 'uppercase', color: 'var(--cream)',
+                textDecoration: 'none',
+                background: 'var(--prairie)',
+                padding: '14px 20px',
+                borderRadius: 2,
               }}
             >
-              Review the full 2025 Financial Statements ↗
+              2025 Financial Statements ↗
             </a>
             <a
               href="https://edmontonheritage.ca/s/2025-Audit-Findings-Report.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
+                display: 'inline-flex', alignItems: 'center', gap: 10,
                 fontFamily: 'var(--mono)', fontSize: 12, letterSpacing: '0.08em',
                 textTransform: 'uppercase', color: 'var(--prairie)',
-                textDecoration: 'none', borderBottom: '1px solid var(--prairie)',
-                paddingBottom: 2,
+                textDecoration: 'none',
+                background: 'transparent',
+                border: '1px solid var(--prairie)',
+                padding: '14px 20px',
+                borderRadius: 2,
               }}
             >
               2025 Audit Findings Report ↗
